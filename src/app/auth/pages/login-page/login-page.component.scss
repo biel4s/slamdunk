@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url("/assets/img/background3.jpg");
+  background-repeat: no-repeat;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  &-field {
+    min-width: 225px;
+    width: 25vw;
+  }
+}
+
+.mat-mdc-form-field-hint {
+  cursor: pointer;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+
+.login-btn {
+  min-width: 225px;
+  width: 25vw;
+  margin-top: 20px;
+  padding: 25px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.register-btn {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  min-width: 160px;
+  width: 15vw;
+  padding: 25px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+hr {
+  width: 100%;
+  margin: 20px 0;
+  opacity: 0.5;
+}
