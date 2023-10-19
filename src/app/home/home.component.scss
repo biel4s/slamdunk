@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 .container {
   display: flex;
@@ -29,7 +29,7 @@ p {
 
 span::before {
   content: "";
-  background: #FF9100;
+  background: #ff9100;
   height: 0.25em;
   position: absolute;
   bottom: 0.15em;
