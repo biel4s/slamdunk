@@ -7,7 +7,7 @@
       </mat-form-field>
       <mat-form-field class="login-form-field">
         <mat-label>Enter your password</mat-label>
-        <input matInput [type]="isPasswordHidden ? 'password' : 'text'" />
+        <input matInput [type]="isPasswordHidden ? 'password' : 'text'" [formControl]="authForm.controls.password" />
         <button
           mat-icon-button
           matSuffix
@@ -25,8 +25,14 @@
       <button mat-raised-button color="primary" class="login-btn" type="submit">
         Log In
       </button>
-      <hr>
-      <button mat-raised-button color="accent" class="register-btn" type="button">
+      <hr />
+      <button
+        mat-raised-button
+        color="accent"
+        class="register-btn"
+        type="button"
+        (click)="goToRegisterPage()"
+      >
         Create new account
       </button>
     </form>
