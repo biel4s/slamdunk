@@ -1,10 +1,14 @@
+@import '../../../../sass/mixins';
+
 :host {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-image: url("/assets/img/background3.jpg");
-  background-repeat: no-repeat;
+  // background-image: url("/assets/img/background3.jpg");
+  // background-repeat: no-repeat;
+  background-color: #2c2c2c;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23ff9100' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
 .login-form {
@@ -17,36 +21,70 @@
   }
 }
 
+::ng-deep .mat-mdc-text-field-wrapper {
+  border-radius: 20px !important;
+}
+
 .mat-mdc-form-field-hint {
   cursor: pointer;
-  margin-top: 2px;
-  color: rgba(0, 0, 0, 0.6);
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 500;
 }
 
-.login-btn {
-  min-width: 225px;
-  width: 25vw;
+.errorMessage {
   margin-top: 20px;
-  padding: 25px;
+  text-align: center; 
+}
+
+
+.login-btn {
+  @include submit-button;
   color: white !important;
-  font-size: 1.2rem;
-  font-weight: bold;
+  margin-top: 30px;
 }
 
 .register-btn {
+  @include submit-button;
   position: relative;
   transform: translateX(-50%);
   left: 50%;
-  min-width: 160px;
-  width: 15vw;
-  padding: 25px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  border: 2px solid #82b1ff;
 }
 
-hr {
+.divider {
+  display: flex;
+  align-items: center;
+  color: white;
   width: 100%;
-  margin: 20px 0;
-  opacity: 0.5;
+}
+
+.divider::before {
+  @include pseudoelement-line;
+  margin-right: 10px;
+}
+
+.divider::after {
+  @include pseudoelement-line;
+  margin-left: 10px;
+}
+
+.custom-shape-divider-top-1697892461 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1697892461 svg {
+  position: relative;
+  display: block;
+  width: calc(150% + 1.3px);
+  height: 249px;
+}
+
+.custom-shape-divider-top-1697892461 .shape-fill {
+  fill: #ff9100;
 }

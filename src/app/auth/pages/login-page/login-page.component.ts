@@ -23,7 +23,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent {
-  isPasswordHidden = true;
+  isPasswordHidden: boolean = true;
+  errorMessage: string = '';
+  isSubmitted: boolean = false;
 
   readonly authForm = this.fb.nonNullable.group({
     login: ['', [Validators.required]],
@@ -35,21 +37,18 @@ export class LoginPageComponent {
     private readonly router: Router
   ) {}
 
-  // getErrorMessage(): any {
-  //   if (this.authForm.controls.login.hasError('required')) {
-  //     return 'You must enter a value';
-  //   }
-  // }
-
   goToRegisterPage(): void {
     this.router.navigate(['/register']);
   }
 
   onSubmit(): void {
-    // if (this.authForm.invalid) {
-    //   return;
-    // }
-    console.log(this.authForm.value);
+    if (this.authForm.invalid) {
+      {
+        this.errorMessage = 'Credentials are incorrect';
+      }
+      return;
+    }
+    console.log(this.authForm);
     this.authForm.reset();
   }
 }

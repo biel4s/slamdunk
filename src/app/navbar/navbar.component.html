@@ -19,11 +19,21 @@
         <button mat-menu-item>Contact</button>
       </mat-menu>
     </nav>
-    <div class="auth">
-      <button (click)="goToRegisterPage()" mat-button color="primary">
+    <div class="signing">
+      <button
+        (click)="goToRegisterPage()"
+        class="auth-button"
+        mat-button
+        color="primary"
+      >
         Sign up
       </button>
-      <button (click)="goToLoginPage()" mat-raised-button color="primary">
+      <button
+        (click)="goToLoginPage()"
+        class="auth-button"
+        mat-raised-button
+        color="primary"
+      >
         Log in
       </button>
     </div>

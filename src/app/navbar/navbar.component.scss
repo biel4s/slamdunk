@@ -1,36 +1,41 @@
 .mat-toolbar {
-    background-color: transparent;
-    position: fixed;
-    z-index: 100;
-    //backdrop-filter: blur(8px);
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    color: white;
-    padding: 0 1rem;
-  }
-  
-  .logo {
-    display: flex;
-  }
-  
-  .links {
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu {
-    display: inline-flex;
-  }
-  
-  a {
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-  }
-  
+  background-color: transparent;
+  position: fixed;
+  z-index: 100;
+  //backdrop-filter: blur(8px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: inline-flex;
+  align-items: center;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.auth-button {
+  border-radius: 20px;
+}
