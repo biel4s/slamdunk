@@ -8,15 +8,24 @@
       <div *ngFor="let link of navLinks">
         <a href="{{ link | lowercase }}">{{ link }}</a>
       </div>
-      <a [matMenuTriggerFor]="menu" class="navbar-more"
+      <a [matMenuTriggerFor]="more" class="navbar-more"
       >More
         <mat-icon>arrow_drop_down</mat-icon>
       </a>
-      <mat-menu #menu="matMenu">
+      <mat-menu #more="matMenu">
+        <button [matMenuTriggerFor]="leagues" mat-menu-item>Leagues</button>
         <button mat-menu-item>Players</button>
         <button mat-menu-item>Calendar</button>
         <button mat-menu-item>Standings</button>
         <button mat-menu-item>Contact</button>
+      </mat-menu>
+      <mat-menu #leagues="matMenu">
+        <button mat-menu-item>EuroLeague</button>
+        <button mat-menu-item>EuroCup</button>
+        <button mat-menu-item>BCL</button>
+        <button mat-menu-item>ACB</button>
+        <button mat-menu-item>BSL</button>
+        <button mat-menu-item>Lega Basket A</button>
       </mat-menu>
     </div>
     <div class="navbar-auth">
