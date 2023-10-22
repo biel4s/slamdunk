@@ -21,48 +21,46 @@
       </path>
     </svg>
   </div>
-  <div class="login-container">
-    <a class="login-heading" href="home">
-      SlamDunk
-    </a>
-    <form (ngSubmit)="onSubmit()" [formGroup]="authForm" class="login-form">
-      <mat-form-field class="login-form-field">
-        <mat-label>Enter your login</mat-label>
-        <input [formControl]="authForm.controls.login" matInput/>
-      </mat-form-field>
-      <mat-form-field class="login-form-field">
-        <mat-label>Enter your password</mat-label>
-        <input
-          [formControl]="authForm.controls.password"
-          [type]="isPasswordHidden ? 'password' : 'text'"
-          matInput/>
-        <button
-          (click)="isPasswordHidden = !isPasswordHidden"
-          [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="isPasswordHidden"
-          mat-icon-button
-          matSuffix>
-          <mat-icon>{{
-            isPasswordHidden ? "visibility_off" : "visibility"
-            }}</mat-icon>
-        </button>
-        <mat-hint align="start">Forgot password?</mat-hint>
-      </mat-form-field>
-      <!-- <mat-error *ngIf="errorMessage" class="errorMessage">
-         Invalid login or username
-       </mat-error>-->
-      <button class="btn-login" color="primary" mat-raised-button type="submit">
-        Log In
-      </button>
-      <p class="divider">or</p>
+  <a class="login-heading" href="home">
+    SlamDunk
+  </a>
+  <form (ngSubmit)="onSubmit()" [formGroup]="authForm" class="login-form">
+    <mat-form-field class="login-form-field">
+      <mat-label>Enter your login</mat-label>
+      <input [formControl]="authForm.controls.login" matInput/>
+    </mat-form-field>
+    <mat-form-field class="login-form-field">
+      <mat-label>Enter your password</mat-label>
+      <input
+        [formControl]="authForm.controls.password"
+        [type]="isPasswordHidden ? 'password' : 'text'"
+        matInput/>
       <button
-        (click)="goToRegisterPage()"
-        class="btn-register"
-        color="accent"
-        mat-button
-        type="button">
-        Create new account
+        (click)="isPasswordHidden = !isPasswordHidden"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="isPasswordHidden"
+        mat-icon-button
+        matSuffix>
+        <mat-icon>{{
+          isPasswordHidden ? "visibility_off" : "visibility"
+          }}</mat-icon>
       </button>
-    </form>
-  </div>
+      <mat-hint align="start">Forgot password?</mat-hint>
+    </mat-form-field>
+    <!-- <mat-error *ngIf="errorMessage" class="errorMessage">
+       Invalid login or username
+     </mat-error>-->
+    <button class="btn-login" color="primary" mat-raised-button type="submit">
+      Log In
+    </button>
+    <p class="divider">or</p>
+    <button
+      (click)="goToRegisterPage()"
+      class="btn-register"
+      color="accent"
+      mat-button
+      type="button">
+      Create new account
+    </button>
+  </form>
 </ng-container>
