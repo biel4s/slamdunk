@@ -1,6 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
+import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
+import {NavbarComponent} from '../shared/navbar/navbar.component';
 
 @Component({
   selector: 'app-home',
@@ -9,4 +9,5 @@ import { NavbarComponent } from '../navbar/navbar.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {}
+export class HomeComponent {
+}
