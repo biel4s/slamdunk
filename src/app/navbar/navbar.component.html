@@ -1,15 +1,15 @@
 <mat-toolbar>
-  <div class="navbar">
-    <div class="logo-link">
-      <img class="logo-img" src="assets/img/logo.png" alt="SlamDunk Logo" />
-      <a class="logo-text" href="home" >SlamDunk</a>
-    </div>
-    <nav class="links">
+  <nav class="navbar">
+    <a class="navbar-brand" href="home">
+      <img alt="SlamDunk Logo" class="navbar-logo" src="assets/img/logo.png"/>
+      <div class="navbar-text">SlamDunk</div>
+    </a>
+    <div class="navbar-menu">
       <div *ngFor="let link of navLinks">
-        <a href="{{ link }}">{{ link }}</a>
+        <a href="{{ link | lowercase }}">{{ link }}</a>
       </div>
-      <a [matMenuTriggerFor]="menu" class="menu"
-        >More
+      <a [matMenuTriggerFor]="menu" class="navbar-more"
+      >More
         <mat-icon>arrow_drop_down</mat-icon>
       </a>
       <mat-menu #menu="matMenu">
@@ -18,24 +18,24 @@
         <button mat-menu-item>Standings</button>
         <button mat-menu-item>Contact</button>
       </mat-menu>
-    </nav>
-    <div class="signing">
+    </div>
+    <div class="navbar-auth">
       <button
         (click)="goToRegisterPage()"
         class="auth-button"
-        mat-button
         color="primary"
+        mat-button
       >
         Sign up
       </button>
       <button
         (click)="goToLoginPage()"
         class="auth-button"
-        mat-raised-button
         color="primary"
+        mat-raised-button
       >
         Log in
       </button>
     </div>
-  </div>
+  </nav>
 </mat-toolbar>

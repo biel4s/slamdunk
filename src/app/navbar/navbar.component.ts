@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { Router } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -20,14 +20,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
-
   navLinks = ['Home', 'About', 'News', 'Events'];
+
+  constructor(private router: Router) {
+  }
 
   goToLoginPage(): void {
     this.router.navigate(['/login']);
   }
-  
+
   goToRegisterPage(): void {
     this.router.navigate(['/register']);
   }
