@@ -1,28 +1,41 @@
 <mat-toolbar>
-    <div class="navbar">
-      <div class="logo">
-        <img width="40" src="assets/img/logo.png" alt="SlamDunk Logo" />
-        <a href="home">SlamDunk</a>
-      </div>
-      <nav class="links">
-        <div *ngFor="let link of navLinks">
-          <a href="{{ link }}">{{ link }}</a>
-        </div>
-        <a [matMenuTriggerFor]="menu" class="menu"
-          >More
-          <mat-icon>arrow_drop_down</mat-icon>
-        </a>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Players</button>
-          <button mat-menu-item>Calendar</button>
-          <button mat-menu-item>Standings</button>
-          <button mat-menu-item>Contact</button>
-        </mat-menu>
-      </nav>
-      <div class="auth">
-        <button mat-button color="primary">Sign up</button>
-        <button mat-raised-button color="primary">Log in</button>
-      </div>
+  <div class="navbar">
+    <div class="logo">
+      <img width="40" src="assets/img/logo.png" alt="SlamDunk Logo" />
+      <a href="home">SlamDunk</a>
     </div>
-  </mat-toolbar>
-  
+    <nav class="links">
+      <div *ngFor="let link of navLinks">
+        <a href="{{ link }}">{{ link }}</a>
+      </div>
+      <a [matMenuTriggerFor]="menu" class="menu"
+        >More
+        <mat-icon>arrow_drop_down</mat-icon>
+      </a>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Players</button>
+        <button mat-menu-item>Calendar</button>
+        <button mat-menu-item>Standings</button>
+        <button mat-menu-item>Contact</button>
+      </mat-menu>
+    </nav>
+    <div class="signing">
+      <button
+        (click)="goToRegisterPage()"
+        class="auth-button"
+        mat-button
+        color="primary"
+      >
+        Sign up
+      </button>
+      <button
+        (click)="goToLoginPage()"
+        class="auth-button"
+        mat-raised-button
+        color="primary"
+      >
+        Log in
+      </button>
+    </div>
+  </div>
+</mat-toolbar>
