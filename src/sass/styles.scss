@@ -1,45 +1,18 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
-// Plus imports for other components in your app.
+@use "./material" as mat-config;
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
+@include mat.all-component-themes(mat-config.$slamdunk-theme);
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$slamdunk-primary: mat.define-palette(mat.$orange-palette, A400);
-$slamdunk-accent: mat.define-palette(mat.$blue-palette, A100);
-$slamdunk-warn: mat.define-palette(mat.$red-palette);
-$slamdunk-success: mat.define-palette(mat.$green-palette);
-
-// The warn palette is optional (defaults to red).
-$slamdunk-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$slamdunk-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $slamdunk-primary,
-      accent: $slamdunk-accent,
-      warn: $slamdunk-warn,
-    ),
-  )
-);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($slamdunk-theme);
-
-/* You can add global styles to this file, and also import other style files */
 @import "./variables";
 @import "./mixins";
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -48,5 +21,5 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
