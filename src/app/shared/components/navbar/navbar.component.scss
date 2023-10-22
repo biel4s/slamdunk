@@ -27,6 +27,7 @@
 
 .navbar-text {
   font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 1.3rem;
   margin-left: 5px;
 }
 
@@ -53,6 +54,12 @@ a {
 .navbar-more {
   display: inline-flex;
   align-items: center;
+}
+
+.more-links {
+  a {
+    color: black;
+  }
 }
 
 .auth-button {

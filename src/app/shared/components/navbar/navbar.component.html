@@ -5,27 +5,37 @@
       <div class="navbar-text">SlamDunk</div>
     </a>
     <div class="navbar-menu">
-      <div *ngFor="let link of navLinks">
+      <div *ngFor="let link of navLinks | slice:0: -1">
         <a href="{{ link | lowercase }}">{{ link }}</a>
       </div>
       <a [matMenuTriggerFor]="more" class="navbar-more"
-      >More
+      >{{ navLinks[navLinks.length - 1] }}
         <mat-icon>arrow_drop_down</mat-icon>
       </a>
       <mat-menu #more="matMenu">
-        <button [matMenuTriggerFor]="leagues" mat-menu-item>Leagues</button>
-        <button mat-menu-item>Players</button>
-        <button mat-menu-item>Calendar</button>
-        <button mat-menu-item>Standings</button>
-        <button mat-menu-item>Contact</button>
+        <div class="more-links">
+          <ng-template matMenuContent>
+            <button [matMenuTriggerFor]="league" mat-menu-item>
+              <a href="leagues">{{ moreLinks[0] }}</a>
+            </button>
+            <div *ngFor="let link of moreLinks | slice:1">
+              <button mat-menu-item>
+                <a href="{{ link | lowercase }}">{{ link }}</a>
+              </button>
+            </div>
+          </ng-template>
+        </div>
       </mat-menu>
-      <mat-menu #leagues="matMenu">
-        <button mat-menu-item>EuroLeague</button>
-        <button mat-menu-item>EuroCup</button>
-        <button mat-menu-item>BCL</button>
-        <button mat-menu-item>ACB</button>
-        <button mat-menu-item>BSL</button>
-        <button mat-menu-item>Lega Basket A</button>
+      <mat-menu #league="matMenu">
+        <div class="more-links">
+          <ng-template matMenuContent>
+            <div *ngFor="let link of leagueLinks">
+              <button mat-menu-item>
+                <a href="{{ link | lowercase }}">{{ link }}</a>
+              </button>
+            </div>
+          </ng-template>
+        </div>
       </mat-menu>
     </div>
     <div class="navbar-auth">
