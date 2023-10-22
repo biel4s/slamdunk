@@ -1,12 +1,12 @@
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { Router } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -18,6 +18,7 @@ import { Router } from '@angular/router';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+
   ],
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss'],
@@ -35,7 +36,8 @@ export class LoginPageComponent {
   constructor(
     private readonly fb: FormBuilder,
     private readonly router: Router
-  ) {}
+  ) {
+  }
 
   goToRegisterPage(): void {
     this.router.navigate(['/register']);
