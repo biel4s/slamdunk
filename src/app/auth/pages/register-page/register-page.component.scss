@@ -30,12 +30,12 @@
 
   &-field {
     width: 25vw;
-    min-width: 225px;
+    min-width: 250px;
   }
 }
 
 :host ::ng-deep .mat-mdc-text-field-wrapper {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .btn {
@@ -44,7 +44,6 @@
   &-register {
     @extend .btn;
     margin-top: 30px;
-    color: white !important;
   }
 }
 
@@ -61,7 +60,7 @@
   position: relative;
   display: block;
   width: calc(150% + 1.3px);
-  height: 249px;
+  height: 250px;
 }
 
 .custom-shape-divider-top-1697892461 .shape-fill {
