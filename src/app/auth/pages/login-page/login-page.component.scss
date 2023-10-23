@@ -1,4 +1,5 @@
 @import "../../../../sass/mixins";
+@import "../../../../sass/variables";
 
 :host {
   display: flex;
@@ -30,19 +31,19 @@
 
   &-field {
     width: 25vw;
-    min-width: 225px;
+    min-width: 250px;
   }
 }
 
 :host ::ng-deep .mat-mdc-text-field-wrapper {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .mat-mdc-form-field-hint {
   font-weight: 500;
   margin-top: 5px;
   cursor: pointer;
-  transition: color ease-in-out 0.2s;
+  transition: color ease-in-out .2s;
   color: rgba(255, 255, 255, 0.5);
 
   &:hover {
@@ -61,12 +62,11 @@
   &-login {
     @extend .btn;
     margin-top: 30px;
-    color: white !important;
   }
 
   &-register {
     @extend .btn;
-    border: 2px solid #82B1FF;
+    color: $secondary-color !important;
   }
 }
 
@@ -100,7 +100,7 @@
   position: relative;
   display: block;
   width: calc(150% + 1.3px);
-  height: 249px;
+  height: 250px;
 }
 
 .custom-shape-divider-top-1697892461 .shape-fill {

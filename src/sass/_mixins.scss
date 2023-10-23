@@ -1,14 +1,14 @@
 @mixin submit-button {
-  min-width: 225px;
+  min-width: 250px;
   width: 25vw;
   padding: 25px;
-  //color: white !important;
+  color: white !important;
   font-size: 1.2rem;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: transform ease-in-out 0.2s;
 
-  &:hover {
+  &:active {
     transform: scale(1.05);
   }
 }

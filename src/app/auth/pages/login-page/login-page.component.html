@@ -26,11 +26,11 @@
   </a>
   <form (ngSubmit)="onSubmit()" [formGroup]="authForm" class="login-form">
     <mat-form-field class="login-form-field">
-      <mat-label>Enter your login</mat-label>
+      <mat-label>Login</mat-label>
       <input [formControl]="authForm.controls.login" matInput/>
     </mat-form-field>
     <mat-form-field class="login-form-field">
-      <mat-label>Enter your password</mat-label>
+      <mat-label>Password</mat-label>
       <input
         [formControl]="authForm.controls.password"
         [type]="isPasswordHidden ? 'password' : 'text'"
