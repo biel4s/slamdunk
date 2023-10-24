@@ -29,3 +29,7 @@ body {
 .login-form-field, .register-form-field {
   @include mat.form-field-density(-1);
 }
+
+.mdc-text-field--filled {
+  --mdc-filled-text-field-focus-active-indicator-height: 4px !important;
+}
