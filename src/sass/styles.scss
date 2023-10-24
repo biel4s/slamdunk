@@ -8,6 +8,7 @@
 @import "./mixins";
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&family=Montserrat+Subrayada:wght@400;700&display=swap");
 
+
 *,
 *::before,
 *::after {
@@ -20,7 +21,11 @@ body {
 }
 
 body {
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;;
   margin: 0;
   padding: 0;
+}
+
+.login-form-field, .register-form-field {
+  @include mat.form-field-density(-1);
 }
