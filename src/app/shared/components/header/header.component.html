@@ -1,10 +1,10 @@
 <mat-toolbar>
-  <nav class="navbar">
-    <a class="navbar-brand" href="home">
-      <img alt="SlamDunk Logo" class="navbar-logo" src="../../../../assets/img/logo.png"/>
-      <div class="navbar-text">SlamDunk</div>
+  <header class="header">
+    <a class="header-brand" href="home">
+      <img alt="SlamDunk Logo" class="header-logo" src="../../../../assets/img/logo.png"/>
+      <div class="header-text">SlamDunk</div>
     </a>
-    <div class="navbar-menu">
+    <nav class="navbar">
       <div *ngFor="let link of navLinks | slice:0: -1">
         <a href="{{ link | lowercase }}">{{ link }}</a>
       </div>
@@ -37,8 +37,8 @@
           </ng-template>
         </div>
       </mat-menu>
-    </div>
-    <div class="navbar-auth">
+    </nav>
+    <div class="header-auth">
       <button
         (click)="goToRegisterPage()"
         class="auth-button"
@@ -56,5 +56,5 @@
         Log in
       </button>
     </div>
-  </nav>
+  </header>
 </mat-toolbar>

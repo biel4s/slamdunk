@@ -7,7 +7,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-header',
   standalone: true,
   imports: [
     CommonModule,
@@ -17,8 +17,8 @@ import {Router} from '@angular/router';
     MatIconModule,
     NgOptimizedImage,
   ],
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
 })
 export class NavbarComponent {
   navLinks = ['Home', 'About', 'News', 'Events', 'More'];

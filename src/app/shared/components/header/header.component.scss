@@ -5,7 +5,7 @@
   //backdrop-filter: blur(8px);
 }
 
-.navbar {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -13,21 +13,25 @@
   color: white;
 }
 
-.navbar-brand {
+.header-brand {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
 }
 
-.navbar-logo {
+.header-logo {
   width: 35px;
   height: 35px;
   margin-right: 5px;
 }
 
-.navbar-text {
+.header-text {
   font-family: "Montserrat Subrayada", sans-serif;
   font-size: 1.3rem;
+  /*  font: {
+      family: "Montserrat Subrayada", sans-serif;
+      size: 1.3rem;
+    }*/
   margin-left: 5px;
 }
 
@@ -37,7 +41,7 @@ a {
   color: white;
 }
 
-.navbar-menu {
+.navbar {
   display: flex;
   align-items: center;
 
