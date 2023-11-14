@@ -12,30 +12,26 @@
       >{{ navLinks[navLinks.length - 1] }}
         <mat-icon>arrow_drop_down</mat-icon>
       </a>
-      <mat-menu #more="matMenu">
-        <div class="more-links">
-          <ng-template matMenuContent>
-            <button [matMenuTriggerFor]="league" mat-menu-item>
-              <a href="leagues">{{ moreLinks[0] }}</a>
+      <mat-menu #more="matMenu" class="more-links">
+        <ng-template matMenuContent>
+          <button [matMenuTriggerFor]="league" mat-menu-item>
+            <a href="leagues">{{ moreLinks[0] }}</a>
+          </button>
+          <mat-menu #league="matMenu">
+            <ng-template matMenuContent>
+              <div *ngFor="let link of leagueLinks">
+                <button mat-menu-item>
+                  <a class="some-class" href="{{ link | lowercase }}">{{ link }}</a>
+                </button>
+              </div>
+            </ng-template>
+          </mat-menu>
+          <div *ngFor="let link of moreLinks | slice:1">
+            <button mat-menu-item>
+              <a class="some-class" href="{{ link | lowercase }}">{{ link }}</a>
             </button>
-            <div *ngFor="let link of moreLinks | slice:1">
-              <button mat-menu-item>
-                <a href="{{ link | lowercase }}">{{ link }}</a>
-              </button>
-            </div>
-          </ng-template>
-        </div>
-      </mat-menu>
-      <mat-menu #league="matMenu">
-        <div class="more-links">
-          <ng-template matMenuContent>
-            <div *ngFor="let link of leagueLinks">
-              <button mat-menu-item>
-                <a href="{{ link | lowercase }}">{{ link }}</a>
-              </button>
-            </div>
-          </ng-template>
-        </div>
+          </div>
+        </ng-template>
       </mat-menu>
     </nav>
     <div class="header-auth">
