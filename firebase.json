@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "slamdunk",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
