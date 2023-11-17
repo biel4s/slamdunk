@@ -24,43 +24,26 @@
   <a class="login-heading" href="home">
     SlamDunk
   </a>
-  <form (ngSubmit)="onSubmit()" [formGroup]="authForm" class="login-form">
-    <mat-form-field class="login-form-field">
-      <mat-label>Login</mat-label>
-      <input [formControl]="authForm.controls.login" matInput/>
-    </mat-form-field>
-    <mat-form-field class="login-form-field">
-      <mat-label>Password</mat-label>
-      <input
-        [formControl]="authForm.controls.password"
-        [type]="isPasswordHidden ? 'password' : 'text'"
-        matInput/>
-      <button
-        (click)="isPasswordHidden = !isPasswordHidden"
-        [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="isPasswordHidden"
-        mat-icon-button
-        matSuffix>
-        <mat-icon>{{
-          isPasswordHidden ? "visibility_off" : "visibility"
-          }}</mat-icon>
+  <div *ngIf="!(authService.afAuth.authState | async)">
+    <app-login-form></app-login-form>
+  </div>
+  <div *ngIf="authService.afAuth.authState | async as user" class="logout">
+    <p>
+      Logged in as <strong>{{ user.email }}</strong>
+    </p>
+    <p>
+      Is Verified: <strong>{{ user.emailVerified }}</strong>
+    </p>
+    <p *ngIf="user.displayName">
+      Display name: <strong>{{ user.displayName }}</strong>
+    </p>
+    <div class="buttons">
+      <button class="btn-primary"
+              color="primary"
+              mat-raised-button>
+        Reset password
       </button>
-      <mat-hint align="start">Forgot password?</mat-hint>
-    </mat-form-field>
-    <!-- <mat-error *ngIf="errorMessage" class="errorMessage">
-       Invalid login or username
-     </mat-error>-->
-    <button class="btn-login" color="primary" mat-raised-button type="submit">
-      Log In
-    </button>
-    <p class="divider">or</p>
-    <button
-      (click)="goToRegisterPage()"
-      class="btn-register"
-      color="accent"
-      mat-button
-      type="button">
-      Create new account
-    </button>
-  </form>
+      <button (click)="authService.logout()" class="btn-primary" color="primary" mat-raised-button>Logout</button>
+    </div>
+  </div>
 </ng-container>

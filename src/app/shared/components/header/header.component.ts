@@ -4,7 +4,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {Router} from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
+import {AuthService} from "../../../auth/auth.service";
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,7 @@ import {Router} from '@angular/router';
     MatButtonModule,
     MatIconModule,
     NgOptimizedImage,
+    RouterLink,
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
@@ -25,14 +27,6 @@ export class NavbarComponent {
   moreLinks = ['League', 'Players', 'Calendar', 'Standings', 'Contact'];
   leagueLinks = ['EuroLeague', 'EuroCup', 'BCL', 'ACB', 'BSL', 'Lega Basket A']
 
-  constructor(private router: Router) {
-  }
-
-  goToLoginPage(): void {
-    this.router.navigate(['/login']);
-  }
-
-  goToRegisterPage(): void {
-    this.router.navigate(['/register']);
+  constructor(private router: Router, public authService: AuthService) {
   }
 }

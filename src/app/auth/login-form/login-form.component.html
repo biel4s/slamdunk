@@ -1,0 +1,95 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="authForm" class="login-form">
+  <mat-form-field class="login-form-field">
+    <mat-label>Email</mat-label>
+    <input [formControl]="authForm.controls.email" autocomplete="off" matInput/>
+  </mat-form-field>
+  <mat-form-field *ngIf="!isPasswordReset" class="login-form-field">
+    <mat-label>Password</mat-label>
+    <input
+      [formControl]="authForm.controls.password"
+      [type]="isPasswordHidden ? 'password' : 'text'"
+      autocomplete="off"
+      matInput/>
+    <button
+      (click)="isPasswordHidden = !isPasswordHidden"
+      *ngIf="isLogin"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="isPasswordHidden"
+      mat-icon-button
+      matSuffix
+      type="button">
+      <mat-icon>{{isPasswordHidden ? "visibility_off" : "visibility"}}</mat-icon>
+    </button>
+    <mat-hint (click)="changeType('reset')" *ngIf="isLogin && !isPasswordReset" align="start">Forgot password?
+    </mat-hint>
+  </mat-form-field>
+  <mat-form-field *ngIf="isRegister" class="login-form-field">
+    <mat-label>Confirm password</mat-label>
+    <input
+      [formControl]="authForm.controls.confirmPassword"
+      [type]="isPasswordHidden ? 'password' : 'text'"
+      autocomplete="off"
+      matInput/>
+    <button (click)="isPasswordHidden = !isPasswordHidden"
+            *ngIf="isLogin"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="isPasswordHidden"
+            mat-icon-button
+            matSuffix>
+      <mat-icon>{{isPasswordHidden ? "visibility_off" : "visibility"}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-error class="errorMessage">
+    {{serverMessage}}
+  </mat-error>
+  <div *ngIf="isLogin">
+    <div class="login-buttons">
+      <button class="btn-submit" color="primary" mat-raised-button type="submit">
+        Log In
+      </button>
+      <button (click)="authService.GoogleAuth()" class="btn-google" color="primary" mat-raised-button type="button">
+            <span class="google-text">
+            <img alt="Google Logo" class="google-logo" src="../../../assets/img/google-logo.png">Login with Google
+            </span>
+      </button>
+    </div>
+    <p class="divider">or</p>
+    <button
+      (click)="changeType('register')"
+      class="btn-secondary"
+      color="accent"
+      mat-button
+      type="button">
+      Create new account
+    </button>
+  </div>
+  <div *ngIf="isRegister">
+    <button class="btn-submit" color="primary" mat-raised-button type="submit">
+      Register
+    </button>
+    <p class="divider">or</p>
+    <button
+      (click)="changeType('login')"
+      class="btn-secondary"
+      color="accent"
+      mat-button
+      type="button"
+    >
+      Login
+    </button>
+  </div>
+  <div *ngIf="isPasswordReset">
+    <button class="btn-submit" color="primary" mat-raised-button type="submit">
+      Submit
+    </button>
+    <p class="divider">or</p>
+    <button
+      (click)="changeType('login')"
+      class="btn-secondary"
+      color="accent"
+      mat-button
+      type="button">
+      Back
+    </button>
+  </div>
+</form>
