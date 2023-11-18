@@ -7,6 +7,7 @@ import {getAuth, provideAuth} from '@angular/fire/auth';
 import {getFirestore, provideFirestore} from '@angular/fire/firestore';
 import {FIREBASE_OPTIONS} from '@angular/fire/compat';
 import {environment} from "../environments/environment";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,7 +16,8 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom([
       provideFirebaseApp(() => initializeApp(environment.firebase)),
       provideAuth(() => getAuth()),
-      provideFirestore(() => getFirestore())
+      provideFirestore(() => getFirestore()),
+      MatSnackBarModule
     ]),
     {provide: FIREBASE_OPTIONS, useValue: environment.firebase}
   ]

@@ -1,12 +1,20 @@
-import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  ReactiveFormsModule,
+  ValidationErrors,
+  ValidatorFn,
+  Validators
+} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
-import {Router} from '@angular/router';
 import {AuthService} from "../auth.service";
+import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
+
 
 @Component({
   selector: 'app-login-form',
@@ -18,6 +26,7 @@ import {AuthService} from "../auth.service";
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatSnackBarModule
   ],
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss'],
@@ -26,17 +35,11 @@ export class LoginFormComponent {
   isPasswordHidden: boolean = true;
   type: 'login' | 'register' | 'reset' = 'login';
   isLoading: boolean = false;
-  serverMessage: any;
-
-  readonly authForm = this.fb.nonNullable.group({
-    email: ['', [Validators.email, Validators.required]],
-    password: ['', [Validators.minLength(6), Validators.required]],
-    confirmPassword: ['', []]
-  });
+  serverMessage: unknown;
 
   constructor(
     private readonly fb: FormBuilder,
-    private readonly router: Router,
+    private _snackBar: MatSnackBar,
     public authService: AuthService
   ) {
   }
@@ -54,23 +57,15 @@ export class LoginFormComponent {
   }
 
   get email() {
-    return this.authForm.get('email');
+    return this.authForm.value.email;
   }
 
   get password() {
-    return this.authForm.get('password');
+    return this.authForm.value.password;
   }
 
-  get passwordConfirm() {
-    return this.authForm.get('confirmPassword');
-  }
-
-  get passwordDoesMatch(): boolean {
-    if (this.type !== 'register') {
-      return true;
-    } else {
-      return this.password?.value === this.passwordConfirm?.value;
-    }
+  get confirmPassword() {
+    return this.authForm.value.confirmPassword;
   }
 
   changeType(value: 'login' | 'register' | 'reset'): void {
@@ -78,48 +73,63 @@ export class LoginFormComponent {
     this.serverMessage = '';
   }
 
-  /*  mapErrorMessages(error: unknown): string {
-      switch (error) {
-        case "auth/weak-password":
-          return "Password should be at least 6 characters"
-        case "auth/invalid-email":
-          return "The email address is badly formatted"
-        default:
-          return "Credentials are incorrect";
+  doesPasswordMatch: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+    let password = control.get('password');
+    let confirmPassword = control.get('confirmPassword');
+    if (password && confirmPassword && password?.value != confirmPassword?.value
+    ) {
+      return {
+        passwordMatchError: true,
       }
-    }*/
+    }
+    return null;
+  }
+
+  readonly authForm = this.fb.nonNullable.group({
+    email: ['', [Validators.email, Validators.required]],
+    password: ['', [Validators.minLength(6), Validators.required]],
+    confirmPassword: ['']
+  }, {validators: this.doesPasswordMatch});
 
   async onSubmit(): Promise<void> {
     this.isLoading = true;
-
-    /*    if (this.authForm.invalid) {
-          {
-            this.serverMessage = 'Credentials are incorrect';
-          }
-          return;
-        }*/
-
-    const email: any = this.email?.value;
-    const password: any = this.password?.value;
+    const email: any = this.email;
+    const password: any = this.password;
+    const confirmPassword: any = this.confirmPassword
 
     try {
       if (this.isLogin) {
-        await this.authService.afAuth.signInWithEmailAndPassword(email, password);
-        await this.router.navigate(['/'])
+        await this.authService.loginWithEmailAndPassword(email, password, confirmPassword);
+        this.authForm.reset();
       }
       if (this.isRegister) {
-        await this.authService.afAuth.createUserWithEmailAndPassword(email, password);
-        await this.router.navigate(['/']);
+        await this.authService.registerWithEmailAndPassword(email, password);
       }
       if (this.isPasswordReset) {
-        await this.authService.afAuth.sendPasswordResetEmail(email);
-        this.serverMessage = 'Check your email';
+        await this.authService.resetPassword(email);
+        this.authForm.reset();
       }
     } catch (error) {
-      this.serverMessage = error;
+      this.authService.handleError(error);
     }
 
-    this.authForm.reset();
     this.isLoading = false;
   }
+
+  /* private doesPasswordMatch(Control1: string, Control2: string): ValidatorFn {
+     return (control: AbstractControl): ValidationErrors | null => {
+       const formGroup = control as FormGroup;
+       const valueOfControl1 = formGroup.get(Control1)?.value;
+       const valueOfControl2 = formGroup.get(Control2)?.value;
+
+       if (valueOfControl1 === valueOfControl2) {
+         return null
+       } else {
+         return {valuesDoNotMatch: true}
+       }
+     }
+   }*/
+
 }
+
+

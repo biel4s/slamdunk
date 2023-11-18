@@ -27,9 +27,9 @@
     <mat-label>Confirm password</mat-label>
     <input
       [formControl]="authForm.controls.confirmPassword"
-      [type]="isPasswordHidden ? 'password' : 'text'"
       autocomplete="off"
-      matInput/>
+      matInput
+      type="password"/>
     <button (click)="isPasswordHidden = !isPasswordHidden"
             *ngIf="isLogin"
             [attr.aria-label]="'Hide password'"
@@ -39,9 +39,13 @@
       <mat-icon>{{isPasswordHidden ? "visibility_off" : "visibility"}}</mat-icon>
     </button>
   </mat-form-field>
-  <mat-error class="errorMessage">
-    {{serverMessage}}
+  <mat-error *ngIf="authForm.errors?.['passwordMatchError']" class="errorMessage">
+    Passwords do not match.
   </mat-error>
+  <mat-error class="errorMessage">
+    {{authService.serverMessage}}
+  </mat-error>
+
   <div *ngIf="isLogin">
     <div class="login-buttons">
       <button class="btn-submit" color="primary" mat-raised-button type="submit">
@@ -64,7 +68,8 @@
     </button>
   </div>
   <div *ngIf="isRegister">
-    <button class="btn-submit" color="primary" mat-raised-button type="submit">
+    <button class="btn-submit" color="primary"
+            mat-raised-button type="submit">
       Register
     </button>
     <p class="divider">or</p>
@@ -80,7 +85,7 @@
   </div>
   <div *ngIf="isPasswordReset">
     <button class="btn-submit" color="primary" mat-raised-button type="submit">
-      Submit
+      Reset password
     </button>
     <p class="divider">or</p>
     <button
