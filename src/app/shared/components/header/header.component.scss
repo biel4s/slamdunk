@@ -1,21 +1,22 @@
 .mat-toolbar {
   position: fixed;
   z-index: 100;
+  padding: 0 2rem;
   background-color: transparent;
   //backdrop-filter: blur(8px);
 }
 
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   width: 100%;
   color: white;
 }
 
 .header-brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -42,6 +43,8 @@ a {
 .navbar {
   display: flex;
   align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
 
   a {
     margin: 15px;
@@ -58,6 +61,13 @@ a {
   align-items: center;
 }
 
+.header-auth {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .auth-button {
   font-size: 15px;
   font-weight: bold;
@@ -69,4 +79,17 @@ a {
 .auth-button:hover {
   transition: ease-in-out 0.2s;
   transform: scale(1.1);
+}
+
+.auth-email {
+  cursor: pointer;
+}
+
+.auth-logout {
+  display: flex;
+  align-items: center;
+
+  .auth-button {
+    margin-left: 20px;
+  }
 }

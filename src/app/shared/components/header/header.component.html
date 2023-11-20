@@ -35,22 +35,29 @@
       </mat-menu>
     </nav>
     <div class="header-auth">
-      <button
-        (click)="goToRegisterPage()"
-        class="auth-button"
-        color="primary"
-        mat-button
-      >
-        Sign up
-      </button>
-      <button
-        (click)="goToLoginPage()"
-        class="auth-button"
-        color="primary"
-        mat-raised-button
-      >
-        Log in
-      </button>
+      <div *ngIf="!(authService.afAuth.authState | async)">
+        <button
+          (click)="authService.goToLoginPage()"
+          class="auth-button"
+          color="primary"
+          mat-button
+        >
+          Sign up
+        </button>
+        <button
+          (click)="authService.goToLoginPage()"
+          class="auth-button"
+          color="primary"
+          mat-raised-button
+        >
+          Log in
+        </button>
+      </div>
+      <div *ngIf="authService.afAuth.authState | async as user" class="auth-logout">
+        <p (click)="authService.goToLoginPage()" class="auth-email">{{ user.email }}</p>
+        <button (click)="authService.afAuth.signOut()" class="auth-button" color="primary" mat-raised-button>Logout
+        </button>
+      </div>
     </div>
   </header>
 </mat-toolbar>
