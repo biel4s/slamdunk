@@ -36,4 +36,8 @@ export class NavbarComponent {
   onWindowScroll(): void {
     this.isScrolled = window.scrollY > 50;
   }
+
+  scrollToSection(sectionId: string): void {
+    document.getElementById(sectionId.toLowerCase())?.scrollIntoView({behavior: 'smooth'});
+  }
 }

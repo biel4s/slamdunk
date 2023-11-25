@@ -24,6 +24,7 @@
   justify-content: flex-start;
   width: 100%;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .header-logo {
@@ -38,12 +39,32 @@
     size: 1.3rem;
   }
   margin-left: 5px;
+  color: white;
 }
 
-a {
-  cursor: pointer;
+.more-links {
   text-decoration: none;
   color: white;
+}
+
+.navbar-links {
+  font: {
+    size: 1rem;
+    family: "Be Vietnam Pro", sans-serif;
+  }
+  display: inline-flex;
+  align-items: center;
+  margin: 15px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  text-decoration: none;
+  color: white;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    color: #FF9100;
+  }
 }
 
 .navbar {
@@ -51,20 +72,6 @@ a {
   align-items: center;
   flex-basis: 0;
   flex-grow: 1;
-
-  a {
-    margin: 15px;
-    transition: ease-in-out 0.2s;
-  }
-
-  a:hover {
-    color: #FF9100;
-  }
-}
-
-.navbar-more {
-  display: inline-flex;
-  align-items: center;
 }
 
 .header-auth {
