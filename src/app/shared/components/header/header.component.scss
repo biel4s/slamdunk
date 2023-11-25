@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 100;
   padding: 0 2rem;
+  transition: ease-in-out .2s;
   background-color: transparent;
   //backdrop-filter: blur(8px);
 }
@@ -13,7 +14,6 @@
 }
 
 .active {
-  transition: .2s;
   background-color: rgb(28, 28, 28);
   backdrop-filter: blur(8px);
 }
