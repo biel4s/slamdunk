@@ -6,29 +6,29 @@
     </a>
     <nav class="navbar">
       <div *ngFor="let link of navLinks | slice:0: -1">
-        <a href="{{ link | lowercase }}">{{ link }}</a>
+        <button (click)="scrollToSection(link)" class="navbar-links">{{ link }}</button>
       </div>
-      <a [matMenuTriggerFor]="more" class="navbar-more"
+      <a [matMenuTriggerFor]="more" class="navbar-links"
       >{{ navLinks[navLinks.length - 1] }}
         <mat-icon>arrow_drop_down</mat-icon>
       </a>
-      <mat-menu #more="matMenu" class="more-links">
+      <mat-menu #more="matMenu">
         <ng-template matMenuContent>
           <button [matMenuTriggerFor]="league" mat-menu-item>
-            <a href="leagues">{{ moreLinks[0] }}</a>
+            <a class="more-links" href="leagues">{{ moreLinks[0] }}</a>
           </button>
           <mat-menu #league="matMenu">
             <ng-template matMenuContent>
               <div *ngFor="let link of leagueLinks">
                 <button mat-menu-item>
-                  <a class="some-class" href="{{ link | lowercase }}">{{ link }}</a>
+                  <a class="more-links" href="{{ link | lowercase }}">{{ link }}</a>
                 </button>
               </div>
             </ng-template>
           </mat-menu>
           <div *ngFor="let link of moreLinks | slice:1">
             <button mat-menu-item>
-              <a class="some-class" href="{{ link | lowercase }}">{{ link }}</a>
+              <a class="more-links" href="{{ link | lowercase }}">{{ link }}</a>
             </button>
           </div>
         </ng-template>
