@@ -12,6 +12,12 @@
   color: white;
 }
 
+.active {
+  transition: .2s;
+  background-color: rgb(28, 28, 28);
+  backdrop-filter: blur(8px);
+}
+
 .header-brand {
   display: flex;
   align-items: center;
