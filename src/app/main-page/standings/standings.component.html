@@ -1,3 +1,121 @@
-<div class="about-container" id="about">
-  <p>Standings</p>
+<div class="standings-container" id="about">
+  <h1 class="primary-heading">Standings</h1>
+  <mat-tab-group animationDuration="500ms">
+    <mat-tab label="EuroLeague">
+      <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th *matHeaderCellDef mat-header-cell> Position</th>
+          <td *matCellDef="let element" mat-cell> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Team Column -->
+        <ng-container matColumnDef="team">
+          <th *matHeaderCellDef mat-header-cell> Team</th>
+          <td *matCellDef="let element" mat-cell> {{element.team}} </td>
+        </ng-container>
+
+        <!-- Wins Column -->
+        <ng-container matColumnDef="wins">
+          <th *matHeaderCellDef mat-header-cell> W</th>
+          <td *matCellDef="let element" mat-cell> {{element.wins}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="loses">
+          <th *matHeaderCellDef mat-header-cell> L</th>
+          <td *matCellDef="let element" mat-cell> {{element.loses}} </td>
+        </ng-container>
+
+        <!-- Win ratio Column -->
+        <ng-container matColumnDef="winratio">
+          <th *matHeaderCellDef mat-header-cell> WIN%</th>
+          <td *matCellDef="let element" mat-cell> {{element.winratio}} </td>
+        </ng-container>
+
+        <!-- Home Column -->
+        <ng-container matColumnDef="home">
+          <th *matHeaderCellDef mat-header-cell> HOME</th>
+          <td *matCellDef="let element" mat-cell> {{element.home}} </td>
+        </ng-container>
+
+        <!-- Away Column -->
+        <ng-container matColumnDef="away">
+          <th *matHeaderCellDef mat-header-cell> AWAY</th>
+          <td *matCellDef="let element" mat-cell> {{element.away}} </td>
+        </ng-container>
+
+        <!-- Last 10 Column -->
+        <ng-container matColumnDef="last10">
+          <th *matHeaderCellDef mat-header-cell> LAST10</th>
+          <td *matCellDef="let element" mat-cell> {{element.last10}} </td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+      </table>
+    </mat-tab>
+    <mat-tab label="EuroCap">
+      <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th *matHeaderCellDef mat-header-cell> Position</th>
+          <td *matCellDef="let element" mat-cell> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Team Column -->
+        <ng-container matColumnDef="team">
+          <th *matHeaderCellDef mat-header-cell> Team</th>
+          <td *matCellDef="let element" mat-cell> {{element.team}} </td>
+        </ng-container>
+
+        <!-- Wins Column -->
+        <ng-container matColumnDef="wins">
+          <th *matHeaderCellDef mat-header-cell> Wins</th>
+          <td *matCellDef="let element" mat-cell> {{element.wins}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="loses">
+          <th *matHeaderCellDef mat-header-cell> Loses</th>
+          <td *matCellDef="let element" mat-cell> {{element.loses}} </td>
+        </ng-container>
+
+        <!-- Win ratio Column -->
+        <ng-container matColumnDef="winratio">
+          <th *matHeaderCellDef mat-header-cell> Win%</th>
+          <td *matCellDef="let element" mat-cell> {{element.winratio}} </td>
+        </ng-container>
+
+        <!-- Home Column -->
+        <ng-container matColumnDef="home">
+          <th *matHeaderCellDef mat-header-cell> Home</th>
+          <td *matCellDef="let element" mat-cell> {{element.home}} </td>
+        </ng-container>
+
+        <!-- Away Column -->
+        <ng-container matColumnDef="away">
+          <th *matHeaderCellDef mat-header-cell> Away</th>
+          <td *matCellDef="let element" mat-cell> {{element.away}} </td>
+        </ng-container>
+
+        <!-- Last 10 Column -->
+        <ng-container matColumnDef="last10">
+          <th *matHeaderCellDef mat-header-cell> Last 10</th>
+          <td *matCellDef="let element" mat-cell> {{element.last10}} </td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+      </table>
+    </mat-tab>
+  </mat-tab-group>
 </div>
