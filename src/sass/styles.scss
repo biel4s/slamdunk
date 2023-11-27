@@ -38,3 +38,7 @@ body {
 .mdc-text-field--filled {
   --mdc-filled-text-field-focus-active-indicator-height: 4px !important;
 }
+
+.cdk-overlay-pane {
+  padding-top: 20px;
+}

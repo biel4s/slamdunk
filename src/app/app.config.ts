@@ -8,11 +8,13 @@ import {getFirestore, provideFirestore} from '@angular/fire/firestore';
 import {FIREBASE_OPTIONS} from '@angular/fire/compat';
 import {environment} from "../environments/environment";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {provideHttpClient} from "@angular/common/http";
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideAnimations(),
+    provideHttpClient(),
     importProvidersFrom([
       provideFirebaseApp(() => initializeApp(environment.firebase)),
       provideAuth(() => getAuth()),

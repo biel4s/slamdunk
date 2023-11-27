@@ -4,7 +4,11 @@
   padding: 0 2rem;
   transition: ease-in-out .2s;
   background-color: transparent;
-  //backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.active {
+  background-color: rgb(28, 28, 28);
 }
 
 .header {
@@ -13,10 +17,6 @@
   color: white;
 }
 
-.active {
-  background-color: rgb(28, 28, 28);
-  backdrop-filter: blur(8px);
-}
 
 .header-brand {
   display: flex;
@@ -42,36 +42,40 @@
   color: white;
 }
 
-.more-links {
-  text-decoration: none;
-  color: white;
-}
 
-.navbar-links {
-  font: {
-    size: 1rem;
-    family: "Be Vietnam Pro", sans-serif;
-  }
-  display: inline-flex;
-  align-items: center;
-  margin: 15px;
-  cursor: pointer;
-  transition: ease-in-out 0.2s;
-  text-decoration: none;
-  color: white;
-  border: none;
-  background-color: transparent;
-
-  &:hover {
-    color: #FF9100;
-  }
-}
-
-.navbar {
+.nav-menu {
   display: flex;
   align-items: center;
   flex-basis: 0;
   flex-grow: 1;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  padding: 0 15px;
+
+  &-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: #FF9100;
+    }
+  }
+}
+
+.leagues-link {
+  padding-right: 0;
+}
+
+.leagues-links {
+  text-decoration: none;
+  color: white;
 }
 
 .header-auth {
