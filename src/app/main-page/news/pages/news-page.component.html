@@ -1,0 +1,14 @@
+<div class="news-container" id="news">
+  <h1 class="primary-heading"> {{'Latest News' | uppercase}}</h1>
+  <div class="news-content">
+    <mat-icon (click)="scrollToLeft()">keyboard_arrow_left</mat-icon>
+    <div class="cards-container">
+      <app-news-card></app-news-card>
+      <app-news-card></app-news-card>
+      <app-news-card></app-news-card>
+      <app-news-card></app-news-card>
+    </div>
+    <mat-icon (click)="scrollToRight()">keyboard_arrow_right</mat-icon>
+  </div>
+  <button class="read-more" color="accent" mat-raised-button>Read more</button>
+</div>
