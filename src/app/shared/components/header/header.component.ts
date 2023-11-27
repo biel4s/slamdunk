@@ -21,7 +21,7 @@ import {AuthService} from "../../../auth/auth.service";
   styleUrls: ['./header.component.scss'],
 })
 export class NavbarComponent {
-  navLinks = ['Home', 'News', 'Leagues', 'Standings', 'Teams', 'Players', 'Calendar', 'About'];
+  navLinks = ['Home', 'News', 'Leagues', 'Standings', 'Teams', 'Players', 'Events', 'About'];
   leagueLinks = ['EuroLeague', 'EuroCup', 'BCL', 'ACB', 'BSL', 'Lega Basket A']
   isScrolled: boolean = false;
 
