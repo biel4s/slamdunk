@@ -7,16 +7,16 @@
   backdrop-filter: blur(8px);
 }
 
+.active {
+  background-color: rgb(28, 28, 28);
+}
+
 .header {
   display: flex;
   width: 100%;
   color: white;
 }
 
-.active {
-  background-color: rgb(28, 28, 28);
-  backdrop-filter: blur(8px);
-}
 
 .header-brand {
   display: flex;
