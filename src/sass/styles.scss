@@ -43,6 +43,8 @@ body {
   padding-top: 20px;
 }
 
-.mat-mdc-tab .mdc-tab__text-label {
+.mdc-tab__text-label {
   --mat-tab-header-inactive-label-text-color: white !important;
+  --mat-tab-header-inactive-hover-label-text-color: white !important;
+  --mat-tab-header-inactive-focus-label-text-color: white !important;
 }
