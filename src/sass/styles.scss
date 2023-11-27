@@ -42,3 +42,9 @@ body {
 .cdk-overlay-pane {
   padding-top: 20px;
 }
+
+.mdc-tab__text-label {
+  --mat-tab-header-inactive-label-text-color: white !important;
+  --mat-tab-header-inactive-hover-label-text-color: white !important;
+  --mat-tab-header-inactive-focus-label-text-color: white !important;
+}
