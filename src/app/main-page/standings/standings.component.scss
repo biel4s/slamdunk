@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
   /*background-image: linear-gradient(to right, #202020 0%, #0A0A0A 100%);*/
@@ -46,24 +46,4 @@ mat-tab-group {
 
 .mat-column-wins, .mat-column-loses, .mat-column-winratio, .mat-column-home, .mat-column-away, .mat-column-last10 {
   text-align: center;
-}
-
-.custom-shape-divider-bottom-1701125282 {
-  line-height: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  width: 100%;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1701125282 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 120px;
-}
-
-.custom-shape-divider-bottom-1701125282 .shape-fill {
-  fill: #FF5B00;
 }
