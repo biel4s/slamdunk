@@ -17,17 +17,11 @@
   <div class="events-content">
     <h1 class="primary-heading"> {{'Upcoming events' | uppercase}}</h1>
     <div class="events-cards">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Actions Buttons</mat-card-title>
-          <mat-card-subtitle>Start</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
+      <app-events-card></app-events-card>
+      <app-events-card></app-events-card>
+      <app-events-card></app-events-card>
     </div>
+    <button class="read-more" color="accent" mat-raised-button>Checkout more</button>
   </div>
-  <p>Events</p>
+  <p></p>
 </div>
