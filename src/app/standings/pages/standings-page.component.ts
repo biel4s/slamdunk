@@ -76,10 +76,10 @@ const STANDINGS_DATA: StandingsElement[] = [
   selector: 'app-standings',
   standalone: true,
   imports: [CommonModule, MatTabsModule, MatTableModule],
-  templateUrl: './standings.component.html',
-  styleUrl: './standings.component.scss'
+  templateUrl: './standings-page.component.html',
+  styleUrl: './standings-page.component.scss'
 })
-export class StandingsComponent {
+export class StandingsPageComponent {
   displayedColumns: string[] = ['position', 'team', 'wins', 'loses', 'winratio', 'home', 'away', 'last10'];
   dataSource: StandingsElement[] = STANDINGS_DATA;
 }
