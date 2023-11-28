@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-events',
@@ -9,5 +9,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './events.component.scss'
 })
 export class EventsComponent {
-
 }
