@@ -1,14 +1,14 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HomePageComponent} from "../home/pages/home-page.component";
-import {StandingsPageComponent} from "../standings/pages/standings-page.component";
-import {NewsPageComponent} from "../news/pages/news-page.component";
-import {EventsPageComponent} from "../events/pages/events-page/events-page.component";
+import {HomePageComponent} from "../home/home-page/home-page.component";
+import {StandingsMainPageComponent} from "../standings/pages/standings-main-page/standings-main-page.component";
+import {NewsMainPageComponent} from "../news/pages/news-main-page/news-main-page.component";
+import {EventsMainPageComponent} from "../events/pages/events-main-page/events-main-page.component";
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [CommonModule, HomePageComponent, StandingsPageComponent, NewsPageComponent, EventsPageComponent],
+  imports: [CommonModule, HomePageComponent, StandingsMainPageComponent, NewsMainPageComponent, EventsMainPageComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })

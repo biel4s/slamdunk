@@ -20,7 +20,7 @@
         <ng-template matMenuContent>
           <div *ngFor="let link of leagueLinks">
             <button mat-menu-item>
-              <a class="leagues-links" href="{{ link | lowercase }}">{{ link }}</a>
+              <a class="leagues-links" href="{{ 'leagues/' + link | lowercase }}">{{ link }}</a>
             </button>
           </div>
         </ng-template>
