@@ -2,8 +2,15 @@
 
 .events-card {
   display: flex;
-  width: 80vw;
+  flex-direction: row;
+  width: 60vw;
   cursor: pointer;
+}
+
+.mdc-card__media {
+  min-width: 200px;
+  max-width: 300px;
+  object-fit: cover;
 }
 
 mat-card-title {
@@ -11,7 +18,6 @@ mat-card-title {
     size: larger;
     weight: bold;
   }
-  width: 70vw;
   color: $primary-color;
 }
 
@@ -27,14 +33,23 @@ mat-mdc-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .card-date {
   margin: 0 0 0.3rem;
+  text-align: center;
   opacity: 0.6;
 }
 
 .mat-mdc-card-content > :last-child:not(.mat-mdc-card-footer) {
   margin: 0 !important;
   margin-right: 20px !important;
+}
+
+.card-description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
