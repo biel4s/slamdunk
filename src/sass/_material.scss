@@ -1,6 +1,8 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
-$slamdunk-primary: mat.define-palette(mat.$orange-palette, A400);
+@import "./palette";
+
+$slamdunk-primary: mat.define-palette($orange-palette, 700);
 $slamdunk-accent: mat.define-palette(mat.$blue-palette, A100);
 $slamdunk-warn: mat.define-palette(mat.$red-palette);
 $slamdunk-success: mat.define-palette(mat.$green-palette);
@@ -11,6 +13,6 @@ $slamdunk-theme: mat.define-light-theme(
         primary: $slamdunk-primary,
         accent: $slamdunk-accent,
         warn: $slamdunk-warn,
-      ),
+      )
     )
 );

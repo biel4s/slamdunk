@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "slamdunk-1ad93": {
+      "hosting": {
+        "slamdunk": [
+          "slamdunk-1ad93"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "slamdunk-1ad93"
+  }
+}

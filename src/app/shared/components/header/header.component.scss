@@ -1,0 +1,112 @@
+.mat-toolbar {
+  position: fixed;
+  z-index: 100;
+  padding: 0 2rem;
+  transition: ease-in-out .2s;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+}
+
+.active {
+  background-color: rgb(28, 28, 28);
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  color: white;
+}
+
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.header-text {
+  font: {
+    family: "Montserrat Subrayada", sans-serif;
+    size: 1.3rem;
+  }
+  margin-left: 5px;
+  color: white;
+}
+
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  padding: 0 15px;
+
+  &-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: #FF9100;
+    }
+  }
+}
+
+.leagues-link {
+  padding-right: 0;
+}
+
+.leagues-links {
+  text-decoration: none;
+  color: white;
+}
+
+.header-auth {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.auth-button {
+  font-size: 15px;
+  font-weight: bold;
+  width: 90px;
+  letter-spacing: -.02rem;
+  border-radius: 20px;
+}
+
+.auth-button:hover {
+  transition: ease-in-out 0.2s;
+  transform: scale(1.1);
+}
+
+.auth-email {
+  cursor: pointer;
+}
+
+.auth-logout {
+  display: flex;
+  align-items: center;
+
+  .auth-button {
+    margin-left: 20px;
+  }
+}

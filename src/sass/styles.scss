@@ -8,6 +8,7 @@
 @import "./mixins";
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&family=Montserrat+Subrayada:wght@400;700&display=swap");
 
+
 *,
 *::before,
 *::after {
@@ -23,4 +24,31 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.login-form-field, .register-form-field {
+  @include mat.form-field-density(-1);
+}
+
+.mat-mdc-menu-panel {
+  --mat-menu-container-color: #333333;
+  --mat-menu-item-icon-color: white;
+}
+
+.mdc-text-field--filled {
+  --mdc-filled-text-field-focus-active-indicator-height: 4px !important;
+}
+
+.cdk-overlay-pane {
+  padding-top: 20px;
+}
+
+.mdc-tab__text-label {
+  --mat-tab-header-inactive-label-text-color: white !important;
+  --mat-tab-header-inactive-hover-label-text-color: white !important;
+  --mat-tab-header-inactive-focus-label-text-color: white !important;
+}
+
+.mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs > .mat-mdc-tab-header .mat-mdc-tab {
+  width: 40vw !important;
 }
