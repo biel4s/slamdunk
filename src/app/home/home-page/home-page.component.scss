@@ -3,7 +3,7 @@
 .home-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
   /*background-color: black;*/
@@ -38,7 +38,7 @@ span::before {
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .custom-shape-divider-bottom-1701191221 {
