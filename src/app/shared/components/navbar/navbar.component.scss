@@ -1,0 +1,72 @@
+.mat-toolbar {
+  position: fixed;
+  z-index: 100;
+  background-color: transparent;
+  //backdrop-filter: blur(8px);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  color: white;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.navbar-text {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin: 15px;
+    transition: ease-in-out 0.2s;
+  }
+
+  a:hover {
+    color: #FF9100;
+  }
+}
+
+.navbar-more {
+  display: inline-flex;
+  align-items: center;
+}
+
+.more-links {
+  a {
+    color: black;
+  }
+}
+
+.auth-button {
+  border-radius: 20px;
+}
+
+.auth-button:hover {
+  transition: ease-in-out 0.2s;
+  transform: scale(1.1);
+}
