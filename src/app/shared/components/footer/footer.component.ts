@@ -10,5 +10,7 @@ import {MatDividerModule} from '@angular/material/divider';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  scrollToHome(): void {
+    document.getElementById("home-page")?.scrollIntoView({behavior: 'smooth'});
+  }
 }
