@@ -95,5 +95,7 @@ export class AuthService {
 
   logout(): void {
     this.afAuth.signOut().then();
+    console.log(this.afAuth.user.subscribe(res => res));
+    this._snackBar.open("Logged out. Goodbye" + this.afAuth.user.subscribe(res => res?.email), "OK", {duration: 5000});
   }
 }
