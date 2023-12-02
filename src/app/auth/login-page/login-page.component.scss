@@ -30,10 +30,11 @@
 
 .buttons {
   display: flex;
+  align-items: center;
   flex-direction: column;
 
-  :first-child {
-    margin-bottom: 20px;
+  :nth-child(2) {
+    margin: 20px 0;
   }
 }
 

@@ -37,16 +37,25 @@
     <p *ngIf="user.displayName">
       Display name: <strong>{{ user.displayName }}</strong>
     </p>
-    <div *ngIf="authService.type === 'reset'">
-      <p>testest</p>
-    </div>
     <div class="buttons">
-      <button (click)="authService.goToResetPage()" class="btn-primary"
+      <button (click)="authService.verifyEmail()"
+              class="btn-primary"
+              color="primary"
+              mat-raised-button>
+        Verify email
+      </button>
+      <button (click)="authService.goToResetPage()"
+              class="btn-primary"
               color="primary"
               mat-raised-button>
         Reset password
       </button>
-      <button (click)="authService.logout()" class="btn-primary" color="primary" mat-raised-button>Logout</button>
+      <button (click)="authService.logout()"
+              class="btn-primary"
+              color="primary"
+              mat-raised-button>
+        Logout
+      </button>
     </div>
   </div>
 </ng-container>
