@@ -29,7 +29,7 @@
     <div class="header-auth">
       <div *ngIf="!(authService.afAuth.authState | async)">
         <button
-          (click)="authService.goToLoginPage()"
+          (click)="authService.goToRegisterPage()"
           class="auth-button"
           color="primary"
           mat-button

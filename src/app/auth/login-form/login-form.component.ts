@@ -33,9 +33,7 @@ import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 })
 export class LoginFormComponent {
   isPasswordHidden: boolean = true;
-  type: 'login' | 'register' | 'reset' = 'login';
   isLoading: boolean = false;
-  serverMessage: unknown;
 
   constructor(
     private readonly fb: FormBuilder,
@@ -45,15 +43,15 @@ export class LoginFormComponent {
   }
 
   get isLogin(): boolean {
-    return this.type === 'login';
+    return this.authService.type === 'login';
   }
 
   get isRegister(): boolean {
-    return this.type === 'register';
+    return this.authService.type === 'register';
   }
 
   get isPasswordReset(): boolean {
-    return this.type === 'reset';
+    return this.authService.type === 'reset';
   }
 
   get email() {
@@ -66,11 +64,6 @@ export class LoginFormComponent {
 
   get confirmPassword() {
     return this.authForm.value.confirmPassword;
-  }
-
-  changeType(value: 'login' | 'register' | 'reset'): void {
-    this.type = value;
-    this.serverMessage = '';
   }
 
   doesPasswordMatch: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {

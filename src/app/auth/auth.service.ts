@@ -10,12 +10,32 @@ import FirebaseError = firebase.FirebaseError;
   providedIn: 'root'
 })
 export class AuthService {
+  type: 'login' | 'register' | 'reset' = 'login';
   serverMessage: unknown;
 
   constructor(private router: Router, public afAuth: AngularFireAuth, private _snackBar: MatSnackBar) {
   }
 
+  setFormType(value: 'login' | 'register' | 'reset'): void {
+    this.type = value;
+    this.serverMessage = '';
+  }
+
   goToLoginPage(): void {
+    this.setFormType('login');
+    this.router.navigate(['/login']).then();
+    console.log(this.type);
+  }
+
+  goToRegisterPage(): void {
+    this.setFormType('register');
+    this.router.navigate(['/login']).then();
+    console.log(this.type);
+  }
+
+  goToResetPage(): void {
+    this.setFormType('reset');
+    this.afAuth.signOut().then();
     this.router.navigate(['/login']).then();
   }
 
