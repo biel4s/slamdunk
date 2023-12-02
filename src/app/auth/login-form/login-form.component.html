@@ -41,7 +41,7 @@
     </button>
   </mat-form-field>
   <!--  <mat-error *ngIf="authForm.errors?.['passwordMatchError'] && isLoading" class="errorMessage">
-      Passwords do not match.
+      {{authService.serverMessage}}
     </mat-error>-->
   <mat-error class="errorMessage">
     {{authService.serverMessage}}

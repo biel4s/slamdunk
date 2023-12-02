@@ -122,6 +122,8 @@ export class AuthService {
         return "The email address is already in use by another account."
       case "auth/missing-email":
         return "The email address is missing."
+      case "auth/passwords-dont-match":
+        return "Passwords do not match."
       default:
         return "An unexpected error occurred.";
     }

@@ -90,21 +90,32 @@ export class LoginFormComponent {
     const password: any = this.password;
     const confirmPassword: any = this.confirmPassword
 
-    try {
-      if (this.isLogin) {
+    if (this.isRegister) {
+      try {
+        await this.authService.registerWithEmailAndPassword(email, password);
+      } catch (error) {
+        this.authService.handleError(error);
+      }
+    }
+
+    if (this.isLogin) {
+      try {
         await this.authService.loginWithEmailAndPassword(email, password, confirmPassword);
         this.authForm.reset();
+      } catch (error) {
+        this.authService.handleError(error);
       }
-      if (this.isRegister) {
-        await this.authService.registerWithEmailAndPassword(email, password);
-      }
-      if (this.isPasswordReset) {
+    }
+
+    if (this.isPasswordReset) {
+      try {
         await this.authService.resetPassword(email);
         this.authForm.reset();
+      } catch (error) {
+        this.authService.handleError(error);
       }
-    } catch (error) {
-      this.authService.handleError(error);
     }
+
 
     this.isLoading = false;
   }
