@@ -81,7 +81,7 @@ export class LoginFormComponent {
   readonly authForm = this.fb.nonNullable.group({
     email: ['', [Validators.email, Validators.required]],
     password: ['', [Validators.minLength(6), Validators.required]],
-    confirmPassword: ['']
+    confirmPassword: ['', [Validators.required]]
   }, {validators: this.doesPasswordMatch});
 
   async onSubmit(): Promise<void> {
@@ -90,18 +90,22 @@ export class LoginFormComponent {
     const password: any = this.password;
     const confirmPassword: any = this.confirmPassword
 
-    if (this.isRegister) {
+    if (this.isLogin) {
       try {
-        await this.authService.registerWithEmailAndPassword(email, password);
+        await this.authService.loginWithEmailAndPassword(email, password);
+        this.authForm.reset();
       } catch (error) {
         this.authService.handleError(error);
       }
     }
 
-    if (this.isLogin) {
+    if (this.isRegister) {
+      if (this.authForm.invalid && password !== confirmPassword) {
+        this.authService.serverMessage = "Passwords do not match!";
+        return;
+      }
       try {
-        await this.authService.loginWithEmailAndPassword(email, password, confirmPassword);
-        this.authForm.reset();
+        await this.authService.registerWithEmailAndPassword(email, password, confirmPassword);
       } catch (error) {
         this.authService.handleError(error);
       }
@@ -115,7 +119,6 @@ export class LoginFormComponent {
         this.authService.handleError(error);
       }
     }
-
 
     this.isLoading = false;
   }
