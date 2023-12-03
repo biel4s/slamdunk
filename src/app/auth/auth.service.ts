@@ -10,15 +10,34 @@ import FirebaseError = firebase.FirebaseError;
   providedIn: 'root'
 })
 export class AuthService {
+  type: 'login' | 'register' | 'reset' = 'login';
   serverMessage: unknown;
 
   constructor(private router: Router, public afAuth: AngularFireAuth, private _snackBar: MatSnackBar) {
   }
 
-  goToLoginPage(): void {
-    this.router.navigate(['/login']).then();
+  setFormType(value: 'login' | 'register' | 'reset'): void {
+    this.type = value;
+    this.serverMessage = '';
   }
 
+  goToLoginPage(): void {
+    this.setFormType('login');
+    this.router.navigate(['/login']).then();
+    console.log(this.type);
+  }
+
+  goToRegisterPage(): void {
+    this.setFormType('register');
+    this.router.navigate(['/login']).then();
+    console.log(this.type);
+  }
+
+  goToResetPage(): void {
+    this.setFormType('reset');
+    this.afAuth.signOut().then();
+    this.router.navigate(['/login']).then();
+  }
 
   async GoogleAuth(): Promise<void> {
     try {
@@ -58,11 +77,26 @@ export class AuthService {
     }
   }
 
+  async verifyEmail(): Promise<void> {
+    const user: firebase.User | null = await this.afAuth.currentUser;
+    if (user) {
+      user.sendEmailVerification().then((): void => {
+        this._snackBar.open("Email verification sent.", "OK", {duration: 5000});
+      }).catch((error): void => {
+        if (error.code === 'auth/too-many-requests') {
+          this._snackBar.open("Too many requests!", "OK", {duration: 5000});
+        } else {
+          this._snackBar.open('Error sending verification email.', "OK", {duration: 5000});
+        }
+      })
+    }
+  }
+
   isFirebaseError(error: unknown): error is FirebaseError {
     return (error as FirebaseError).code !== undefined;
   }
 
-  handleError(error: unknown) {
+  handleError(error: unknown): void {
     if (this.isFirebaseError(error)) {
       this.serverMessage = this.mapErrorMessages(error.code);
     } else {
@@ -88,12 +122,21 @@ export class AuthService {
         return "The email address is already in use by another account."
       case "auth/missing-email":
         return "The email address is missing."
+      case "auth/passwords-dont-match":
+        return "Passwords do not match."
       default:
         return "An unexpected error occurred.";
     }
   }
 
   logout(): void {
+    this.afAuth.signOut().then();
+    this.afAuth.currentUser.then(user => {
+      if (user) {
+        const email: string | null = user.email;
+        this._snackBar.open(`Logged out. Goodbye ${email}`, "OK", {duration: 5000});
+      }
+    });
     this.afAuth.signOut().then();
   }
 }

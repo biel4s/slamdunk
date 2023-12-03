@@ -29,7 +29,7 @@
     <div class="header-auth">
       <div *ngIf="!(authService.afAuth.authState | async)">
         <button
-          (click)="authService.goToLoginPage()"
+          (click)="authService.goToRegisterPage()"
           class="auth-button"
           color="primary"
           mat-button
@@ -47,7 +47,7 @@
       </div>
       <div *ngIf="authService.afAuth.authState | async as user" class="auth-logout">
         <p (click)="authService.goToLoginPage()" class="auth-email">{{ user.email }}</p>
-        <button (click)="authService.afAuth.signOut()" class="auth-button" color="primary" mat-raised-button>Logout
+        <button (click)="authService.logout()" class="auth-button" color="primary" mat-raised-button>Logout
         </button>
       </div>
     </div>

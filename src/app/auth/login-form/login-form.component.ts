@@ -33,9 +33,7 @@ import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 })
 export class LoginFormComponent {
   isPasswordHidden: boolean = true;
-  type: 'login' | 'register' | 'reset' = 'login';
   isLoading: boolean = false;
-  serverMessage: unknown;
 
   constructor(
     private readonly fb: FormBuilder,
@@ -45,15 +43,15 @@ export class LoginFormComponent {
   }
 
   get isLogin(): boolean {
-    return this.type === 'login';
+    return this.authService.type === 'login';
   }
 
   get isRegister(): boolean {
-    return this.type === 'register';
+    return this.authService.type === 'register';
   }
 
   get isPasswordReset(): boolean {
-    return this.type === 'reset';
+    return this.authService.type === 'reset';
   }
 
   get email() {
@@ -66,11 +64,6 @@ export class LoginFormComponent {
 
   get confirmPassword() {
     return this.authForm.value.confirmPassword;
-  }
-
-  changeType(value: 'login' | 'register' | 'reset'): void {
-    this.type = value;
-    this.serverMessage = '';
   }
 
   doesPasswordMatch: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
@@ -97,21 +90,32 @@ export class LoginFormComponent {
     const password: any = this.password;
     const confirmPassword: any = this.confirmPassword
 
-    try {
-      if (this.isLogin) {
+    if (this.isRegister) {
+      try {
+        await this.authService.registerWithEmailAndPassword(email, password);
+      } catch (error) {
+        this.authService.handleError(error);
+      }
+    }
+
+    if (this.isLogin) {
+      try {
         await this.authService.loginWithEmailAndPassword(email, password, confirmPassword);
         this.authForm.reset();
+      } catch (error) {
+        this.authService.handleError(error);
       }
-      if (this.isRegister) {
-        await this.authService.registerWithEmailAndPassword(email, password);
-      }
-      if (this.isPasswordReset) {
+    }
+
+    if (this.isPasswordReset) {
+      try {
         await this.authService.resetPassword(email);
         this.authForm.reset();
+      } catch (error) {
+        this.authService.handleError(error);
       }
-    } catch (error) {
-      this.authService.handleError(error);
     }
+
 
     this.isLoading = false;
   }
