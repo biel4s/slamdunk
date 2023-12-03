@@ -19,14 +19,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  width: 80%;
+  width: 80vw;
 }
 
-.events-cards {
-
-  > * {
-    padding: 20px;
-  }
+.events-grid {
+  width: 100%;
 }
 
 .read-more {
