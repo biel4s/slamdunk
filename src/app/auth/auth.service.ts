@@ -48,7 +48,7 @@ export class AuthService {
     }
   }
 
-  async loginWithEmailAndPassword(email: string, password: string, confirmPassword: string): Promise<void> {
+  async loginWithEmailAndPassword(email: string, password: string): Promise<void> {
     try {
       await this.afAuth.signInWithEmailAndPassword(email, password);
       await this.router.navigate(['/']);
@@ -58,13 +58,17 @@ export class AuthService {
     }
   }
 
-  async registerWithEmailAndPassword(email: string, password: string): Promise<void> {
-    try {
-      await this.afAuth.createUserWithEmailAndPassword(email, password);
-      await this.router.navigate(['/']);
-      this._snackBar.open("Your account has been created successfully", "OK", {duration: 5000});
-    } catch (error) {
-      this.handleError(error);
+  async registerWithEmailAndPassword(email: string, password: string, confirmPassword: string): Promise<void> {
+    if (password !== confirmPassword) {
+      this.serverMessage = "Passwords do not match."
+    } else {
+      try {
+        await this.afAuth.createUserWithEmailAndPassword(email, password);
+        await this.router.navigate(['/']);
+        this._snackBar.open("Your account has been created successfully", "OK", {duration: 5000});
+      } catch (error) {
+        this.handleError(error);
+      }
     }
   }
 
