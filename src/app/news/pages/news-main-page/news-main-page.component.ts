@@ -13,11 +13,18 @@ import {RouterLink} from "@angular/router";
   styleUrl: './news-main-page.component.scss'
 })
 export class NewsMainPageComponent {
-  scrollToLeft() {
-
+  scrollToLeft(): void {
+    const container = document.querySelector('.cards-content');
+    if (container !== null) {
+      container.scrollBy({left: -410, behavior: 'smooth'}); // Scroll 200px to the left
+    }
   }
 
-  scrollToRight() {
-
+  scrollToRight(): void {
+    const container = document.querySelector('.cards-content');
+    if (container !== null) {
+      container.scrollBy({left: 410, behavior: 'smooth'}); // Scroll 200px to the right
+    }
   }
+
 }
