@@ -1,16 +1,23 @@
-mat-grid-list {
-  font-size: 1.3rem;
-  color: white;
-}
-
-.background-image {
-  background-size: cover;
+mat-grid-list > * {
+  margin: 20px;
 }
 
 mat-grid-tile {
-
+  cursor: pointer;
+  background-image: url("/assets/img/events.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.mat-grid-tile-content {
-
+.tile-description {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  text-shadow: 2px 2px black;
 }
+
