@@ -1,0 +1,15 @@
+<!--<mat-grid-list cols="4" rowHeight="250px">
+  @for (tile of tiles; track tile) {
+  <mat-grid-tile
+    class="events-tile"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background-image]="tile.backgroundImage">{{tile.text}}
+  </mat-grid-tile>}
+</mat-grid-list>-->
+<mat-grid-list [gutterSize]="'10px'" cols="2" rowHeight="250px">
+  <mat-grid-tile [rowspan]="2"><span class="tile-description">The global landscape of sports is ever-evolving.</span>
+  </mat-grid-tile>
+  <mat-grid-tile><span class="tile-description">The global landscape of sports is ever-evolving.</span></mat-grid-tile>
+  <mat-grid-tile><span class="tile-description">The global landscape of sports is ever-evolving.</span></mat-grid-tile>
+</mat-grid-list>
