@@ -1,21 +1,29 @@
 <div class="news-filter">
-  <mat-chip-listbox (click)="changeType('trending')" aria-label="Type selection">
-    <mat-chip-option selectable="true" selected>Article</mat-chip-option>
-    <mat-chip-option selectable="true">Trending</mat-chip-option>
-    <mat-chip-option selectable="true">Awards</mat-chip-option>
-    <mat-chip-option selectable="true">Stats</mat-chip-option>
+  <mat-chip-listbox aria-label="Type selection">
+    <mat-chip-option #myChipGrid1 (click)="changeType(myChipGrid1.value)" selectable="true" selected value="all">
+      All
+    </mat-chip-option>
+    <mat-chip-option #myChipGrid2 (click)="changeType(myChipGrid2.value)" selectable="true">
+      Article
+    </mat-chip-option>
+    <mat-chip-option #myChipGrid3 (click)="changeType(myChipGrid3.value)" selectable="true">Trending
+    </mat-chip-option>
+    <mat-chip-option #myChipGrid4 (click)="changeType(myChipGrid4.value)" selectable="true">Awards
+    </mat-chip-option>
+    <mat-chip-option #myChipGrid5 (click)="changeType(myChipGrid5.value)" selectable="true">Stats
+    </mat-chip-option>
   </mat-chip-listbox>
 </div>
 <div class="news-cards">
   <div class="cards-first-row">
-    <app-news-card *ngIf="selectedOption === 'article'"></app-news-card>
-    <app-news-card *ngIf="selectedOption === 'trending'" [type]="'Trending'"></app-news-card>
-    <app-news-card *ngIf="selectedOption === 'article'"></app-news-card>
+    <ng-container *ngFor="let card of cards">
+      <app-news-card *ngIf="selectedType === '' || selectedType === card.type" [card]="card"/>
+    </ng-container>
   </div>
   <div class="cards-second-row">
-    <app-news-card *ngIf="selectedOption === 'article'"></app-news-card>
-    <app-news-card *ngIf="selectedOption === 'awards'" [type]="'Awards'"></app-news-card>
-    <app-news-card *ngIf="selectedOption === 'trending'" [type]="'Trending'"></app-news-card>
+    <!-- <app-news-card *ngIf="selectedType === 'Article'"></app-news-card>
+     <app-news-card *ngIf="selectedType === 'Awards'"></app-news-card>
+     <app-news-card *ngIf="selectedType === 'Trending'"></app-news-card>-->
   </div>
 </div>
 <div class="news-more">

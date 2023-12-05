@@ -3,6 +3,7 @@
 .news-filter {
   display: flex;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
 .news-cards {
@@ -11,12 +12,13 @@
 }
 
 app-news-card {
-  padding: 30px;
   color: black;
 }
 
 .cards-first-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
 }
 
 .cards-second-row {
@@ -26,6 +28,7 @@ app-news-card {
 .news-more {
   display: flex;
   justify-content: center;
+  padding-top: 50px;
 }
 
 .load-more {
