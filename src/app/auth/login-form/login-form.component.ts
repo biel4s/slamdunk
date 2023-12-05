@@ -119,24 +119,8 @@ export class LoginFormComponent {
         this.authService.handleError(error);
       }
     }
-
     this.isLoading = false;
   }
-
-  /* private doesPasswordMatch(Control1: string, Control2: string): ValidatorFn {
-     return (control: AbstractControl): ValidationErrors | null => {
-       const formGroup = control as FormGroup;
-       const valueOfControl1 = formGroup.get(Control1)?.value;
-       const valueOfControl2 = formGroup.get(Control2)?.value;
-
-       if (valueOfControl1 === valueOfControl2) {
-         return null
-       } else {
-         return {valuesDoNotMatch: true}
-       }
-     }
-   }*/
-
 }
 
 
