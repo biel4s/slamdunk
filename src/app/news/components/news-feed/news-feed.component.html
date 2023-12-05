@@ -1,0 +1,28 @@
+<div class="news-filter">
+  <mat-chip-listbox aria-label="Type selection">
+    <mat-chip-option #myChipGrid1 (click)="changeType(myChipGrid1.value)" selectable="true" selected value="all">
+      All
+    </mat-chip-option>
+    <mat-chip-option #myChipGrid2 (click)="changeType(myChipGrid2.value)" selectable="true">
+      Article
+    </mat-chip-option>
+    <mat-chip-option #myChipGrid3 (click)="changeType(myChipGrid3.value)" selectable="true">Trending
+    </mat-chip-option>
+    <mat-chip-option #myChipGrid4 (click)="changeType(myChipGrid4.value)" selectable="true">Awards
+    </mat-chip-option>
+    <mat-chip-option #myChipGrid5 (click)="changeType(myChipGrid5.value)" selectable="true">Stats
+    </mat-chip-option>
+  </mat-chip-listbox>
+</div>
+<div class="news-cards">
+  <div class="cards-row">
+    <ng-container *ngFor="let card of cards.slice(0, currentIndex)">
+      <app-news-card *ngIf="selectedType === '' || selectedType === card.type" [card]="card"/>
+    </ng-container>
+  </div>
+</div>
+<div class="news-more">
+  <button (click)="loadMore()" class="load-more" color="accent" mat-raised-button>Load more</button>
+  <p>{{errorMessage}}</p>
+</div>
+
