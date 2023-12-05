@@ -1,12 +1,18 @@
 .news-container {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100%;
-  background-color: #151515;
+  height: 200%;
+  color: white;
+  background-color: #252525;
 }
 
-p {
-  color: white;
+app-news-latest {
+  padding: 50px 0;
+}
+
+app-news-feed {
+  padding: 50px 0;
 }

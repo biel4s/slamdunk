@@ -1,0 +1,24 @@
+<div class="news-filter">
+  <mat-chip-listbox (click)="changeType('trending')" aria-label="Type selection">
+    <mat-chip-option selectable="true" selected>Article</mat-chip-option>
+    <mat-chip-option selectable="true">Trending</mat-chip-option>
+    <mat-chip-option selectable="true">Awards</mat-chip-option>
+    <mat-chip-option selectable="true">Stats</mat-chip-option>
+  </mat-chip-listbox>
+</div>
+<div class="news-cards">
+  <div class="cards-first-row">
+    <app-news-card *ngIf="selectedOption === 'article'"></app-news-card>
+    <app-news-card *ngIf="selectedOption === 'trending'" [type]="'Trending'"></app-news-card>
+    <app-news-card *ngIf="selectedOption === 'article'"></app-news-card>
+  </div>
+  <div class="cards-second-row">
+    <app-news-card *ngIf="selectedOption === 'article'"></app-news-card>
+    <app-news-card *ngIf="selectedOption === 'awards'" [type]="'Awards'"></app-news-card>
+    <app-news-card *ngIf="selectedOption === 'trending'" [type]="'Trending'"></app-news-card>
+  </div>
+</div>
+<div class="news-more">
+  <button class="load-more" color="accent" mat-raised-button>Load more</button>
+</div>
+

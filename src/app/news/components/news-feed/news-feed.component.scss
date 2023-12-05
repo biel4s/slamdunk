@@ -1,0 +1,33 @@
+@import "../../../../sass/mixins";
+
+.news-filter {
+  display: flex;
+  justify-content: center;
+}
+
+.news-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+app-news-card {
+  padding: 30px;
+  color: black;
+}
+
+.cards-first-row {
+  display: flex;
+}
+
+.cards-second-row {
+  display: flex;
+}
+
+.news-more {
+  display: flex;
+  justify-content: center;
+}
+
+.load-more {
+  @include more-button;
+}
