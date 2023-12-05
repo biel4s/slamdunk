@@ -1,6 +1,7 @@
 .latest-content {
   display: flex;
   max-width: 80vw;
+  padding-top: 150px;
 }
 
 .latest-img {
@@ -9,7 +10,8 @@
 }
 
 .latest-description {
-  margin-left: 30px;
+  padding-left: 30px;
+  background-color: #151515;
 }
 
 .latest-heading {

@@ -11,12 +11,7 @@
     <div class="news-cards">
       <mat-icon (click)="scrollToLeft()" class="left-arrow">keyboard_arrow_left</mat-icon>
       <div class="cards-content">
-        <app-news-card></app-news-card>
-        <app-news-card></app-news-card>
-        <app-news-card></app-news-card>
-        <app-news-card></app-news-card>
-        <app-news-card></app-news-card>
-        <app-news-card></app-news-card>
+        <app-news-card *ngFor="let card of cards" [card]="card"/>
       </div>
       <mat-icon (click)="scrollToRight()" class="right-arrow">keyboard_arrow_right</mat-icon>
     </div>

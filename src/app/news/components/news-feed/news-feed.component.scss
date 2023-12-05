@@ -15,19 +15,16 @@ app-news-card {
   color: black;
 }
 
-.cards-first-row {
+.cards-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 2fr);
   gap: 60px;
-}
-
-.cards-second-row {
-  display: flex;
 }
 
 .news-more {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding-top: 50px;
 }
 

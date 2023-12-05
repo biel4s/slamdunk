@@ -4,6 +4,8 @@ import {NewsCardComponent} from "../../components/news-card/news-card.component"
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
+import {Cards} from "../../components/news-feed/news";
+import {Card} from "../../components/news-card/news-card.model";
 
 @Component({
   selector: 'app-news-page',
@@ -13,6 +15,8 @@ import {RouterLink} from "@angular/router";
   styleUrl: './news-main-page.component.scss'
 })
 export class NewsMainPageComponent {
+  cards: Card[] = Cards;
+
   scrollToLeft(): void {
     const container = document.querySelector('.cards-content');
     if (container !== null) {
@@ -26,5 +30,4 @@ export class NewsMainPageComponent {
       container.scrollBy({left: 410, behavior: 'smooth'}); // Scroll 200px to the right
     }
   }
-
 }
