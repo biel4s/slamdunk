@@ -4,8 +4,8 @@ import {NewsCardComponent} from "../../components/news-card/news-card.component"
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
-import {Cards} from "../../components/news-feed/news";
-import {Card} from "../../components/news-card/news-card.model";
+import {Cards} from "../../models/news";
+import {Card} from "../../models/news-card.model";
 
 @Component({
   selector: 'app-news-page',

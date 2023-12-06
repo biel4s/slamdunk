@@ -5,8 +5,8 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {FormsModule} from "@angular/forms";
-import {Cards} from "./news";
-import {Card} from "../news-card/news-card.model";
+import {Cards} from "../../models/news";
+import {Card} from "../../models/news-card.model";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {NewsService} from "../../services/news.service";
 

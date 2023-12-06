@@ -1,26 +1,29 @@
 <mat-card class="news-url-card">
   <mat-card-header>
-    <div class="news-url-header-image" mat-card-avatar></div>
-    <mat-card-title>Filip Petrusev returns to Europe</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-title class="news-url-title">{{latest.title}}</mat-card-title>
+    <mat-card-subtitle class="news-url-date">{{latest.date}}</mat-card-subtitle>
   </mat-card-header>
-  <img alt="Photo of Filip Petrusev" class="news-url-img" mat-card-image src="assets/img/news.png">
+  <mat-divider></mat-divider>
   <mat-card-content>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
+    <p class="latest-paragraph">
+      {{latest.description}}
     </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
+    <div class="news-img">
+      <img alt="Photo of Filip Petrusev" class="news-img-url" mat-card-image src="{{latest.img}}">
+    </div>
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <p class="latest-paragraph">{{latest.detailedDescription}}</p>
+    <div class="news-img">
+      <img alt="Photo of Filip Petrusev" class="news-img-url" mat-card-image src="{{latest.img2}}">
+      <p class="news-img-subtitle">Lorem ipsum dolor sit amet</p>
+    </div>
+    <ul>
+      <li><strong>Lorem</strong> ipsum dolor sit amet</li>
+      <li><strong>Lorem</strong> ipsum dolor sit amet</li>
+      <li><strong>Lorem</strong> ipsum dolor sit amet</li>
+    </ul>
+    <p class="latest-paragraph">
+      {{latest.description}}
     </p>
   </mat-card-content>
 </mat-card>
