@@ -13,17 +13,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  width: 30vw;
-  min-width: 400px;
+  width: 40vw;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
 }
 
 .footer-link {
+  margin-right: 15px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
   text-decoration: none;
@@ -39,8 +44,18 @@
   border-right-color: white !important;
 }
 
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
 .footer-paragraph {
   font-size: 0.8rem;
-  margin: 0;
+  min-width: 250px;
+  padding-left: 15px;
+  text-align: center;
   color: white;
+  border-left: 2px white solid;
 }
