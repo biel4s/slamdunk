@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatDividerModule} from '@angular/material/divider';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +11,16 @@ import {MatDividerModule} from '@angular/material/divider';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  scrollToHome(): void {
-    document.getElementById("home-page")?.scrollIntoView({behavior: 'smooth'});
+  constructor(private router: Router) {
+  }
+
+  goToHome(): void {
+    if (this.router.url === '/home') {
+      document.getElementById("home-page")?.scrollIntoView({behavior: 'smooth'});
+    } else {
+      this.router.navigate(["/home"]).then(() => {
+        window.scrollTo(0, 0);
+      });
+    }
   }
 }
