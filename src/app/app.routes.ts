@@ -7,6 +7,9 @@ import {PlayersPageComponent} from "./players/players-page/players-page.componen
 import {TeamsPageComponent} from "./teams/teams-page/teams-page.component";
 import {StandingsPageComponent} from "./standings/pages/standings-page/standings-page.component";
 import {LeaguesPageComponent} from "./leagues/leagues-page/leagues-page.component";
+import {
+  FilipPetrusevReturnsToEuropePageComponent
+} from "./news/pages/news-urls/filip-petrusev-returns-to-europe-page/filip-petrusev-returns-to-europe-page.component";
 
 export const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -18,5 +21,6 @@ export const routes: Routes = [
   {path: 'teams', component: TeamsPageComponent},
   {path: 'players', component: PlayersPageComponent},
   {path: 'events', component: EventsPageComponent},
+  {path: 'news/:url', component: FilipPetrusevReturnsToEuropePageComponent},
   {path: '**', redirectTo: ''},
 ];

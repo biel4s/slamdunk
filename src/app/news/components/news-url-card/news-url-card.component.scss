@@ -1,14 +1,15 @@
-
-.news-card {
-  max-width: 350px;
-  color: black;
+.news-url-card {
+  max-width: 80vw;
+  padding: 30px;
+  color: white;
+  background: #353535;
 }
 
-.news-header-image {
+.news-url-header-image {
   background-image: url("https://w7.pngwing.com/pngs/687/150/png-transparent-baloncesto-malaga-2017-18-euroleague-eurocup-basketball-2018-19-euroleague-bc-Žalgiris-basketball-text-sport-orange-thumbnail.png");
   background-size: cover;
 }
 
-.news-type {
-  opacity: 0.6;
+.news-url-img {
+  border-radius: 5px;
 }

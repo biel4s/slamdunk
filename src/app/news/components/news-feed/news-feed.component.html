@@ -17,7 +17,9 @@
 <div class="news-cards">
   <div class="cards-row">
     <ng-container *ngFor="let card of cards.slice(0, currentIndex)">
-      <app-news-card *ngIf="selectedType === '' || selectedType === card.type" [card]="card"/>
+      <a [href]="'/news/' + card.url" class="news-card-link">
+        <app-news-card *ngIf="selectedType === '' || selectedType === card.type" [card]="card"/>
+      </a>
     </ng-container>
   </div>
 </div>

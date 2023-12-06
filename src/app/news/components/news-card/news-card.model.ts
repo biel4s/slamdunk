@@ -4,4 +4,5 @@ export interface Card {
   img: string;
   description: string;
   type: string;
+  url: string
 }
