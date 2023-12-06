@@ -17,12 +17,13 @@
 <div class="news-cards">
   <div class="cards-row">
     <ng-container *ngFor="let card of cards.slice(0, currentIndex)">
-      <app-news-card *ngIf="selectedType === '' || selectedType === card.type" [card]="card"/>
+      <app-news-card (click)="goToUrl(card.url)" *ngIf="selectedType === '' || selectedType === card.type"
+                     [card]="card"/>
     </ng-container>
   </div>
 </div>
 <div class="news-more">
-  <button (click)="loadMore()" class="load-more" color="accent" mat-raised-button>Load more</button>
+  <button (click)="loadMore()" class="load-more" color="primary" mat-raised-button>Load more</button>
   <p>{{errorMessage}}</p>
 </div>
 

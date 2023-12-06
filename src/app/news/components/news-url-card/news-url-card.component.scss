@@ -1,0 +1,46 @@
+.news-url-card {
+  font-size: 1.2rem;
+  max-width: 50vw;
+  padding: 30px;
+  color: black;
+}
+
+.mat-mdc-card-header {
+  padding-bottom: 16px;
+}
+
+:host ::ng-deep .mat-mdc-card-header-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.news-url-title {
+  font: {
+    size: 2.3rem;
+    weight: 800;
+  };
+  margin: 0;
+}
+
+.news-url-date {
+  opacity: 0.8;
+}
+
+.news-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+
+  &-url {
+    max-width: 45vw;
+  }
+
+  &-subtitle {
+    margin-top: 5px;
+    opacity: 0.8;
+  }
+}
+

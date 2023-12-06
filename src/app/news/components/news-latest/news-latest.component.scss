@@ -1,3 +1,5 @@
+@import "../../../../sass/mixins";
+
 .latest-content {
   display: flex;
   max-width: 80vw;
@@ -6,24 +8,40 @@
 
 .latest-img {
   width: 50vw;
+  border-radius: 5px;
   object-fit: cover;
 }
 
 .latest-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-left: 30px;
-  background-color: #151515;
 }
 
-.latest-heading {
+.latest-header {
   font-size: 2.3rem;
   font-weight: 800;
   margin: 0;
 }
 
 .latest-date {
+  margin: 0;
   opacity: 0.8;
 }
 
 .latest-paragraph {
   font-size: 1.2rem;
+}
+
+.read-more {
+  display: flex;
+  justify-content: end;
+}
+
+.load-more {
+  @include more-button;
+  width: 150px;
+  height: 40px;
+  vertical-align: top;
 }

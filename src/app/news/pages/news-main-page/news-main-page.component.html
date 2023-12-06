@@ -11,7 +11,11 @@
     <div class="news-cards">
       <mat-icon (click)="scrollToLeft()" class="left-arrow">keyboard_arrow_left</mat-icon>
       <div class="cards-content">
-        <app-news-card *ngFor="let card of cards" [card]="card"/>
+        <ng-container *ngFor="let card of cards">
+          <a [routerLink]="'/news/' + card.url" class="news-card-link">
+            <app-news-card [card]="card"/>
+          </a>
+        </ng-container>
       </div>
       <mat-icon (click)="scrollToRight()" class="right-arrow">keyboard_arrow_right</mat-icon>
     </div>

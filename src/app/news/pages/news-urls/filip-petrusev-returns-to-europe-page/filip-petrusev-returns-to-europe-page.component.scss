@@ -1,0 +1,11 @@
+.news-url-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+app-news-url-card {
+  padding: 150px 0;
+}

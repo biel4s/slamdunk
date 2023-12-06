@@ -70,6 +70,7 @@ mat-icon {
 
 .read-more {
   @include more-button;
+  background-color: #E4D5B7 !important;
 }
 
 .news-link {

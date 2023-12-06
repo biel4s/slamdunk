@@ -5,9 +5,10 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {FormsModule} from "@angular/forms";
-import {Cards} from "./news";
-import {Card} from "../news-card/news-card.model";
+import {Cards} from "../../models/news";
+import {Card} from "../../models/news-card.model";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {NewsService} from "../../services/news.service";
 
 @Component({
   selector: 'app-news-feed',
@@ -23,8 +24,9 @@ export class NewsFeedComponent {
   currentIndex: number = 6;
   cards: Card[] = Cards;
 
-  constructor(private _snackBar: MatSnackBar) {
+  constructor(private newsService: NewsService, private _snackBar: MatSnackBar) {
   }
+
 
   changeType(value: string): void {
     if (value === "all") {
@@ -40,5 +42,9 @@ export class NewsFeedComponent {
       this._snackBar.open("No more content available!", "OK", {duration: 5000});
       return;
     }
+  }
+
+  goToUrl(url: string): void {
+    this.newsService.goToNews(url);
   }
 }

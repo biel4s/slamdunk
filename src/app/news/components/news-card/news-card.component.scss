@@ -1,6 +1,7 @@
 .news-card {
   max-width: 350px;
   cursor: pointer;
+  color: black;
 }
 
 .news-header-image {
@@ -8,6 +9,17 @@
   background-size: cover;
 }
 
+.news-description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 .news-type {
-  opacity: 0.6;
+  opacity: 0.8;
+}
+
+.mat-icon {
+  vertical-align: 0;
 }
