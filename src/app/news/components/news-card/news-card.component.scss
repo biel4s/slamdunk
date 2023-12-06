@@ -1,6 +1,6 @@
-
 .news-card {
   max-width: 350px;
+  cursor: pointer;
   color: black;
 }
 
@@ -10,5 +10,9 @@
 }
 
 .news-type {
-  opacity: 0.6;
+  opacity: 0.8;
+}
+
+.mat-icon {
+  vertical-align: 0;
 }

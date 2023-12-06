@@ -21,6 +21,6 @@ export const routes: Routes = [
   {path: 'teams', component: TeamsPageComponent},
   {path: 'players', component: PlayersPageComponent},
   {path: 'events', component: EventsPageComponent},
-  {path: 'news/:url', component: FilipPetrusevReturnsToEuropePageComponent},
+  {path: 'news/filip-petrusev-returns-to-europe', component: FilipPetrusevReturnsToEuropePageComponent},
   {path: '**', redirectTo: ''},
 ];

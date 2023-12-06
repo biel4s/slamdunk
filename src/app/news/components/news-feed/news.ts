@@ -3,7 +3,7 @@ import {Card} from "../news-card/news-card.model";
 export const Cards: Card[] = [
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Article",
@@ -11,15 +11,15 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Trending",
-    url: "filip-petrusev-returns-to-europe"
+    url: "XD"
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Awards",
@@ -27,7 +27,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Stats",
@@ -35,7 +35,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Article",
@@ -43,7 +43,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Stats",
@@ -51,7 +51,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Article",
@@ -59,7 +59,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Trending",
@@ -67,7 +67,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Awards",
@@ -75,7 +75,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Article",
@@ -83,7 +83,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Trending",
@@ -91,7 +91,7 @@ export const Cards: Card[] = [
   },
   {
     title: "Filip Petrusev returns to Europe",
-    subtitle: "30.12.2023",
+    date: "30.12.2023",
     img: "assets/img/news.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     type: "Awards",

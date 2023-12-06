@@ -1,6 +1,6 @@
 export interface Card {
   title: string;
-  subtitle: string;
+  date: string;
   img: string;
   description: string;
   type: string;
