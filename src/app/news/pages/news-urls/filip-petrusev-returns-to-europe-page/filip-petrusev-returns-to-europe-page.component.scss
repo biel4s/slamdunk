@@ -1,11 +1,19 @@
+@import "../../../../../sass/mixins";
+
 .news-url-container {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   background-color: whitesmoke;
 }
 
 app-news-url-card {
-  padding: 150px 0;
+  padding-top: 150px;
+}
+
+.read-more {
+  @include more-button;
+  margin: 50px 0;
 }
