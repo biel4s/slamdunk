@@ -10,8 +10,9 @@
   <ng-container matColumnDef="team">
     <th *matHeaderCellDef mat-header-cell>Team</th>
     <td *matCellDef="let element" class="team-cell" mat-cell>
-      <img alt="Team's logo" class="team-logo" src="../../../../assets/img/google-logo.png">
-      <span class="team-name">{{element.team}}</span>
+      <a class="team-name" href="/teams/{{element.team}}" target="_blank">
+        <img alt="Team's logo" class="team-logo" src="../../../../assets/img/google-logo.png">
+        {{element.team}}</a>
     </td>
   </ng-container>
 

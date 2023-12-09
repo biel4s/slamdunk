@@ -25,3 +25,11 @@
 ::ng-deep app-standings-tab .mat-mdc-row {
   color: white;
 }
+
+::ng-deep app-standings-tab tr:hover {
+  background: #3B3B3B !important;
+}
+
+::ng-deep app-standings-tab .team-name {
+  color: white !important;
+}
