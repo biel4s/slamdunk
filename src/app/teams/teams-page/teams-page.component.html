@@ -1,5 +1,40 @@
 <app-header></app-header>
 <div class="teams-container">
-  <p>teams-page works!</p>
+  <div class="teams-content">
+    <div class="teams-header">
+      <h1 class="primary-heading">{{selectedLeague | uppercase}}</h1>
+      <mat-form-field>
+        <mat-label>Select a league</mat-label>
+        <mat-select [(value)]="selectedLeague">
+          <mat-option value="euroleague">EuroLeague</mat-option>
+          <mat-option value="eurocup">EuroCup</mat-option>
+          <mat-option value="bcl">BCL</mat-option>
+          <mat-option value="acb">ACB</mat-option>
+          <mat-option value="bsl">BSL</mat-option>
+          <mat-option value="lega basket a">Lega Basket A</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="teams-tab">
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+    </div>
+  </div>
 </div>
 <app-footer></app-footer>

@@ -17,6 +17,6 @@ import {StandingsElement} from "../../models/standings-element.model";
   styleUrl: './standings-page.component.scss'
 })
 export class StandingsPageComponent {
-  selected: string = 'euroleague';
+  selectedLeague: string = 'euroleague';
   protected readonly dataSource: StandingsElement[] = StandingsEuroLeague;
 }
