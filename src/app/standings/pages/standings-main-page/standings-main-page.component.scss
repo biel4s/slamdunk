@@ -14,33 +14,22 @@
   color: white;
 }
 
-/*mat-tab-group {
-  width: 80%;
-}*/
-
-.mat-elevation-z8 {
+::ng-deep app-standings-tab .mat-elevation-z8 {
   background-color: #303030;
 }
 
-.mat-mdc-header-row, .mat-mdc-row {
+::ng-deep app-standings-tab .mat-mdc-header-row {
   color: white;
 }
 
-.mat-column-position {
-  width: 5%;
-  text-align: center;
+::ng-deep app-standings-tab .mat-mdc-row {
+  color: white;
 }
 
-.mat-column-team {
-  padding-left: 25px;
+::ng-deep app-standings-tab tr:hover {
+  background: #3B3B3B !important;
 }
 
-.team-logo {
-  width: 30px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.mat-column-wins, .mat-column-loses, .mat-column-winratio, .mat-column-home, .mat-column-away, .mat-column-last10 {
-  text-align: center;
+::ng-deep app-standings-tab .team-name {
+  color: white !important;
 }

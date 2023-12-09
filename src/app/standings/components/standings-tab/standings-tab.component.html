@@ -1,0 +1,57 @@
+<table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th *matHeaderCellDef mat-header-cell>Position</th>
+    <td *matCellDef="let element" mat-cell> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Team Column -->
+  <ng-container matColumnDef="team">
+    <th *matHeaderCellDef mat-header-cell>Team</th>
+    <td *matCellDef="let element" class="team-cell" mat-cell>
+      <a class="team-name" href="/teams/{{element.team}}" target="_blank">
+        <img alt="Team's logo" class="team-logo" src="../../../../assets/img/google-logo.png">
+        {{element.team}}</a>
+    </td>
+  </ng-container>
+
+  <!-- Wins Column -->
+  <ng-container matColumnDef="wins">
+    <th *matHeaderCellDef mat-header-cell>W</th>
+    <td *matCellDef="let element" mat-cell>{{element.wins}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="loses">
+    <th *matHeaderCellDef mat-header-cell>L</th>
+    <td *matCellDef="let element" mat-cell>{{element.loses}} </td>
+  </ng-container>
+
+  <!-- Win ratio Column -->
+  <ng-container matColumnDef="winratio">
+    <th *matHeaderCellDef mat-header-cell>WIN%</th>
+    <td *matCellDef="let element" mat-cell>{{element.winratio}}%</td>
+  </ng-container>
+
+  <!-- Home Column -->
+  <ng-container matColumnDef="home">
+    <th *matHeaderCellDef mat-header-cell>HOME</th>
+    <td *matCellDef="let element" mat-cell>{{element.home}} </td>
+  </ng-container>
+
+  <!-- Away Column -->
+  <ng-container matColumnDef="away">
+    <th *matHeaderCellDef mat-header-cell>AWAY</th>
+    <td *matCellDef="let element" mat-cell>{{element.away}} </td>
+  </ng-container>
+
+  <!-- Last 10 Column -->
+  <ng-container matColumnDef="last10">
+    <th *matHeaderCellDef mat-header-cell>LAST10</th>
+    <td *matCellDef="let element" mat-cell>{{element.last10}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+</table>

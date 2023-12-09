@@ -1,12 +1,19 @@
 .standings-container {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100%;
-  background-color: #151515;
+  padding: 150px 0;
+  background-color: #F7F7F7;
 }
 
-p {
-  color: white;
+.standings-team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primary-heading {
+  font-size: 2.5rem;
 }
