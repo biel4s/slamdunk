@@ -18,7 +18,13 @@
     <div class="standings-tab">
       <mat-tab-group animationDuration="500ms">
         <mat-tab label="Standings">
-          <app-standings-tab [dataSource]="dataSource"></app-standings-tab>
+          <app-standings-tab *ngIf="selected === 'euroleague'" [dataSource]="dataSource"></app-standings-tab>
+          <app-standings-tab *ngIf="selected === 'eurocup'" [dataSource]="dataSource.slice(0,10)"></app-standings-tab>
+          <app-standings-tab *ngIf="selected === 'bcl'" [dataSource]="dataSource.slice(0,10)"></app-standings-tab>
+          <app-standings-tab *ngIf="selected === 'acb'" [dataSource]="dataSource.slice(0,10)"></app-standings-tab>
+          <app-standings-tab *ngIf="selected === 'bsl'" [dataSource]="dataSource.slice(0,10)"></app-standings-tab>
+          <app-standings-tab *ngIf="selected === 'lega basket a'"
+                             [dataSource]="dataSource.slice(0,10)"></app-standings-tab>
         </mat-tab>
       </mat-tab-group>
     </div>
