@@ -15,12 +15,27 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="teams-tab">
+    <div *ngIf="selectedLeague === 'euroleague'" class="teams-tab">
       <app-teams-card></app-teams-card>
       <app-teams-card></app-teams-card>
       <app-teams-card></app-teams-card>
       <app-teams-card></app-teams-card>
       <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+      <app-teams-card></app-teams-card>
+    </div>
+    <div *ngIf="selectedLeague === 'eurocup'" class="teams-tab">
       <app-teams-card></app-teams-card>
       <app-teams-card></app-teams-card>
       <app-teams-card></app-teams-card>
