@@ -1,4 +1,6 @@
 @import "../../../../../sass/mixins";
+@import "../../../../../sass/variables";
+
 
 .news-url-container {
   display: flex;
@@ -6,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: $background-color;
 }
 
 app-news-url-card {
