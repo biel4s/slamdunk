@@ -1,9 +1,26 @@
 .teams-card {
-  max-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 200px;
+  transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 }
 
-.example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-  background-size: cover;
+.teams-logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
 
+.mat-mdc-card-title {
+  font-weight: 700;
+  text-align: center;
+}
