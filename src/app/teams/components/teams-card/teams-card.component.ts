@@ -1,6 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatCardModule} from "@angular/material/card";
+import {Team} from "../../models/team.model";
+
 
 @Component({
   selector: 'app-teams-card',
@@ -10,5 +12,13 @@ import {MatCardModule} from "@angular/material/card";
   styleUrl: './teams-card.component.scss'
 })
 export class TeamsCardComponent {
+  @Input() teamData: Team;
+
+  constructor() {
+    this.teamData = {
+      name: '',
+      logo: ''
+    }
+  }
 
 }

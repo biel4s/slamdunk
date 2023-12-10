@@ -1,0 +1,5 @@
+.teams-tab {
+  display: grid;
+  grid-template-columns: repeat(6, 2fr);
+  gap: 60px;
+}

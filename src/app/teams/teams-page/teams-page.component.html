@@ -15,41 +15,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div *ngIf="selectedLeague === 'euroleague'" class="teams-tab">
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-    </div>
-    <div *ngIf="selectedLeague === 'eurocup'" class="teams-tab">
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-      <app-teams-card></app-teams-card>
-    </div>
+    <app-teams-euroleague *ngIf="selectedLeague === 'euroleague'"></app-teams-euroleague>
   </div>
 </div>
 <app-footer></app-footer>
