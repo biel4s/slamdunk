@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 90%;
+  height: 100%;
   /*background-image: linear-gradient(to right, #202020 0%, #0A0A0A 100%);*/
   background-color: #151515;
 }
@@ -12,6 +12,12 @@
 .primary-heading {
   font-size: 2.5rem;
   color: white;
+}
+
+::ng-deep .mdc-tab__text-label {
+  --mat-tab-header-inactive-label-text-color: white !important;
+  --mat-tab-header-inactive-hover-label-text-color: white !important;
+  --mat-tab-header-inactive-focus-label-text-color: white !important;
 }
 
 ::ng-deep app-standings-tab .mat-elevation-z8 {
@@ -33,3 +39,4 @@
 ::ng-deep app-standings-tab .team-name {
   color: white !important;
 }
+
