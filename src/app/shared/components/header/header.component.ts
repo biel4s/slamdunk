@@ -23,8 +23,7 @@ import {Router, RouterLinkActive} from "@angular/router";
   styleUrls: ['./header.component.scss'],
 })
 export class NavbarComponent {
-  navLinks: string[] = ['Home', 'News', 'Leagues', 'Standings', 'Teams', 'Players', 'Events'];
-  leagueLinks: string[] = ['EuroLeague', 'EuroCup', 'BCL', 'ACB', 'BSL', 'Lega Basket A']
+  navLinks: string[] = ['Home', 'News', 'Schedule', 'Stats', 'Standings', 'Teams', 'Players', 'Events'];
   isScrolled: boolean = false;
   isHomeRoute: boolean = false;
 
