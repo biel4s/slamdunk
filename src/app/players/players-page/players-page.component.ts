@@ -31,4 +31,8 @@ export class PlayersPageComponent implements AfterViewInit {
     this.paginator._intl.itemsPerPageLabel = "Players per page:";
     this.playersSource.paginator = this.paginator;
   }
+
+  filterSearch(e: KeyboardEvent): void {
+    this.playersSource.filter = (e.target as HTMLInputElement).value;
+  }
 }
