@@ -7,7 +7,7 @@
         <form class="players-search">
           <mat-form-field>
             <mat-label>Search player</mat-label>
-            <input matInput placeholder="Nikola Mirotić" type="player">
+            <input (keyup)="filterSearch($event)" matInput placeholder="Name, team, position.." type="player">
             <mat-icon matSuffix>search</mat-icon>
           </mat-form-field>
         </form>
