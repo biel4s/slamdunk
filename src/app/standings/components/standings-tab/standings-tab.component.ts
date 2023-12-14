@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
-import {StandingsElement} from "../../models/standings-element.model";
+import {StandingsModel} from "../../models/standings.model";
 
 @Component({
   selector: 'app-standings-tab',
@@ -12,7 +12,7 @@ import {StandingsElement} from "../../models/standings-element.model";
   styleUrl: './standings-tab.component.scss'
 })
 export class StandingsTabComponent {
-  @Input() dataSource: StandingsElement[];
+  @Input() dataSource: StandingsModel[];
   displayedColumns: string[] = ['position', 'team', 'wins', 'loses', 'winratio', 'home', 'away', 'last10'];
 
   constructor() {

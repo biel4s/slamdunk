@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import {StandingsTabComponent} from "../../components/standings-tab/standings-tab.component";
-import {StandingsElement} from "../../models/standings-element.model";
+import {StandingsModel} from "../../models/standings.model";
 import {StandingsEuroLeague} from "../../models/standings";
 
 
@@ -15,5 +15,5 @@ import {StandingsEuroLeague} from "../../models/standings";
   styleUrl: './standings-main-page.component.scss'
 })
 export class StandingsMainPageComponent {
-  protected readonly dataSource: StandingsElement[] = StandingsEuroLeague;
+  protected readonly dataSource: StandingsModel[] = StandingsEuroLeague;
 }

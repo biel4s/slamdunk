@@ -1,4 +1,4 @@
-export interface StandingsElement {
+export interface StandingsModel {
   position: number;
   team: string;
   wins: number;

@@ -1,5 +1,37 @@
 <app-header></app-header>
 <div class="players-container">
-  <p>players-page works!</p>
+  <div class="players-content">
+    <div class="players-header">
+      <h1 class="primary-heading">{{'Players - ' + selectedLeague | uppercase}}</h1>
+      <div class="players-filters">
+        <form class="players-search">
+          <mat-form-field>
+            <mat-label>Search player</mat-label>
+            <input matInput placeholder="Nikola Mirotić" type="player">
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+        </form>
+        <mat-form-field class="players-league">
+          <mat-label>Select a league</mat-label>
+          <mat-select [(value)]="selectedLeague">
+            <mat-option value="euroleague">EuroLeague</mat-option>
+            <mat-option value="eurocup">EuroCup</mat-option>
+            <mat-option value="bcl">BCL</mat-option>
+            <mat-option value="acb">ACB</mat-option>
+            <mat-option value="bsl">BSL</mat-option>
+            <mat-option value="lega basket a">Lega Basket A</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="players-tab">
+      <app-players-tab [dataSource]="playersSource"></app-players-tab>
+      <mat-paginator
+        [pageSize]="10"
+        aria-label="Select page"
+        showFirstLastButtons>
+      </mat-paginator>
+    </div>
+  </div>
 </div>
 <app-footer></app-footer>

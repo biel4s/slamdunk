@@ -1,0 +1,41 @@
+<table [dataSource]="dataSource" class="mat-elevation-z8" mat-table matSort>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th *matHeaderCellDef mat-header-cell mat-sort-header>Name</th>
+    <td *matCellDef="let element" mat-cell>
+      <img alt="Team's logo" class="players-img" src="../../../../assets/img/players/nikolamirotic.png">
+      {{element.name}}
+    </td>
+  </ng-container>
+
+  <!-- Team Column -->
+  <ng-container matColumnDef="team">
+    <th *matHeaderCellDef mat-header-cell>Team</th>
+    <td *matCellDef="let element" class="team-cell" mat-cell>
+      <a class="team-name" href="/teams/{{element.team}}" target="_blank">
+        {{element.team}}</a>
+    </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th *matHeaderCellDef mat-header-cell>Position</th>
+    <td *matCellDef="let element" mat-cell>{{element.position}}</td>
+  </ng-container>
+
+  <!-- Height Column -->
+  <ng-container matColumnDef="height">
+    <th *matHeaderCellDef mat-header-cell>Height</th>
+    <td *matCellDef="let element" mat-cell>{{element.height}}cm</td>
+  </ng-container>
+
+  <!-- Nationality Column -->
+  <ng-container matColumnDef="nationality">
+    <th *matHeaderCellDef mat-header-cell>Nationality</th>
+    <td *matCellDef="let element" mat-cell>{{element.nationality}}</td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+</table>
