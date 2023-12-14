@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import {PlayersTabComponent} from "../components/players-tab/players-tab.component";
 import {PlayersData} from "../models/players";
 import {MatTableDataSource} from "@angular/material/table";
+import {PlayersModel} from "../models/players.model";
 
 
 @Component({
@@ -24,8 +25,8 @@ import {MatTableDataSource} from "@angular/material/table";
 export class PlayersPageComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  selectedLeague: string = 'euroleague';
-  playersSource = new MatTableDataSource(PlayersData);
+  selectedLeague: string = 'all leagues';
+  playersSource: MatTableDataSource<PlayersModel> = new MatTableDataSource(PlayersData);
 
   ngAfterViewInit(): void {
     this.paginator._intl.itemsPerPageLabel = "Players per page:";

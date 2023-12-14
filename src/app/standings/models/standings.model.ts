@@ -1,5 +1,6 @@
 export interface StandingsModel {
   position: number;
+  logo: string;
   team: string;
   wins: number;
   loses: number;
