@@ -28,6 +28,7 @@ export class PlayersPageComponent implements AfterViewInit {
   playersSource = new MatTableDataSource(PlayersData);
 
   ngAfterViewInit(): void {
+    this.paginator._intl.itemsPerPageLabel = "Players per page:";
     this.playersSource.paginator = this.paginator;
   }
 }
