@@ -31,7 +31,7 @@
 .footer-home {
   margin-left: 20px;
   cursor: pointer;
-  transition: ease-in-out 0.2s;
+  transition: ease-in-out .2s;
   text-decoration: none;
   color: white;
 
@@ -48,7 +48,12 @@
   svg {
     margin: 0 10px;
     cursor: pointer;
-    transform: scale(1.2);
+    transition: ease-in-out .2s;
+    transform: scale(1.3);
+
+    &:hover {
+      transform: scale(1.6);
+    }
   }
 }
 
