@@ -1,6 +1,6 @@
-import {StandingsElement} from "./standings-element.model";
+import {StandingsModel} from "./standings.model";
 //09.12.2023
-export const StandingsEuroLeague: StandingsElement[] = [
+export const StandingsEuroLeague: StandingsModel[] = [
   {position: 1, team: 'Real Madrid', wins: 12, loses: 1, winratio: 92.3, home: '6-0', away: '6-1', last10: '9-1'},
   {position: 2, team: 'FC Barcelona', wins: 10, loses: 3, winratio: 76.9, home: '7-0', away: '3-3', last10: '7-3'},
   {

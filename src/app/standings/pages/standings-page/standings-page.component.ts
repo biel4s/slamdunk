@@ -7,7 +7,7 @@ import {FooterComponent} from "../../../shared/components/footer/footer.componen
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {StandingsEuroLeague} from "../../models/standings";
-import {StandingsElement} from "../../models/standings-element.model";
+import {StandingsModel} from "../../models/standings.model";
 
 @Component({
   selector: 'app-standings-page',
@@ -18,5 +18,5 @@ import {StandingsElement} from "../../models/standings-element.model";
 })
 export class StandingsPageComponent {
   selectedLeague: string = 'euroleague';
-  protected readonly dataSource: StandingsElement[] = StandingsEuroLeague;
+  protected readonly dataSource: StandingsModel[] = StandingsEuroLeague;
 }

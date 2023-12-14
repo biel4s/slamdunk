@@ -1,0 +1,21 @@
+.players-img {
+  width: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+
+.team-name {
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.03rem;
+  color: black;
+}
+
+.mat-column-team, .mat-column-position, .mat-column-height, .mat-column-nationality {
+  text-align: center;
+}
+
+tr:hover {
+  background: whitesmoke;
+}

@@ -24,20 +24,14 @@
         </mat-form-field>
       </div>
     </div>
-    <div class="players-list">
-      <app-players-list></app-players-list>
-      <app-players-list></app-players-list>
-      <app-players-list></app-players-list>
-      <app-players-list></app-players-list>
-      <app-players-list></app-players-list>
-      <app-players-list></app-players-list>
-      <app-players-list></app-players-list>
+    <div class="players-tab">
+      <app-players-tab [dataSource]="playersSource"></app-players-tab>
+      <mat-paginator
+        [pageSize]="10"
+        aria-label="Select page"
+        showFirstLastButtons>
+      </mat-paginator>
     </div>
-
-    <mat-paginator [length]="100"
-                   [pageSize]="10"
-                   aria-label="Select page">
-    </mat-paginator>
   </div>
 </div>
 <app-footer></app-footer>
