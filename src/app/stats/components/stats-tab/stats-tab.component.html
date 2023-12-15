@@ -1,0 +1,27 @@
+<table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th *matHeaderCellDef mat-header-cell></th>
+    <td *matCellDef="let element" mat-cell> {{element.position}}.</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th *matHeaderCellDef mat-header-cell>Players</th>
+    <td *matCellDef="let element" class="name-cell" mat-cell>
+      <a class="stats-name" href="/teams/{{element.name}}" target="_blank">
+        <!--<img alt="Team's logo" class="team-logo" src="{{element.logo}}">-->
+        {{element.name}}</a>
+    </td>
+  </ng-container>
+
+  <!-- Score Column -->
+  <ng-container matColumnDef="score">
+    <th *matHeaderCellDef mat-header-cell></th>
+    <td *matCellDef="let element" mat-cell>{{element.score}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+</table>
