@@ -16,7 +16,32 @@
       </mat-form-field>
     </div>
     <div class="stats-cards">
-      <app-stats-tab [dataSource]="dataSource"></app-stats-tab>
+      <div class="stats-players">
+        <h1>Players</h1>
+        <div class="stats-grid">
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Free Throws Made'"></app-stats-tab>
+        </div>
+      </div>
+      <div class="stats-teams">
+        <h1>Teams</h1>
+        <div class="stats-grid">
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Free Throws Made'"></app-stats-tab>
+        </div>
+      </div>
     </div>
   </div>
 </div>

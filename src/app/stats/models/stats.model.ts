@@ -1,6 +1,6 @@
 export interface StatsModel {
   position: number;
   name: string;
-  league?: string;
+  team?: string;
   score: number;
 }

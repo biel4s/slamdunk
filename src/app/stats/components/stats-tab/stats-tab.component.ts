@@ -12,9 +12,11 @@ import {StatsModel} from "../../models/stats.model";
 })
 export class StatsTabComponent {
   @Input() dataSource: StatsModel[];
+  @Input() heading: string;
   displayedColumns: string[] = ['position', 'name', 'score'];
 
   constructor() {
     this.dataSource = [];
+    this.heading = '';
   }
 }

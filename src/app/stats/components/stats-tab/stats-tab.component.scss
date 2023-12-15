@@ -1,34 +1,45 @@
+@import "src/sass/_variables.scss";
+
 .mat-elevation-z8 {
   overflow: hidden !important;
-  width: 400px;
   border-radius: 10px;
 }
 
 .mat-mdc-header-cell {
   font: {
     weight: bold;
-    size: 1.3rem;
+    size: 1.2rem;
   }
+}
+
+.stats-header {
+  background-color: $primary-color;
 }
 
 .mat-column-position {
   width: 1%;
   padding-right: 0;
+
 }
 
 .mat-column-name {
-  padding-left: 4px;
-}
-
-
-.stats-name {
   font-weight: 500;
+  padding-left: 4px;
   text-decoration: none;
   letter-spacing: 0.03rem;
-  color: black;
 }
 
+.mat-column-score {
+  font-weight: 500;
+  width: 1%;
+  padding-left: 0;
+  text-align: end;
+}
 
-tr:hover {
-  background: whitesmoke;
+.stats-header:hover {
+  background-color: #FF9025;
+}
+
+.mat-mdc-row:hover {
+  background-color: whitesmoke;
 }

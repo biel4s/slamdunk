@@ -7,7 +7,8 @@ import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
 import {StatsTabComponent} from "../components/stats-tab/stats-tab.component";
 import {StatsModel} from "../models/stats.model";
-import {StatsData} from "../models/stats";
+import {StatsPlayers} from "../models/stats-players";
+import {StatsTeams} from "../models/stats-teams";
 
 
 @Component({
@@ -19,5 +20,6 @@ import {StatsData} from "../models/stats";
 })
 export class StatsPageComponent {
   selectedLeague: string = 'euroleague';
-  protected readonly dataSource: StatsModel[] = StatsData;
+  protected readonly playersSource: StatsModel[] = StatsPlayers;
+  protected readonly teamsSource: StatsModel[] = StatsTeams;
 }

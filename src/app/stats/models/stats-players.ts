@@ -1,6 +1,6 @@
 import {StatsModel} from "./stats.model";
 
-export const StatsData: StatsModel[] = [
+export const StatsPlayers: StatsModel[] = [
   {
     position: 1,
     name: 'Nikola Mirotić',

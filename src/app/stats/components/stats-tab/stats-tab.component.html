@@ -8,11 +8,9 @@
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
-    <th *matHeaderCellDef mat-header-cell>Players</th>
-    <td *matCellDef="let element" class="name-cell" mat-cell>
-      <a class="stats-name" href="/teams/{{element.name}}" target="_blank">
-        <!--<img alt="Team's logo" class="team-logo" src="{{element.logo}}">-->
-        {{element.name}}</a>
+    <th *matHeaderCellDef mat-header-cell>{{heading}}</th>
+    <td *matCellDef="let element" mat-cell>
+      {{element.name}}
     </td>
   </ng-container>
 
@@ -22,6 +20,6 @@
     <td *matCellDef="let element" mat-cell>{{element.score}} </td>
   </ng-container>
 
-  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matHeaderRowDef="displayedColumns" class="stats-header" mat-header-row></tr>
   <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
 </table>
