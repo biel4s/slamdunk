@@ -1,3 +1,11 @@
+.mat-mdc-card {
+  margin: 30px 0;
+}
+
+.mdc-card {
+  border-radius: 10px;
+}
+
 .card-content {
   display: flex;
   align-items: center;
@@ -47,6 +55,3 @@
   margin-right: 15px;
 }
 
-.mat-mdc-card {
-  margin: 30px 0;
-}

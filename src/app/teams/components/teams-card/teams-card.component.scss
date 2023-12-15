@@ -1,3 +1,12 @@
+.mdc-card {
+  border-radius: 10px;
+}
+
+.mat-mdc-card-title {
+  font-weight: 700;
+  text-align: center;
+}
+
 .teams-card {
   display: flex;
   align-items: center;
@@ -20,7 +29,3 @@
   object-fit: contain;
 }
 
-.mat-mdc-card-title {
-  font-weight: 700;
-  text-align: center;
-}
