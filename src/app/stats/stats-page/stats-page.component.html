@@ -1,5 +1,48 @@
 <app-header></app-header>
 <div class="stats-container">
-  <p>stats works!</p>
+  <div class="stats-content">
+    <div class="stats-header">
+      <h1 class="primary-heading">{{'Standings - ' + selectedLeague | uppercase}}</h1>
+      <mat-form-field>
+        <mat-label>Select a league</mat-label>
+        <mat-select [(value)]="selectedLeague">
+          <mat-option value="euroleague">EuroLeague</mat-option>
+          <mat-option value="eurocup">EuroCup</mat-option>
+          <mat-option value="bcl">BCL</mat-option>
+          <mat-option value="acb">ACB</mat-option>
+          <mat-option value="bsl">BSL</mat-option>
+          <mat-option value="lega basket a">Lega Basket A</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="stats-cards">
+      <div class="stats-players">
+        <h1>Players</h1>
+        <div class="stats-grid">
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSource" [heading]="'Free Throws Made'"></app-stats-tab>
+        </div>
+      </div>
+      <div class="stats-teams">
+        <h1>Teams</h1>
+        <div class="stats-grid">
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Free Throws Made'"></app-stats-tab>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <app-footer></app-footer>

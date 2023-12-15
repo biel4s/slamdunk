@@ -1,0 +1,25 @@
+<table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th *matHeaderCellDef mat-header-cell></th>
+    <td *matCellDef="let element" mat-cell> {{element.position}}.</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th *matHeaderCellDef mat-header-cell>{{heading}}</th>
+    <td *matCellDef="let element" mat-cell>
+      {{element.name}}
+    </td>
+  </ng-container>
+
+  <!-- Score Column -->
+  <ng-container matColumnDef="score">
+    <th *matHeaderCellDef mat-header-cell></th>
+    <td *matCellDef="let element" mat-cell>{{element.score}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" class="stats-header" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+</table>
