@@ -25,7 +25,7 @@ import {PlayersModel} from "../models/players.model";
 export class PlayersPageComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  selectedLeague: string = 'all leagues';
+  selectedLeague: string = 'euroleague';
   playersSource: MatTableDataSource<PlayersModel> = new MatTableDataSource(PlayersData);
 
   ngAfterViewInit(): void {

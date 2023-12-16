@@ -5,7 +5,8 @@
 }
 
 .players-img {
-  width: 30px;
+  width: 25px;
+  margin-right: 10px;
   vertical-align: middle;
   border-radius: 100%;
 }
@@ -22,6 +23,7 @@
 }
 
 .mat-column-league, .mat-column-team, .mat-column-position, .mat-column-height, .mat-column-nationality {
+  width: 15%;
   text-align: center;
 }
 
