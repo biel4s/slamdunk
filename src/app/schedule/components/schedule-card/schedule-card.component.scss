@@ -10,7 +10,6 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 80vw;
   height: 75px;
 }
 
@@ -28,15 +27,18 @@
 
 .card-team1, .card-team2 {
   display: flex;
+  width: 25vw;
   cursor: pointer;
 }
 
 .card-team1 {
   justify-content: end;
+  text-align: end;
 }
 
 .card-team2 {
   justify-content: start;
+  text-align: start;
 }
 
 .card-img {
@@ -48,10 +50,11 @@
   object-fit: contain;
 }
 
-.card-place {
+.card-stadium {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   margin-right: 15px;
+  text-align: end;
 }
 

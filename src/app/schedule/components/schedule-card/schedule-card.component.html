@@ -1,7 +1,7 @@
 <mat-card>
   <div class="card-content">
     <div class="card-date">
-      <p>19:00</p>
+      <p>{{matchData.date}}</p>
     </div>
     <div class="card-opponents">
       <div class="card-team1">
@@ -16,8 +16,8 @@
         <h3 class="team-name">{{matchData.team2}}</h3>
       </div>
     </div>
-    <div class="card-place">
-      <p>Stadion Warszawa</p>
+    <div class="card-stadium">
+      <p>{{matchData.stadium}}</p>
     </div>
   </div>
 </mat-card>

@@ -1,10 +1,10 @@
 <mat-card class="news-card">
   <mat-card-header>
-    <div class="news-header-image" mat-card-avatar></div>
+    <div [style.background-image]="'url('+card.league+')'" class="news-header-image" mat-card-avatar></div>
     <mat-card-title>{{card.title}}</mat-card-title>
     <mat-card-subtitle>{{card.date}}</mat-card-subtitle>
   </mat-card-header>
-  <img alt="News" mat-card-image
+  <img alt="News" class="news-image" mat-card-image
        src="{{card.img}}">
   <mat-card-content>
     <p class="news-description">

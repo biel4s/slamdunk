@@ -16,10 +16,12 @@ export class ScheduleCardComponent {
 
   constructor() {
     this.matchData = {
+      date: '',
       team1: '',
       logo1: '',
       team2: '',
-      logo2: ''
+      logo2: '',
+      stadium: ''
     }
   }
 }
