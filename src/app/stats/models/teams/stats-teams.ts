@@ -1,4 +1,4 @@
-import {StatsModel} from "./stats.model";
+import {StatsModel} from "../stats.model";
 
 export const StatsTeams: StatsModel[] = [
   {

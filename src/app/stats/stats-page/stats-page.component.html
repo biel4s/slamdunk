@@ -17,20 +17,20 @@
     </div>
     <div class="stats-cards">
       <div class="stats-players">
-        <h1>Players</h1>
+        <h1>Players - totals</h1>
         <div class="stats-grid">
-          <app-stats-tab [dataSource]="playersSource" [heading]="'Points'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersSource" [heading]="'Rebounds'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersSource" [heading]="'Assists'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersSource" [heading]="'Blocks'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersSource" [heading]="'Steals'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersSource" [heading]="'Two-pointers Made'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersSource" [heading]="'Three-pointers Made'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersSource" [heading]="'Free Throws Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersPoints" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersRebounds" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersAssists" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersBlocks" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersSteals" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="players2P" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="players3P" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersFT" [heading]="'Free Throws Made'"></app-stats-tab>
         </div>
       </div>
       <div class="stats-teams">
-        <h1>Teams</h1>
+        <h1>Teams - totals</h1>
         <div class="stats-grid">
           <app-stats-tab [dataSource]="teamsSource" [heading]="'Points'"></app-stats-tab>
           <app-stats-tab [dataSource]="teamsSource" [heading]="'Rebounds'"></app-stats-tab>
