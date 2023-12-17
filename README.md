@@ -1,6 +1,5 @@
 # Slamdunk
-
-
+![Sonny and Mariel high fiving.](https://i.imgur.com/SrprcBU.jpeg)
 
 ## TODO LIST:
 - Schedule add working properly load more button
