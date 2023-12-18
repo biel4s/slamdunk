@@ -25,7 +25,6 @@ import {AverageStealsPlayers} from "../models/players/Average/statsAverage-steal
 import {AverageBlocksPlayers} from "../models/players/Average/statsAverage-blocks";
 import {AverageAssistsPlayers} from "../models/players/Average/statsAverage-assists";
 
-
 @Component({
   selector: 'app-stats',
   standalone: true,
@@ -34,7 +33,7 @@ import {AverageAssistsPlayers} from "../models/players/Average/statsAverage-assi
   styleUrl: './stats-page.component.scss'
 })
 export class StatsPageComponent {
-  selectedStatistics: string = 'Total';
+  selectedStatistics: string = 'Totals';
   selectedLeague: string = 'euroleague';
 
   protected readonly playersTotalPoints: StatsModel[] = TotalPointsPlayers;
