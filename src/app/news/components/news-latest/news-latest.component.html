@@ -1,8 +1,8 @@
 <div class="latest-content">
-  <img alt="Latest new" class="latest-img" src="{{latest.img}}">
+  <a (click)="goToLatest(latest.url)" class="latest-link"><img alt="Latest new" class="latest-img" src="{{latest.img}}"></a>
   <div class="latest-description">
     <div class="latest-heading">
-      <h1 class="latest-header">{{latest.title}}</h1>
+      <a (click)="goToLatest(latest.url)" class="latest-link"><h1 class="latest-header">{{latest.title}}</h1></a>
       <p class="latest-date">{{latest.date}}</p>
     </div>
     <p class="latest-paragraph">{{latest.description}}</p>
