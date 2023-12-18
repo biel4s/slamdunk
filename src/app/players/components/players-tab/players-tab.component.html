@@ -9,14 +9,6 @@
   </ng-container>
 
   <!-- Team Column -->
-  <ng-container matColumnDef="league">
-    <th *matHeaderCellDef mat-header-cell>League</th>
-    <td *matCellDef="let element" mat-cell>
-      {{element.league}}
-    </td>
-  </ng-container>
-
-  <!-- Team Column -->
   <ng-container matColumnDef="team">
     <th *matHeaderCellDef mat-header-cell>Team</th>
     <td *matCellDef="let element" class="team-cell" mat-cell>
@@ -29,6 +21,14 @@
   <ng-container matColumnDef="position">
     <th *matHeaderCellDef mat-header-cell>Position</th>
     <td *matCellDef="let element" mat-cell>{{element.position}}</td>
+  </ng-container>
+
+  <!-- Age Column -->
+  <ng-container matColumnDef="age">
+    <th *matHeaderCellDef mat-header-cell>Age</th>
+    <td *matCellDef="let element" mat-cell>
+      {{element.age}}
+    </td>
   </ng-container>
 
   <!-- Height Column -->
