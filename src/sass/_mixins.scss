@@ -30,4 +30,9 @@
   width: 200px;
   height: 52px;
   border-radius: 25px;
+  transition: ease-in-out .2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }

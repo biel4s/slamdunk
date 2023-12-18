@@ -1,29 +1,29 @@
-import {StatsModel} from "../stats.model";
+import {StatsModel} from "../../stats.model";
 
-export const PointsPlayers: StatsModel[] = [
+export const AveragePointsPlayers: StatsModel[] = [
   {
     position: 1,
     name: 'Mike James',
-    score: 272
+    score: 19.4
   },
   {
     position: 2,
     name: 'Markus Howard',
-    score: 251
+    score: 17.9
   },
   {
     position: 3,
     name: 'Shane Larkin',
-    score: 247
+    score: 17.6
   },
   {
     position: 4,
-    name: 'Tornike Shengelia',
-    score: 241
+    name: 'Nikola Mirotić',
+    score: 17.6
   },
   {
     position: 5,
     name: 'Shavon Shields',
-    score: 226
+    score: 17.5
   },
 ]

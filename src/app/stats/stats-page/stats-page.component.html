@@ -5,6 +5,13 @@
       <h1 class="primary-heading">{{'Stats - ' + selectedLeague | uppercase}}</h1>
       <mat-form-field>
         <mat-label>Select a league</mat-label>
+        <mat-select [(value)]="selectedStatistics">
+          <mat-option value="Total">Total</mat-option>
+          <mat-option value="Average">Average</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select a league</mat-label>
         <mat-select [(value)]="selectedLeague">
           <mat-option value="euroleague">EuroLeague</mat-option>
           <mat-option value="eurocup">EuroCup</mat-option>
@@ -17,20 +24,20 @@
     </div>
     <div class="stats-cards">
       <div class="stats-players">
-        <h1>Players - totals</h1>
+        <h1>{{'Players -' + selectedStatistics}}</h1>
         <div class="stats-grid">
-          <app-stats-tab [dataSource]="playersPoints" [heading]="'Points'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersRebounds" [heading]="'Rebounds'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersAssists" [heading]="'Assists'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersBlocks" [heading]="'Blocks'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersSteals" [heading]="'Steals'"></app-stats-tab>
-          <app-stats-tab [dataSource]="players2P" [heading]="'Two-pointers Made'"></app-stats-tab>
-          <app-stats-tab [dataSource]="players3P" [heading]="'Three-pointers Made'"></app-stats-tab>
-          <app-stats-tab [dataSource]="playersFT" [heading]="'Free Throws Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalPoints" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalRebounds" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalAssists" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalBlocks" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalSteals" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotal2P" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotal3P" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalFT" [heading]="'Free Throws Made'"></app-stats-tab>
         </div>
       </div>
       <div class="stats-teams">
-        <h1>Teams - totals</h1>
+        <h1>{{'Teams -' + selectedStatistics}}</h1>
         <div class="stats-grid">
           <app-stats-tab [dataSource]="teamsSource" [heading]="'Points'"></app-stats-tab>
           <app-stats-tab [dataSource]="teamsSource" [heading]="'Rebounds'"></app-stats-tab>

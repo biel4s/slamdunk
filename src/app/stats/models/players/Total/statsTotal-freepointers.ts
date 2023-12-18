@@ -1,6 +1,6 @@
-import {StatsModel} from "../stats.model";
+import {StatsModel} from "../../stats.model";
 
-export const FreePointersPlayers: StatsModel[] = [
+export const TotalFreePointersPlayers: StatsModel[] = [
   {
     position: 1,
     name: 'Mathias Lessort',

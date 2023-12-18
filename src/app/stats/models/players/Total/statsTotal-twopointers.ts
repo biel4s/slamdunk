@@ -1,6 +1,6 @@
-import {StatsModel} from "../stats.model";
+import {StatsModel} from "../../stats.model";
 
-export const TwoPointersPlayers: StatsModel[] = [
+export const TotalTwoPointersPlayers: StatsModel[] = [
   {
     position: 1,
     name: 'Tornike Shengelia',

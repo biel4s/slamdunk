@@ -12,7 +12,12 @@
 }
 
 app-news-card {
+  transition: ease-in-out .2s;
   color: black;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .cards-row {
