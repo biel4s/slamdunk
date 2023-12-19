@@ -1,0 +1,21 @@
+@import "../../../../../sass/mixins";
+@import "../../../../../sass/variables";
+
+
+.news-url-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: $background-color;
+}
+
+app-news-url-card {
+  padding-top: 150px;
+}
+
+.read-more {
+  @include more-button;
+  margin: 50px 0;
+}

@@ -1,0 +1,77 @@
+<app-header></app-header>
+<div class="stats-container">
+  <div class="stats-content">
+    <div class="stats-header">
+      <h1 class="primary-heading">{{'Stats - ' + selectedLeague | uppercase}}</h1>
+      <div class="stats-filters">
+        <mat-form-field>
+          <mat-label>Select mode</mat-label>
+          <mat-select [(value)]="selectedStatistics">
+            <mat-option value="Totals">Totals</mat-option>
+            <mat-option value="Average">Average</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Select a league</mat-label>
+          <mat-select [(value)]="selectedLeague">
+            <mat-option value="euroleague">EuroLeague</mat-option>
+            <mat-option value="eurocup">EuroCup</mat-option>
+            <mat-option value="bcl">BCL</mat-option>
+            <mat-option value="acb">ACB</mat-option>
+            <mat-option value="bsl">BSL</mat-option>
+            <mat-option value="lega basket a">Lega Basket A</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="stats-cards">
+      <div class="stats-players">
+        <h1>{{'Players -' + selectedStatistics}}</h1>
+        <div *ngIf="selectedStatistics === 'Totals'" class="stats-grid">
+          <app-stats-tab [dataSource]="playersTotalPoints" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalRebounds" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalAssists" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalBlocks" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalSteals" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotal2P" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotal3P" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersTotalFT" [heading]="'Free Throws Made'"></app-stats-tab>
+        </div>
+        <div *ngIf="selectedStatistics === 'Average'" class="stats-grid">
+          <app-stats-tab [dataSource]="playersAveragePoints" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersAverageRebounds" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersAverageAssists" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersAverageBlocks" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersAverageSteals" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersAverage2P" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersAverage3P" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="playersAverageFT" [heading]="'Free Throws Made'"></app-stats-tab>
+        </div>
+      </div>
+      <div class="stats-teams">
+        <h1>{{'Teams -' + selectedStatistics}}</h1>
+        <div *ngIf="selectedStatistics === 'Totals'" class="stats-grid">
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Free Throws Made'"></app-stats-tab>
+        </div>
+        <div *ngIf="selectedStatistics === 'Average'" class="stats-grid">
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Points'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Rebounds'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Assists'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Blocks'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Steals'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Two-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Three-pointers Made'"></app-stats-tab>
+          <app-stats-tab [dataSource]="teamsSource" [heading]="'Free Throws Made'"></app-stats-tab>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

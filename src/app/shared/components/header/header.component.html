@@ -1,30 +1,18 @@
-<mat-toolbar [ngClass]="{'active': isScrolled}">
+<!--<mat-toolbar [ngClass]="{'active': isHomeRouter}">-->
+<mat-toolbar>
   <header class="header">
-    <a class="header-brand" href="home">
-      <img alt="SlamDunk Logo" class="header-logo" src="../../../../assets/img/logo.png"/>
-      <div class="header-text">SlamDunk</div>
-    </a>
+    <div class="header-brand">
+      <a class="header-logo" href="home">
+        <img alt="SlamDunk Logo" class="header-logo-img" src="../../../../assets/img/logo.png"/>
+        <div class="header-text">SlamDunk</div>
+      </a>
+    </div>
     <ul class="nav-menu">
       <li *ngFor="let link of navLinks; let i = index" class="nav-item">
-        <ng-container *ngIf="i !== 2; else leaguesMenu">
+        <ng-container>
           <a class="nav-item-link" href="{{ link | lowercase }}"><span>{{ link }}</span></a>
         </ng-container>
-        <ng-template #leaguesMenu>
-          <a [matMenuTriggerFor]="leagues" class="nav-item-link leagues-link"
-          >{{ link }}
-            <mat-icon>arrow_drop_down</mat-icon>
-          </a>
-        </ng-template>
       </li>
-      <mat-menu #leagues="matMenu">
-        <ng-template matMenuContent>
-          <div *ngFor="let link of leagueLinks">
-            <button mat-menu-item>
-              <a class="leagues-links" href="{{ 'leagues/' + link | lowercase }}">{{ link }}</a>
-            </button>
-          </div>
-        </ng-template>
-      </mat-menu>
     </ul>
     <div class="header-auth">
       <div *ngIf="!(authService.afAuth.authState | async)">

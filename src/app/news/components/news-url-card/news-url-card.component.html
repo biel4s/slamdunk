@@ -1,0 +1,29 @@
+<mat-card class="news-url-card">
+  <mat-card-header>
+    <mat-card-title class="news-url-title">{{latest.title}}</mat-card-title>
+    <mat-card-subtitle class="news-url-date">{{latest.date}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <p class="latest-paragraph">
+      {{latest.description}}
+    </p>
+    <div class="news-img">
+      <img alt="Photo of Filip Petrusev" class="news-img-url" mat-card-image src="{{latest.img}}">
+    </div>
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <p class="latest-paragraph">{{latest.detailedDescription}}</p>
+    <div class="news-img">
+      <img alt="Photo of Filip Petrusev" class="news-img-url" mat-card-image src="{{latest.img2}}">
+      <p class="news-img-subtitle">Lorem ipsum dolor sit amet</p>
+    </div>
+    <ul>
+      <li><strong>Lorem</strong> ipsum dolor sit amet</li>
+      <li><strong>Lorem</strong> ipsum dolor sit amet</li>
+      <li><strong>Lorem</strong> ipsum dolor sit amet</li>
+    </ul>
+    <p class="latest-paragraph">
+      {{latest.description}}
+    </p>
+  </mat-card-content>
+</mat-card>

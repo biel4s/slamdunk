@@ -1,0 +1,32 @@
+.mat-elevation-z8 {
+  overflow: hidden !important;
+  width: 80vw;
+  border-radius: 10px 10px 0 0;
+}
+
+.players-img {
+  width: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+
+.team-name {
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.03rem;
+  color: black;
+}
+
+.mat-column-name {
+  font-weight: 500;
+}
+
+.mat-column-team, .mat-column-position, .mat-column-age, .mat-column-height, .mat-column-nationality {
+  width: 13%;
+  text-align: center;
+}
+
+tr:hover {
+  background: whitesmoke;
+}

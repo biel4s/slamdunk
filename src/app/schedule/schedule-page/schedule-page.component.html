@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="schedule-container">
+  <div class="schedule-content">
+    <div class="schedule-header">
+      <h1 class="primary-heading">{{'Schedule - ' + selectedLeague | uppercase}}</h1>
+      <mat-form-field>
+        <mat-label>Select a league</mat-label>
+        <mat-select [(value)]="selectedLeague">
+          <mat-option value="euroleague">EuroLeague</mat-option>
+          <mat-option value="eurocup">EuroCup</mat-option>
+          <mat-option value="bcl">BCL</mat-option>
+          <mat-option value="acb">ACB</mat-option>
+          <mat-option value="bsl">BSL</mat-option>
+          <mat-option value="lega basket a">Lega Basket A</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="schedule-tab">
+      <div class="schedule-cards">
+        <h2>5 December 2023</h2>
+        <app-schedule-card *ngFor="let matches of matchData5Dec" [matchData]="matches"></app-schedule-card>
+        <h2>6 December 2023</h2>
+        <app-schedule-card *ngFor="let matches of matchData6Dec" [matchData]="matches"></app-schedule-card>
+      </div>
+    </div>
+    <div class="schedule-more">
+      <button class="load-more" color="primary" mat-raised-button>Load more</button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

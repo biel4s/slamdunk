@@ -1,0 +1,38 @@
+@import "../../../sass/variables";
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 150px 0;
+  background-color: $background-color;
+}
+
+.stats-content {
+  width: 80vw;
+}
+
+.stats-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stats-filters {
+  display: flex;
+}
+
+.primary-heading {
+  font-size: 2.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 40px;
+}
+
+.stats-teams {
+  margin-top: 100px;
+}

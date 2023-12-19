@@ -1,0 +1,36 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.schedule-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 150px 0 50px;
+  background-color: $background-color;
+}
+
+.schedule-content {
+  width: 80vw;
+}
+
+.schedule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primary-heading {
+  font-size: 2.5rem;
+}
+
+.schedule-more {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.load-more {
+  @include more-button;
+}

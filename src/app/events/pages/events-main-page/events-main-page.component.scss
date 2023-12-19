@@ -1,3 +1,5 @@
+@import "../../../../sass/mixins";
+
 .events-container {
   display: flex;
   align-items: center;
@@ -27,13 +29,7 @@
 }
 
 .read-more {
-  font: {
-    family: "Be Vietnam Pro", sans-serif;
-    size: 1rem;
-  }
-  width: 10vw;
-  height: 52px;
-  border-radius: 25px;
+  @include more-button;
   background-color: #E4D5B7 !important;
 }
 
@@ -77,5 +73,5 @@
 }
 
 .custom-shape-divider-bottom-1701358682 .shape-fill {
-  fill: #151515;
+  fill: #202020;
 }

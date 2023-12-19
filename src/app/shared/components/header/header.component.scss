@@ -3,12 +3,12 @@
   z-index: 100;
   padding: 0 2rem;
   transition: ease-in-out .2s;
-  background-color: transparent;
-  backdrop-filter: blur(8px);
+  background-color: #202020;
 }
 
 .active {
-  background-color: rgb(28, 28, 28);
+  background-color: transparent;
+  backdrop-filter: blur(8px);
 }
 
 .header {
@@ -17,20 +17,23 @@
   color: white;
 }
 
-
 .header-brand {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   width: 100%;
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .header-logo {
-  width: 35px;
-  height: 35px;
-  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  &-img {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+  }
 }
 
 .header-text {

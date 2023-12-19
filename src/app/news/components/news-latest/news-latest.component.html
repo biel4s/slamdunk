@@ -1,0 +1,17 @@
+<div class="latest-content">
+  <a (click)="goToLatest(latest.url)" class="latest-link"><img alt="Latest new" class="latest-img" src="{{latest.img}}"></a>
+  <div class="latest-description">
+    <div class="latest-heading">
+      <a (click)="goToLatest(latest.url)" class="latest-link"><h1 class="latest-header">{{latest.title}}</h1></a>
+      <p class="latest-date">{{latest.date}}</p>
+    </div>
+    <p class="latest-paragraph">{{latest.description}}</p>
+    <div class="read-more">
+      <button (click)="goToLatest(latest.url)" class="load-more" color="primary" mat-raised-button>
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <span>Read more</span>
+      </button>
+    </div>
+  </div>
+
+</div>

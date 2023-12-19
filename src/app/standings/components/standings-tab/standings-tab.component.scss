@@ -1,0 +1,31 @@
+.mat-elevation-z8 {
+  overflow: hidden !important;
+  width: 80vw;
+  border-radius: 10px;
+}
+
+.mat-column-position {
+  width: 5%;
+  text-align: center;
+}
+
+.team-logo {
+  width: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.team-name {
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.03rem;
+  color: black;
+}
+
+.mat-column-wins, .mat-column-loses, .mat-column-winratio, .mat-column-home, .mat-column-away, .mat-column-last10 {
+  text-align: center;
+}
+
+tr:hover {
+  background: whitesmoke;
+}
