@@ -2,12 +2,7 @@
 @import "../../../sass/mixins";
 
 .schedule-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 150px 0 50px;
-  background-color: $background-color;
+  @include template-container;
 }
 
 .schedule-content {

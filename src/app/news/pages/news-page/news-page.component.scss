@@ -6,11 +6,12 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  min-height: 100%;
+  padding: 140px 0;
   color: black;
   background-color: $background-color;
 }
 
 app-news-feed {
-  padding: 50px 0;
+  padding-top: 50px;
 }
-

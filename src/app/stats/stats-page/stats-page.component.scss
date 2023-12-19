@@ -1,12 +1,8 @@
 @import "../../../sass/variables";
+@import "../../../sass/mixins";
 
 .stats-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 150px 0;
-  background-color: $background-color;
+  @include template-container;
 }
 
 .stats-content {

@@ -1,11 +1,7 @@
+@import "../../../../sass/mixins";
+
 .standings-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding: 150px 0;
-  background-color: #F7F7F7;
+  @include template-container;
 }
 
 .standings-header {

@@ -2,13 +2,7 @@
 @import "../../../../sass/mixins";
 
 .events-container {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 150px 0;
-  background-color: $background-color;
+  @include template-container;
 }
 
 .events-content {
