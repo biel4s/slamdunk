@@ -53,7 +53,7 @@ export const StandingsEuroLeague: StandingsModel[] = [
     loses: 5,
     winratio: 61.5,
     home: '4-2',
-    away: '4-23',
+    away: '4-3',
     last10: '7-3'
   },
   {

@@ -2,9 +2,10 @@
 
 .players-container {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   width: 100%;
+  min-height: 100%;
   padding: 150px 0;
   background-color: $background-color;
 }

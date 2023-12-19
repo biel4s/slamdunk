@@ -32,7 +32,7 @@ export const PlayersData: PlayersModel[] = [
     name: 'Abrines Alex',
     picture: '/assets/img/players/abrinesalex.png',
     age: 30,
-    team: 'Barca',
+    team: 'FC Barcelona',
     position: 'Small forward',
     height: 198,
     nationality: 'Spain'
