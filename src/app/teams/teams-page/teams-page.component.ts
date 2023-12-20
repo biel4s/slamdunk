@@ -6,16 +6,29 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
 import {TeamsCardComponent} from "../components/teams-card/teams-card.component";
-import {TeamsEuroleagueComponent} from "../components/teams-euroleague/teams-euroleague.component";
+import {TeamModel} from "../models/team.model";
+import {TeamsEuroLeague} from "../models/euroleague";
+import {TeamsEuroCup} from "../models/eurocup";
+import {TeamsBCL} from "../models/bcl";
+import {TeamsBSL} from "../models/bsl";
+import {TeamsACB} from "../models/acb";
+import {TeamsLegaBasketA} from "../models/lega-basket-a";
 
 @Component({
   selector: 'app-teams-page',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, TeamsCardComponent, TeamsEuroleagueComponent],
+  imports: [CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, TeamsCardComponent],
   templateUrl: './teams-page.component.html',
   styleUrl: './teams-page.component.scss'
 })
 export class TeamsPageComponent {
-  selectedLeague: string = 'euroleague';
-  /*protected readonly dataSource: TeamModel[] = StandingsEuroLeague;*/
+  selectedLeague: string = 'bcl';
+
+  protected readonly teamsEuroleague: TeamModel[] = TeamsEuroLeague;
+  protected readonly teamsEuroCup: TeamModel[] = TeamsEuroCup;
+  protected readonly teamsBCL: TeamModel[] = TeamsBCL;
+  protected readonly teamsACB: TeamModel[] = TeamsACB;
+  protected readonly teamsBSL: TeamModel[] = TeamsBSL;
+  protected readonly teamsLegaBasketA: TeamModel[] = TeamsLegaBasketA;
+
 }

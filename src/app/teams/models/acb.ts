@@ -1,6 +1,6 @@
 import {TeamModel} from "./team.model";
 
-export const TeamsEuroLeague: TeamModel[] = [
+export const TeamsACB: TeamModel[] = [
   {name: 'ALBA Berlin', logo: 'assets/img/logos/euroleague/albaberlin.png'},
   {name: 'Anadolu Efes Istanbul', logo: 'assets/img/logos/euroleague/anadoluefesistanbul.png'},
   {name: 'AS Monaco', logo: 'assets/img/logos/euroleague/asmonaco.png'},

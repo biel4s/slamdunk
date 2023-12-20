@@ -14,3 +14,10 @@
 .primary-heading {
   font-size: 2.5rem;
 }
+
+.teams-tab {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: repeat(6, 2fr);
+  gap: 60px;
+}
