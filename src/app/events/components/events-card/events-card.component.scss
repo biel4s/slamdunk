@@ -5,3 +5,44 @@
 .mdc-card {
   border-radius: 10px;
 }
+
+.events-card {
+  transition: ease-in-out .2s;
+
+  &:hover {
+    background-color: #ECECEC;
+  }
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  margin: 0 15px;
+}
+
+.card-name {
+  display: flex;
+  max-width: 400px;
+}
+
+.card-description {
+  display: flex;
+  align-items: center;
+}
+
+.card-location {
+  display: flex;
+  padding-right: 15px;
+}
+
+.card-date {
+  display: flex;
+}
+
+.card-divider {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}

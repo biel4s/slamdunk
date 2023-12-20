@@ -5,11 +5,14 @@ import {FooterComponent} from "../../../shared/components/footer/footer.componen
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
-import {MatchData6Dec} from "../../../schedule/models/match-6dec";
-import {MatchData5Dec} from "../../../schedule/models/match-5dec";
 import {MatButtonModule} from "@angular/material/button";
 import {ScheduleCardComponent} from "../../../schedule/components/schedule-card/schedule-card.component";
 import {EventsCardComponent} from "../../components/events-card/events-card.component";
+import {EventsModel} from "../../models/events.model";
+import {EventsData2024} from '../../models/events-2024'
+import {EventsData2025} from '../../models/events-2025'
+import {EventsData2026} from '../../models/events-2026'
+import {EventsData2027} from '../../models/events-2027'
 
 @Component({
   selector: 'app-events-page',
@@ -19,7 +22,32 @@ import {EventsCardComponent} from "../../components/events-card/events-card.comp
   styleUrl: './events-page.component.scss'
 })
 export class EventsPageComponent {
-  selectedYear: number = 2023;
-  protected readonly MatchData6Dec = MatchData6Dec;
-  protected readonly MatchData5Dec = MatchData5Dec;
+  selectedYear: string = '2024';
+  months: string[] = ['February', 'June', 'July', 'August', 'November'];
+  protected readonly EventsData2024: { [month: string]: EventsModel[] } = EventsData2024;
+  protected readonly EventsData2025: { [month: string]: EventsModel[] } = EventsData2025;
+  protected readonly EventsData2026: { [month: string]: EventsModel[] } = EventsData2026;
+  protected readonly EventsData2027: { [month: string]: EventsModel[] } = EventsData2027;
+
+  ngOnInit(): void {
+    const yearData: { [month: string]: EventsModel[] } = this.getEventsYear(this.selectedYear);
+    this.months = Object.keys(yearData).sort((a: string, b: string) => {
+      return this.months.indexOf(a) - this.months.indexOf(b);
+    });
+  }
+
+  getEventsYear(year: string): { [month: string]: EventsModel[] } {
+    switch (year) {
+      case '2024':
+        return this.EventsData2024
+      case '2025':
+        return this.EventsData2025
+      case '2026':
+        return this.EventsData2026
+      case '2027':
+        return this.EventsData2027
+      default:
+        return {};
+    }
+  }
 }

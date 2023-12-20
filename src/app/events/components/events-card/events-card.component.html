@@ -1,3 +1,11 @@
-<mat-card>
-  <mat-card-content>Simple card</mat-card-content>
+<mat-card class="events-card">
+  <div class="card-content">
+    <h3 class="card-name">{{eventSource.name}}</h3>
+    <p class="card-location">{{eventSource.location}}</p>
+    <div class="card-date">
+      <p class="card-starts">{{eventSource.starts}}</p>
+      <p class="card-divider">-</p>
+      <p class="card-ends">{{eventSource.ends}}</p>
+    </div>
+  </div>
 </mat-card>

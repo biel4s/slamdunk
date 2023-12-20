@@ -6,7 +6,6 @@
       <mat-form-field>
         <mat-label>Select year</mat-label>
         <mat-select [(value)]="selectedYear">
-          <mat-option value="2023">2023</mat-option>
           <mat-option value="2024">2024</mat-option>
           <mat-option value="2025">2025</mat-option>
           <mat-option value="2026">2026</mat-option>
@@ -15,13 +14,15 @@
       </mat-form-field>
     </div>
     <div class="events-tab">
-      <div class="events-cards">
-        <h2>12 December 2023</h2>
-        <app-events-card></app-events-card>
-      </div>
-    </div>
-    <div class="events-more">
-      <button class="load-more" color="primary" mat-raised-button>Load more</button>
+      <ng-container *ngFor="let month of months">
+        <ng-container *ngIf="getEventsYear(selectedYear)[month]">
+          <div class="events-cards">
+            <h2>{{month}}</h2>
+            <app-events-card *ngFor="let event of getEventsYear(selectedYear)[month]"
+                             [eventSource]="event"></app-events-card>
+          </div>
+        </ng-container>
+      </ng-container>
     </div>
   </div>
 </div>
