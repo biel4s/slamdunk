@@ -1,4 +1,4 @@
-export interface Match {
+export interface MatchModel {
   date: string;
   team1: string;
   logo1: string;

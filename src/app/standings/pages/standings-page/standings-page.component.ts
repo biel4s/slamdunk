@@ -18,5 +18,5 @@ import {StandingsModel} from "../../models/standings.model";
 })
 export class StandingsPageComponent {
   selectedLeague: string = 'euroleague';
-  protected readonly dataSource: StandingsModel[] = StandingsEuroLeague;
+  protected readonly standingsData: StandingsModel[] = StandingsEuroLeague;
 }

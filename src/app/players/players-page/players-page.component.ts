@@ -26,14 +26,14 @@ export class PlayersPageComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   selectedLeague: string = 'euroleague';
-  playersSource: MatTableDataSource<PlayersModel> = new MatTableDataSource(PlayersData);
+  playersData: MatTableDataSource<PlayersModel> = new MatTableDataSource(PlayersData);
 
   ngAfterViewInit(): void {
     this.paginator._intl.itemsPerPageLabel = "Players per page:";
-    this.playersSource.paginator = this.paginator;
+    this.playersData.paginator = this.paginator;
   }
 
   filterSearch(e: KeyboardEvent): void {
-    this.playersSource.filter = (e.target as HTMLInputElement).value;
+    this.playersData.filter = (e.target as HTMLInputElement).value;
   }
 }

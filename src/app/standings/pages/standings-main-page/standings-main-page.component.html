@@ -2,15 +2,15 @@
   <h1 class="primary-heading">{{'Top 10 Standings' | uppercase}}</h1>
   <mat-tab-group animationDuration="500ms">
     <mat-tab label="EuroLeague">
-      <app-standings-tab [dataSource]="dataSource.slice(0,10)"></app-standings-tab>
+      <app-standings-tab [standingsSource]="standingsData.slice(0,10)"></app-standings-tab>
     </mat-tab>
     <mat-tab label="EuroCap">
       <mat-tab-group animationDuration="500ms">
         <mat-tab label="Group A">
-          <app-standings-tab [dataSource]="dataSource.slice(0,10)"></app-standings-tab>
+          <app-standings-tab [standingsSource]="standingsData.slice(0,10)"></app-standings-tab>
         </mat-tab>
         <mat-tab label="Group B">
-          <app-standings-tab [dataSource]="dataSource.slice(0,10)"></app-standings-tab>
+          <app-standings-tab [standingsSource]="standingsData.slice(0,10)"></app-standings-tab>
         </mat-tab>
       </mat-tab-group>
     </mat-tab>

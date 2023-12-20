@@ -11,12 +11,7 @@ import {StatsModel} from "../../models/stats.model";
   styleUrl: './stats-tab.component.scss'
 })
 export class StatsTabComponent {
-  @Input() dataSource: StatsModel[];
-  @Input() heading: string;
+  @Input() statsSource!: StatsModel[];
+  @Input() heading!: string;
   displayedColumns: string[] = ['position', 'name', 'score'];
-
-  constructor() {
-    this.dataSource = [];
-    this.heading = '';
-  }
 }

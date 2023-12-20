@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TeamsCardComponent} from "../teams-card/teams-card.component";
-import {Team} from "../../models/team.model";
+import {TeamModel} from "../../models/team.model";
 import {TeamsEuroLeague} from "../../models/euroleague";
 
 @Component({
@@ -12,5 +12,5 @@ import {TeamsEuroLeague} from "../../models/euroleague";
   styleUrl: './teams-euroleague.component.scss'
 })
 export class TeamsEuroleagueComponent {
-  protected readonly teamsArray: Team[] = TeamsEuroLeague;
+  protected readonly teamsArray: TeamModel[] = TeamsEuroLeague;
 }

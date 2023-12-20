@@ -1,6 +1,6 @@
-import {Card} from "./news-card.model";
+import {NewsCardModel} from "./news-card.model";
 
-export const Cards: Card[] = [
+export const Cards: NewsCardModel[] = [
   {
     title: "Filip Petrusev returns to Europe",
     date: "28.11.2023",

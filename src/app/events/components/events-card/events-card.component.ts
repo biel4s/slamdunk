@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatCardModule} from "@angular/material/card";
+import {EventsModel} from "../../models/events.model";
 
 @Component({
   selector: 'app-events-card',
@@ -10,5 +11,5 @@ import {MatCardModule} from "@angular/material/card";
   styleUrl: './events-card.component.scss'
 })
 export class EventsCardComponent {
-
+  @Input() eventSource!: EventsModel;
 }

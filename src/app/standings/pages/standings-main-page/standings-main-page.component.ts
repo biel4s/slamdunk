@@ -15,5 +15,5 @@ import {StandingsEuroLeague} from "../../models/standings";
   styleUrl: './standings-main-page.component.scss'
 })
 export class StandingsMainPageComponent {
-  protected readonly dataSource: StandingsModel[] = StandingsEuroLeague;
+  protected readonly standingsData: StandingsModel[] = StandingsEuroLeague;
 }

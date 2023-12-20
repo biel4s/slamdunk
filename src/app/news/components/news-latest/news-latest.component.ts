@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {NewsService} from "../../services/news.service";
-import {Card} from "../../models/news-card.model";
+import {NewsCardModel} from "../../models/news-card.model";
 import {Cards} from "../../models/news";
 
 
@@ -15,7 +15,7 @@ import {Cards} from "../../models/news";
   styleUrl: './news-latest.component.scss'
 })
 export class NewsLatestComponent {
-  latest: Card = Cards[0];
+  latest: NewsCardModel = Cards[0];
 
   constructor(private newsService: NewsService) {
   }

@@ -6,7 +6,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {Cards} from "../../models/news";
-import {Card} from "../../models/news-card.model";
+import {NewsCardModel} from "../../models/news-card.model";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {NewsService} from "../../services/news.service";
 
@@ -22,11 +22,10 @@ export class NewsFeedComponent {
   selectedType: string | null = '';
   errorMessage: string = '';
   currentIndex: number = 6;
-  cards: Card[] = Cards;
+  cards: NewsCardModel[] = Cards;
 
   constructor(private newsService: NewsService, private _snackBar: MatSnackBar) {
   }
-
 
   changeType(value: string): void {
     if (value === "all") {

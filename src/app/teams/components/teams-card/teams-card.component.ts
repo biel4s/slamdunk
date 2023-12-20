@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatCardModule} from "@angular/material/card";
-import {Team} from "../../models/team.model";
+import {TeamModel} from "../../models/team.model";
 
 
 @Component({
@@ -12,12 +12,5 @@ import {Team} from "../../models/team.model";
   styleUrl: './teams-card.component.scss'
 })
 export class TeamsCardComponent {
-  @Input() teamData: Team;
-
-  constructor() {
-    this.teamData = {
-      name: '',
-      logo: ''
-    }
-  }
+  @Input() teamsSource!: TeamModel;
 }

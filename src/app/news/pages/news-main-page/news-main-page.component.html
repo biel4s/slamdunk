@@ -13,7 +13,7 @@
       <div class="cards-content">
         <ng-container *ngFor="let card of cards">
           <a [routerLink]="'/news/' + card.url" class="news-card-link">
-            <app-news-card [card]="card"/>
+            <app-news-card [cardSource]="card"/>
           </a>
         </ng-container>
       </div>

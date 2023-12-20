@@ -1,4 +1,4 @@
-export interface Card {
+export interface NewsCardModel {
   title: string;
   date: string;
   league: string;

@@ -18,7 +18,7 @@
   <div class="cards-row">
     <ng-container *ngFor="let card of cards.slice(0, currentIndex)">
       <app-news-card (click)="goToUrl(card.url)" *ngIf="selectedType === '' || selectedType === card.type"
-                     [card]="card"/>
+                     [cardSource]="card"/>
     </ng-container>
   </div>
 </div>

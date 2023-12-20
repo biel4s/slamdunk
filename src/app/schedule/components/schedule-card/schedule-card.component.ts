@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import {Match} from "../../models/match.model";
+import {MatchModel} from "../../models/match.model";
 
 @Component({
   selector: 'app-schedule-card',
@@ -12,16 +12,6 @@ import {Match} from "../../models/match.model";
   styleUrl: './schedule-card.component.scss'
 })
 export class ScheduleCardComponent {
-  @Input() matchData: Match;
+  @Input() scheduleSource!: MatchModel;
 
-  constructor() {
-    this.matchData = {
-      date: '',
-      team1: '',
-      logo1: '',
-      team2: '',
-      logo2: '',
-      stadium: ''
-    }
-  }
 }

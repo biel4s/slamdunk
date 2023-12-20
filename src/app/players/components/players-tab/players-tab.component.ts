@@ -13,6 +13,6 @@ import {PlayersModel} from "../../models/players.model";
   styleUrl: './players-tab.component.scss'
 })
 export class PlayersTabComponent {
-  @Input() dataSource!: MatTableDataSource<PlayersModel>;
+  @Input() playersSource!: MatTableDataSource<PlayersModel>;
   displayedColumns: string[] = ['name', 'team', 'position', 'age', 'height', 'nationality'];
 }

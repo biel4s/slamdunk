@@ -5,7 +5,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {Cards} from "../../models/news";
-import {Card} from "../../models/news-card.model";
+import {NewsCardModel} from "../../models/news-card.model";
 
 @Component({
   selector: 'app-news-page',
@@ -15,7 +15,7 @@ import {Card} from "../../models/news-card.model";
   styleUrl: './news-main-page.component.scss'
 })
 export class NewsMainPageComponent {
-  cards: Card[] = Cards;
+  cards: NewsCardModel[] = Cards;
 
   scrollToLeft(): void {
     const container = document.querySelector('.cards-content');

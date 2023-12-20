@@ -18,9 +18,9 @@
     <div class="schedule-tab">
       <div class="schedule-cards">
         <h2>5 December 2023</h2>
-        <app-schedule-card *ngFor="let matches of matchData5Dec" [matchData]="matches"></app-schedule-card>
+        <app-schedule-card *ngFor="let matches of matchData5Dec" [scheduleSource]="matches"></app-schedule-card>
         <h2>6 December 2023</h2>
-        <app-schedule-card *ngFor="let matches of matchData6Dec" [matchData]="matches"></app-schedule-card>
+        <app-schedule-card *ngFor="let matches of matchData6Dec" [scheduleSource]="matches"></app-schedule-card>
       </div>
     </div>
     <div class="schedule-more">

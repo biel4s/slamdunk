@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from '@angular/material/divider';
-import {Card} from "../../models/news-card.model";
+import {NewsCardModel} from "../../models/news-card.model";
 
 @Component({
   selector: 'app-news-card',
@@ -13,6 +13,6 @@ import {Card} from "../../models/news-card.model";
   styleUrl: './news-card.component.scss'
 })
 export class NewsCardComponent {
-  @Input() card!: Card;
+  @Input() cardSource!: NewsCardModel;
 
 }

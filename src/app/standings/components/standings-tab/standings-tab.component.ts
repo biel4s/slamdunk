@@ -12,10 +12,7 @@ import {StandingsModel} from "../../models/standings.model";
   styleUrl: './standings-tab.component.scss'
 })
 export class StandingsTabComponent {
-  @Input() dataSource: StandingsModel[];
+  @Input() standingsSource!: StandingsModel[];
   displayedColumns: string[] = ['position', 'team', 'wins', 'loses', 'winratio', 'home', 'away', 'last10'];
 
-  constructor() {
-    this.dataSource = [];
-  }
 }

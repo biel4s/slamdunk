@@ -1,23 +1,23 @@
 <mat-card>
   <div class="card-content">
     <div class="card-date">
-      <p>{{matchData.date}}</p>
+      <p>{{scheduleSource.date}}</p>
     </div>
     <div class="card-opponents">
       <div class="card-team1">
-        <h3 class="team-name">{{matchData.team1}}</h3>
-        <img alt="Team's logo" class="card-img" src="{{matchData.logo1}}">
+        <h3 class="team-name">{{scheduleSource.team1}}</h3>
+        <img alt="Team's logo" class="card-img" src="{{scheduleSource.logo1}}">
       </div>
       <div class="card-score">
         <p>VS</p>
       </div>
       <div class="card-team2">
-        <img alt="Team's logo" class="card-img" src="{{matchData.logo2}}">
-        <h3 class="team-name">{{matchData.team2}}</h3>
+        <img alt="Team's logo" class="card-img" src="{{scheduleSource.logo2}}">
+        <h3 class="team-name">{{scheduleSource.team2}}</h3>
       </div>
     </div>
     <div class="card-stadium">
-      <p>{{matchData.stadium}}</p>
+      <p>{{scheduleSource.stadium}}</p>
     </div>
   </div>
 </mat-card>

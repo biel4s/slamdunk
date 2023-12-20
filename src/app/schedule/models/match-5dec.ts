@@ -1,6 +1,6 @@
-import {Match} from "./match.model";
+import {MatchModel} from "./match.model";
 
-export const MatchData5Dec: Match[] = [
+export const MatchData5Dec: MatchModel[] = [
   {
     date: '18:30',
     team1: 'Anadolu Efes Istanbul',
