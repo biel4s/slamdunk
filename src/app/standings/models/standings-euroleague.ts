@@ -36,7 +36,7 @@ export const StandingsEuroLeague: StandingsModel[] = [
   },
   {
     position: 4,
-    logo: 'assets/img/logos/euroleague/baskoniavitoriagasteiz.png',
+    logo: 'assets/img/logos/euroleague/baskonia.png',
     team: 'Baskonia Vitoria-Gasteiz',
     wins: 8,
     loses: 5,

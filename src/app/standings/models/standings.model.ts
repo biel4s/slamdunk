@@ -5,7 +5,8 @@ export interface StandingsModel {
   wins: number;
   loses: number;
   winratio: number;
-  home: string;
-  away: string;
+  home?: string;
+  away?: string;
   last10: string;
+  points?: number;
 }

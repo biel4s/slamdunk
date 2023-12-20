@@ -1,0 +1,51 @@
+<table [dataSource]="standingsSource" class="mat-elevation-z8" mat-table>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th *matHeaderCellDef mat-header-cell>Position</th>
+    <td *matCellDef="let element" mat-cell> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Team Column -->
+  <ng-container matColumnDef="team">
+    <th *matHeaderCellDef mat-header-cell>Team</th>
+    <td *matCellDef="let element" class="team-cell" mat-cell>
+      <a class="team-name" href="/teams/{{element.team}}" target="_blank">
+        <img alt="Team's logo" class="team-logo" src="{{element.logo}}">
+        {{element.team}}</a>
+    </td>
+  </ng-container>
+
+  <!-- Wins Column -->
+  <ng-container matColumnDef="wins">
+    <th *matHeaderCellDef mat-header-cell>W</th>
+    <td *matCellDef="let element" mat-cell>{{element.wins}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="loses">
+    <th *matHeaderCellDef mat-header-cell>L</th>
+    <td *matCellDef="let element" mat-cell>{{element.loses}} </td>
+  </ng-container>
+
+  <!-- Win ratio Column -->
+  <ng-container matColumnDef="winratio">
+    <th *matHeaderCellDef mat-header-cell>WIN%</th>
+    <td *matCellDef="let element" mat-cell>{{element.winratio}}%</td>
+  </ng-container>
+
+  <!-- Last 5 Column -->
+  <ng-container matColumnDef="last5">
+    <th *matHeaderCellDef mat-header-cell>LAST5</th>
+    <td *matCellDef="let element" mat-cell>{{element.last10}} </td>
+  </ng-container>
+
+  <!-- Points Column -->
+  <ng-container matColumnDef="points">
+    <th *matHeaderCellDef mat-header-cell>POINTS</th>
+    <td *matCellDef="let element" mat-cell>{{element.points}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+</table>

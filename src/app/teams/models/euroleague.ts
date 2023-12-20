@@ -4,7 +4,7 @@ export const TeamsEuroLeague: TeamModel[] = [
   {name: 'ALBA Berlin', logo: 'assets/img/logos/euroleague/albaberlin.png'},
   {name: 'Anadolu Efes Istanbul', logo: 'assets/img/logos/euroleague/anadoluefesistanbul.png'},
   {name: 'AS Monaco', logo: 'assets/img/logos/euroleague/asmonaco.png'},
-  {name: 'Baskonia Vitoria-Gasteiz', logo: 'assets/img/logos/euroleague/baskoniavitoriagasteiz.png'},
+  {name: 'Baskonia', logo: 'assets/img/logos/euroleague/baskonia.png'},
   {name: 'Crvena Zvezda Meridianbet Belgrade', logo: 'assets/img/logos/euroleague/crvenazvezdameridianbetbelgrade.png'},
   {name: 'EA7 Emporio Armani Milan', logo: 'assets/img/logos/euroleague/ea7emporioarmanimilan.png'},
   {name: 'FC Barcelona', logo: 'assets/img/logos/euroleague/fcbarcelona.png'},

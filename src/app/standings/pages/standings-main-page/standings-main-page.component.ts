@@ -4,7 +4,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import {StandingsTabComponent} from "../../components/standings-tab/standings-tab.component";
 import {StandingsModel} from "../../models/standings.model";
-import {StandingsEuroLeague} from "../../models/standings";
+import {StandingsEuroLeague} from "../../models/standings-euroleague";
 
 
 @Component({

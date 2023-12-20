@@ -22,7 +22,7 @@ import {TeamsLegaBasketA} from "../models/lega-basket-a";
   styleUrl: './teams-page.component.scss'
 })
 export class TeamsPageComponent {
-  selectedLeague: string = 'bcl';
+  selectedLeague: string = 'euroleague';
 
   protected readonly teamsEuroleague: TeamModel[] = TeamsEuroLeague;
   protected readonly teamsEuroCup: TeamModel[] = TeamsEuroCup;

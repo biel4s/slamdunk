@@ -16,18 +16,44 @@
       </mat-form-field>
     </div>
     <div class="standings-tab">
-      <app-standings-tab *ngIf="selectedLeague === 'euroleague'" [standingsSource]="standingsData"></app-standings-tab>
-      <app-standings-tab *ngIf="selectedLeague === 'bcl'" [standingsSource]="standingsData"></app-standings-tab>
-      <app-standings-tab *ngIf="selectedLeague === 'acb'" [standingsSource]="standingsData"></app-standings-tab>
-      <app-standings-tab *ngIf="selectedLeague === 'bsl'" [standingsSource]="standingsData"></app-standings-tab>
+      <app-standings-tab *ngIf="selectedLeague === 'euroleague'"
+                         [standingsSource]="standingsEuroLeague"></app-standings-tab>
+      <app-standings-tab *ngIf="selectedLeague === 'acb'" [standingsSource]="standingsEuroLeague"></app-standings-tab>
+      <app-standings-tab *ngIf="selectedLeague === 'bsl'" [standingsSource]="standingsEuroLeague"></app-standings-tab>
       <app-standings-tab *ngIf="selectedLeague === 'lega basket a'"
-                         [standingsSource]="standingsData.slice(0,10)"></app-standings-tab>
+                         [standingsSource]="standingsEuroLeague.slice(0,10)"></app-standings-tab>
       <mat-tab-group animationDuration="500ms">
         <mat-tab *ngIf="selectedLeague === 'eurocup'" label="Group A">
-          <app-standings-tab [standingsSource]="standingsData"></app-standings-tab>
+          <app-standings-tab [standingsSource]="standingsEuroCupA"></app-standings-tab>
         </mat-tab>
         <mat-tab *ngIf="selectedLeague === 'eurocup'" label="Group B">
-          <app-standings-tab [standingsSource]="standingsData"></app-standings-tab>
+          <app-standings-tab [standingsSource]="standingsEuroCupB"></app-standings-tab>
+        </mat-tab>
+      </mat-tab-group>
+      <mat-tab-group animationDuration="500ms">
+        <mat-tab *ngIf="selectedLeague === 'bcl'" label="Group A">
+          <app-standings-tab-bcl [standingsSource]="standingsBCLA"></app-standings-tab-bcl>
+        </mat-tab>
+        <mat-tab *ngIf="selectedLeague === 'bcl'" label="Group B">
+          <app-standings-tab-bcl [standingsSource]="standingsBCLB"></app-standings-tab-bcl>
+        </mat-tab>
+        <mat-tab *ngIf="selectedLeague === 'bcl'" label="Group C">
+          <app-standings-tab-bcl [standingsSource]="standingsBCLC"></app-standings-tab-bcl>
+        </mat-tab>
+        <mat-tab *ngIf="selectedLeague === 'bcl'" label="Group D">
+          <app-standings-tab-bcl [standingsSource]="standingsBCLD"></app-standings-tab-bcl>
+        </mat-tab>
+        <mat-tab *ngIf="selectedLeague === 'bcl'" label="Group E">
+          <app-standings-tab-bcl [standingsSource]="standingsBCLE"></app-standings-tab-bcl>
+        </mat-tab>
+        <mat-tab *ngIf="selectedLeague === 'bcl'" label="Group F">
+          <app-standings-tab-bcl [standingsSource]="standingsBCLF"></app-standings-tab-bcl>
+        </mat-tab>
+        <mat-tab *ngIf="selectedLeague === 'bcl'" label="Group G">
+          <app-standings-tab-bcl [standingsSource]="standingsBCLG"></app-standings-tab-bcl>
+        </mat-tab>
+        <mat-tab *ngIf="selectedLeague === 'bcl'" label="Group H">
+          <app-standings-tab-bcl [standingsSource]="standingsBCLH"></app-standings-tab-bcl>
         </mat-tab>
       </mat-tab-group>
     </div>
