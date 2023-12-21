@@ -28,7 +28,7 @@ import {StandingsBCLD} from "../../models/standings-bcl/standings-bclD";
   styleUrl: './standings-page.component.scss'
 })
 export class StandingsPageComponent {
-  selectedLeague: string = 'bcl';
+  selectedLeague: string = 'acb';
   protected readonly standingsEuroLeague: StandingsModel[] = StandingsEuroLeague;
   protected readonly standingsEuroCupA: StandingsModel[] = StandingsEuroCupA;
   protected readonly standingsEuroCupB: StandingsModel[] = StandingsEuroCupB;
