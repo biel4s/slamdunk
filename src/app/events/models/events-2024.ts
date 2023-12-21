@@ -8,11 +8,6 @@ export const EventsData2024: { [month: string]: EventsModel[] } = {
       ends: '25 Feb 2024',
     },
     {
-      name: "FIBA Basketball World Cup 2027 Central American Pre-Qualifiers",
-      starts: '19 Feb 2024',
-      ends: '25 Feb 2024',
-    },
-    {
       name: "FIBA Basketball World Cup 2027 European Pre-Qualifiers",
       starts: '19 Feb 2024',
       ends: '25 Feb 2024',

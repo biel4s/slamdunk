@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from "@angular/material/button";
+import {EventsModel} from "../../models/events.model";
 
 @Component({
   selector: 'app-events-grid',
@@ -11,5 +12,18 @@ import {MatButtonModule} from "@angular/material/button";
   styleUrl: './events-grid.component.scss'
 })
 export class EventsGridComponent {
-
+  readonly tileMainPage: EventsModel[] = [
+    {
+      name: "FIBA AmeriCup 2025 Qualifiers",
+      background: "/assets/img/events/fibaamericup2025.png"
+    },
+    {
+      name: "FIBA Basketball World Cup 2027 European Pre-Qualifiers",
+      background: "/assets/img/events/fibaworldcup2027european.png"
+    },
+    {
+      name: "FIBA EuroBasket 2025 Qualifiers",
+      background: "/assets/img/events/fibaeurobasket2025.png"
+    }
+  ]
 }

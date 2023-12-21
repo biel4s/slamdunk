@@ -307,4 +307,76 @@ export const PlayersEuroCup: PlayersModel[] = [
     height: 201,
     country: 'Italy'
   },
+  {
+    name: 'Alviti Davide',
+    picture: '/assets/img/players/eurocup/alvitidavide.png',
+    age: 27,
+    team: 'Dolomiti Energia Trento',
+    position: 'Small forward',
+    height: 201,
+    country: 'Italy'
+  },
+  {
+    name: 'Alviti Davide',
+    picture: '/assets/img/players/eurocup/alvitidavide.png',
+    age: 27,
+    team: 'Dolomiti Energia Trento',
+    position: 'Small forward',
+    height: 201,
+    country: 'Italy'
+  },
+  {
+    name: 'Alviti Davide',
+    picture: '/assets/img/players/eurocup/alvitidavide.png',
+    age: 27,
+    team: 'Dolomiti Energia Trento',
+    position: 'Small forward',
+    height: 201,
+    country: 'Italy'
+  },
+  {
+    name: 'Alviti Davide',
+    picture: '/assets/img/players/eurocup/alvitidavide.png',
+    age: 27,
+    team: 'Dolomiti Energia Trento',
+    position: 'Small forward',
+    height: 201,
+    country: 'Italy'
+  },
+  {
+    name: 'Alviti Davide',
+    picture: '/assets/img/players/eurocup/alvitidavide.png',
+    age: 27,
+    team: 'Dolomiti Energia Trento',
+    position: 'Small forward',
+    height: 201,
+    country: 'Italy'
+  },
+  {
+    name: 'Alviti Davide',
+    picture: '/assets/img/players/eurocup/alvitidavide.png',
+    age: 27,
+    team: 'Dolomiti Energia Trento',
+    position: 'Small forward',
+    height: 201,
+    country: 'Italy'
+  },
+  {
+    name: 'Alviti Davide',
+    picture: '/assets/img/players/eurocup/alvitidavide.png',
+    age: 27,
+    team: 'Dolomiti Energia Trento',
+    position: 'Small forward',
+    height: 201,
+    country: 'Italy'
+  },
+  {
+    name: 'Alviti Davide',
+    picture: '/assets/img/players/eurocup/alvitidavide.png',
+    age: 27,
+    team: 'Dolomiti Energia Trento',
+    position: 'Small forward',
+    height: 201,
+    country: 'Italy'
+  },
 ]
