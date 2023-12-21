@@ -28,47 +28,24 @@
       <div class="stats-players">
         <h1>{{'Players -' + selectedStatistics}}</h1>
         <div *ngIf="selectedStatistics === 'Totals'" class="stats-grid">
-          <app-stats-tab [heading]="'Points'" [statsSource]="playersTotalPoints"></app-stats-tab>
-          <app-stats-tab [heading]="'Rebounds'" [statsSource]="playersTotalRebounds"></app-stats-tab>
-          <app-stats-tab [heading]="'Assists'" [statsSource]="playersTotalAssists"></app-stats-tab>
-          <app-stats-tab [heading]="'Blocks'" [statsSource]="playersTotalBlocks"></app-stats-tab>
-          <app-stats-tab [heading]="'Steals'" [statsSource]="playersTotalSteals"></app-stats-tab>
-          <app-stats-tab [heading]="'Two-pointers Made'" [statsSource]="playersTotal2P"></app-stats-tab>
-          <app-stats-tab [heading]="'Three-pointers Made'" [statsSource]="playersTotal3P"></app-stats-tab>
-          <app-stats-tab [heading]="'Free Throws Made'" [statsSource]="playersTotalFT"></app-stats-tab>
+          <app-stats-tab *ngFor="let stat of totalPlayersStats" [heading]="stat.heading"
+                         [statsSource]="stat.data[leagueMapping[selectedLeague]]"></app-stats-tab>
         </div>
         <div *ngIf="selectedStatistics === 'Average'" class="stats-grid">
-          <app-stats-tab [heading]="'Points'" [statsSource]="playersAveragePoints"></app-stats-tab>
-          <app-stats-tab [heading]="'Rebounds'" [statsSource]="playersAverageRebounds"></app-stats-tab>
-          <app-stats-tab [heading]="'Assists'" [statsSource]="playersAverageAssists"></app-stats-tab>
-          <app-stats-tab [heading]="'Blocks'" [statsSource]="playersAverageBlocks"></app-stats-tab>
-          <app-stats-tab [heading]="'Steals'" [statsSource]="playersAverageSteals"></app-stats-tab>
-          <app-stats-tab [heading]="'Two-pointers Made'" [statsSource]="playersAverage2P"></app-stats-tab>
-          <app-stats-tab [heading]="'Three-pointers Made'" [statsSource]="playersAverage3P"></app-stats-tab>
-          <app-stats-tab [heading]="'Free Throws Made'" [statsSource]="playersAverageFT"></app-stats-tab>
+          <app-stats-tab *ngFor="let stat of averagePlayersStats" [heading]="stat.heading"
+                         [statsSource]="stat.data[leagueMapping[selectedLeague]]"></app-stats-tab>
         </div>
       </div>
       <div class="stats-teams">
         <h1>{{'Teams -' + selectedStatistics}}</h1>
         <div *ngIf="selectedStatistics === 'Totals'" class="stats-grid">
-          <app-stats-tab [heading]="'Points'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Rebounds'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Assists'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Blocks'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Steals'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Two-pointers Made'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Three-pointers Made'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Free Throws Made'" [statsSource]="teamsSource"></app-stats-tab>
+          <app-stats-tab *ngFor="let stat of totalTeamsStats" [heading]="stat.heading"
+                         [statsSource]="stat.data[leagueMapping[selectedLeague]]"></app-stats-tab>
+
         </div>
         <div *ngIf="selectedStatistics === 'Average'" class="stats-grid">
-          <app-stats-tab [heading]="'Points'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Rebounds'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Assists'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Blocks'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Steals'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Two-pointers Made'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Three-pointers Made'" [statsSource]="teamsSource"></app-stats-tab>
-          <app-stats-tab [heading]="'Free Throws Made'" [statsSource]="teamsSource"></app-stats-tab>
+          <app-stats-tab *ngFor="let stat of averageTeamsStats" [heading]="stat.heading"
+                         [statsSource]="stat.data[leagueMapping[selectedLeague]]"></app-stats-tab>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@
         </form>
         <mat-form-field class="players-league">
           <mat-label>Select a league</mat-label>
-          <mat-select [(value)]="selectedLeague">
+          <mat-select (valueChange)="resetPaginator()" [(value)]="selectedLeague">
             <mat-option value="euroleague">EuroLeague</mat-option>
             <mat-option value="eurocup">EuroCup</mat-option>
             <mat-option value="bcl">BCL</mat-option>
