@@ -15,6 +15,10 @@ import * as eurocupTotalPlayers from "../models/players/eurocup/totalStatsPlayer
 import * as eurocupAveragePlayers from "../models/players/eurocup/averageStatsPlayers";
 import * as eurocupTotalTeams from "../models/teams/eurocup/totalStatsTeams";
 import * as eurocupAverageTeams from "../models/teams/eurocup/averageStatsTeams";
+import * as bclTotalPlayers from "../models/players/bcl/totalStatsPlayers"
+import * as bclAveragePlayers from "../models/players/bcl/averageStatsPlayers"
+import * as bclTotalTeams from "../models/teams/bcl/totalStatsTeams"
+import * as bclAverageTeams from "../models/teams/bcl/averageStatsTeams"
 
 @Component({
   selector: 'app-stats',
@@ -29,56 +33,108 @@ export class StatsPageComponent {
 
   leagueMapping: { [key: string]: number } = {
     'euroleague': 0,
-    'eurocup': 1
+    'eurocup': 1,
+    'bcl': 2
   }
 
   totalPlayersStats: { heading: string; data: StatsModel[][] }[] = [
-    {heading: 'Points', data: [euroleagueTotalPlayers.Points, eurocupTotalPlayers.Points]},
-    {heading: 'Rebounds', data: [euroleagueTotalPlayers.Rebounds, eurocupTotalPlayers.Rebounds]},
-    {heading: 'Assists', data: [euroleagueTotalPlayers.Assists, eurocupTotalPlayers.Assists]},
-    {heading: 'Blocks', data: [euroleagueTotalPlayers.Blocks, eurocupTotalPlayers.Blocks]},
-    {heading: 'Steals', data: [euroleagueTotalPlayers.Steals, eurocupTotalPlayers.Steals]},
-    {heading: 'Two-pointers Made', data: [euroleagueTotalPlayers.TwoPointers, eurocupTotalPlayers.TwoPointers]},
-    {heading: 'Three-pointers Made', data: [euroleagueTotalPlayers.ThreePointers, eurocupTotalPlayers.ThreePointers]},
-    {heading: 'Free Throws Made', data: [euroleagueTotalPlayers.FreePointers, eurocupTotalPlayers.FreePointers]},
+    {heading: 'Points', data: [euroleagueTotalPlayers.Points, eurocupTotalPlayers.Points, bclTotalPlayers.Points]},
+    {
+      heading: 'Rebounds',
+      data: [euroleagueTotalPlayers.Rebounds, eurocupTotalPlayers.Rebounds, bclTotalPlayers.Rebounds]
+    },
+    {heading: 'Assists', data: [euroleagueTotalPlayers.Assists, eurocupTotalPlayers.Assists, bclTotalPlayers.Assists]},
+    {heading: 'Blocks', data: [euroleagueTotalPlayers.Blocks, eurocupTotalPlayers.Blocks, bclTotalPlayers.Blocks]},
+    {heading: 'Steals', data: [euroleagueTotalPlayers.Steals, eurocupTotalPlayers.Steals, bclTotalPlayers.Steals]},
+    {
+      heading: 'Two-pointers Made',
+      data: [euroleagueTotalPlayers.TwoPointers, eurocupTotalPlayers.TwoPointers, bclTotalPlayers.TwoPointers]
+    },
+    {
+      heading: 'Three-pointers Made',
+      data: [euroleagueTotalPlayers.ThreePointers, eurocupTotalPlayers.ThreePointers, bclTotalPlayers.ThreePointers]
+    },
+    {
+      heading: 'Free Throws Made',
+      data: [euroleagueTotalPlayers.FreePointers, eurocupTotalPlayers.FreePointers, bclTotalPlayers.FreePointers]
+    },
   ];
 
   averagePlayersStats: { heading: string; data: StatsModel[][] }[] = [
-    {heading: 'Points', data: [euroleagueAveragePlayers.Points, eurocupAveragePlayers.Points]},
-    {heading: 'Rebounds', data: [euroleagueAveragePlayers.Rebounds, eurocupAveragePlayers.Rebounds]},
-    {heading: 'Assists', data: [euroleagueAveragePlayers.Assists, eurocupAveragePlayers.Assists]},
-    {heading: 'Blocks', data: [euroleagueAveragePlayers.Blocks, eurocupAveragePlayers.Blocks]},
-    {heading: 'Steals', data: [euroleagueAveragePlayers.Steals, eurocupAveragePlayers.Steals]},
-    {heading: 'Two-pointers Made', data: [euroleagueAveragePlayers.TwoPointers, eurocupAveragePlayers.ThreePointers]},
+    {
+      heading: 'Points',
+      data: [euroleagueAveragePlayers.Points, eurocupAveragePlayers.Points, bclAveragePlayers.Points]
+    },
+    {
+      heading: 'Rebounds',
+      data: [euroleagueAveragePlayers.Rebounds, eurocupAveragePlayers.Rebounds, bclAveragePlayers.Rebounds]
+    },
+    {
+      heading: 'Assists',
+      data: [euroleagueAveragePlayers.Assists, eurocupAveragePlayers.Assists, bclAveragePlayers.Assists]
+    },
+    {
+      heading: 'Blocks',
+      data: [euroleagueAveragePlayers.Blocks, eurocupAveragePlayers.Blocks, bclAveragePlayers.Blocks]
+    },
+    {
+      heading: 'Steals',
+      data: [euroleagueAveragePlayers.Steals, eurocupAveragePlayers.Steals, bclAveragePlayers.Steals]
+    },
+    {
+      heading: 'Two-pointers Made',
+      data: [euroleagueAveragePlayers.TwoPointers, eurocupAveragePlayers.ThreePointers, bclAveragePlayers.TwoPointers]
+    },
     {
       heading: 'Three-pointers Made',
-      data: [euroleagueAveragePlayers.ThreePointers, eurocupAveragePlayers.ThreePointers]
+      data: [euroleagueAveragePlayers.ThreePointers, eurocupAveragePlayers.ThreePointers, bclAveragePlayers.ThreePointers]
     },
-    {heading: 'Free Throws Made', data: [euroleagueAveragePlayers.FreePointers, eurocupAveragePlayers.FreePointers]},
+    {
+      heading: 'Free Throws Made',
+      data: [euroleagueAveragePlayers.FreePointers, eurocupAveragePlayers.FreePointers, bclAveragePlayers.FreePointers]
+    },
   ];
 
   totalTeamsStats: { heading: string; data: StatsModel[][] }[] = [
-    {heading: 'Points', data: [euroleagueTotalTeams.Points, eurocupTotalTeams.Points]},
-    {heading: 'Rebounds', data: [euroleagueTotalTeams.Rebounds, eurocupTotalTeams.Rebounds]},
-    {heading: 'Assists', data: [euroleagueTotalTeams.Assists, eurocupTotalTeams.Assists]},
-    {heading: 'Blocks', data: [euroleagueTotalTeams.Blocks, eurocupTotalTeams.Blocks]},
-    {heading: 'Steals', data: [euroleagueTotalTeams.Steals, eurocupTotalTeams.Steals]},
-    {heading: 'Two-pointers Made', data: [euroleagueTotalTeams.TwoPointers, eurocupTotalTeams.TwoPointers]},
-    {heading: 'Three-pointers Made', data: [euroleagueTotalTeams.ThreePointers, eurocupTotalTeams.ThreePointers]},
-    {heading: 'Free Throws Made', data: [euroleagueTotalTeams.FreePointers, eurocupTotalTeams.FreePointers]},
+    {heading: 'Points', data: [euroleagueTotalTeams.Points, eurocupTotalTeams.Points, bclTotalTeams.Points]},
+    {heading: 'Rebounds', data: [euroleagueTotalTeams.Rebounds, eurocupTotalTeams.Rebounds, bclTotalTeams.Rebounds]},
+    {heading: 'Assists', data: [euroleagueTotalTeams.Assists, eurocupTotalTeams.Assists, bclTotalTeams.Assists]},
+    {heading: 'Blocks', data: [euroleagueTotalTeams.Blocks, eurocupTotalTeams.Blocks, bclTotalTeams.Blocks]},
+    {heading: 'Steals', data: [euroleagueTotalTeams.Steals, eurocupTotalTeams.Steals, bclTotalTeams.Steals]},
+    {
+      heading: 'Two-pointers Made',
+      data: [euroleagueTotalTeams.TwoPointers, eurocupTotalTeams.TwoPointers, bclTotalTeams.TwoPointers]
+    },
+    {
+      heading: 'Three-pointers Made',
+      data: [euroleagueTotalTeams.ThreePointers, eurocupTotalTeams.ThreePointers, bclTotalTeams.ThreePointers]
+    },
+    {
+      heading: 'Free Throws Made',
+      data: [euroleagueTotalTeams.FreePointers, eurocupTotalTeams.FreePointers, bclTotalTeams.FreePointers]
+    },
   ];
 
   averageTeamsStats: { heading: string; data: StatsModel[][] }[] = [
-    {heading: 'Points', data: [euroleagueAverageTeams.Points, eurocupAverageTeams.Points]},
-    {heading: 'Rebounds', data: [euroleagueAverageTeams.Rebounds, eurocupAverageTeams.Rebounds]},
-    {heading: 'Assists', data: [euroleagueAverageTeams.Assists, eurocupAverageTeams.Assists]},
-    {heading: 'Blocks', data: [euroleagueAverageTeams.Blocks, eurocupAverageTeams.Blocks]},
-    {heading: 'Steals', data: [euroleagueAverageTeams.Steals, eurocupAverageTeams.Steals]},
-    {heading: 'Two-pointers Made', data: [euroleagueAverageTeams.TwoPointers, eurocupAverageTeams.TwoPointers]},
+    {heading: 'Points', data: [euroleagueAverageTeams.Points, eurocupAverageTeams.Points, bclAverageTeams.Points]},
+    {
+      heading: 'Rebounds',
+      data: [euroleagueAverageTeams.Rebounds, eurocupAverageTeams.Rebounds, bclAverageTeams.Rebounds]
+    },
+    {heading: 'Assists', data: [euroleagueAverageTeams.Assists, eurocupAverageTeams.Assists, bclAverageTeams.Assists]},
+    {heading: 'Blocks', data: [euroleagueAverageTeams.Blocks, eurocupAverageTeams.Blocks, bclAverageTeams.Blocks]},
+    {heading: 'Steals', data: [euroleagueAverageTeams.Steals, eurocupAverageTeams.Steals, bclAverageTeams.Steals]},
+    {
+      heading: 'Two-pointers Made',
+      data: [euroleagueAverageTeams.TwoPointers, eurocupAverageTeams.TwoPointers, bclAverageTeams.TwoPointers]
+    },
     {
       heading: 'Three-pointers Made',
-      data: [euroleagueAverageTeams.ThreePointers, eurocupAverageTeams.ThreePointers]
+      data: [euroleagueAverageTeams.ThreePointers, eurocupAverageTeams.ThreePointers, bclAverageTeams.ThreePointers]
     },
-    {heading: 'Free Throws Made', data: [euroleagueAverageTeams.FreePointers, eurocupAverageTeams.FreePointers]},
+    {
+      heading: 'Free Throws Made',
+      data: [euroleagueAverageTeams.FreePointers, eurocupAverageTeams.FreePointers, bclAverageTeams.FreePointers]
+    },
   ];
 }

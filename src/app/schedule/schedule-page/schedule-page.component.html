@@ -17,14 +17,27 @@
     </div>
     <div class="schedule-tab">
       <div class="schedule-cards">
-        <h2>5 December 2023</h2>
-        <app-schedule-card *ngFor="let match of matchData5Dec" [scheduleSource]="match"></app-schedule-card>
-        <h2>6 December 2023</h2>
-        <app-schedule-card *ngFor="let match of matchData6Dec" [scheduleSource]="match"></app-schedule-card>
+        <div *ngFor="let league of Object.keys(matchData)">
+          <div *ngIf="selectedLeague === league">
+            <ng-container
+              *ngFor="let date of Object.keys(matchData[league]) | slice:0:Object.keys(matchData[league]).length-1">
+              <h2>{{ date }}</h2>
+              <app-schedule-card *ngFor="let match of matchData[league][date]"
+                                 [scheduleSource]="match"></app-schedule-card>
+            </ng-container>
+            <ng-container *ngIf="showLastMatch">
+              <h2>{{ Object.keys(matchData[league])[Object.keys(matchData[league]).length - 1] }}</h2>
+              <app-schedule-card
+                *ngFor="let match of matchData[league][Object.keys(matchData[league])[Object.keys(matchData[league]).length - 1]]"
+                [scheduleSource]="match"></app-schedule-card>
+            </ng-container>
+          </div>
+        </div>
       </div>
     </div>
     <div class="schedule-more">
-      <button class="load-more" color="primary" mat-raised-button>Load more</button>
+      <button (click)="loadMore()" class="load-more" color="primary" mat-raised-button>Load more</button>
+      <p>{{errorMessage}}</p>
     </div>
   </div>
 </div>

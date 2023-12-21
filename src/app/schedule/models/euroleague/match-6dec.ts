@@ -1,6 +1,6 @@
-import {MatchModel} from "./match.model";
+import {MatchModel} from "../match.model";
 
-export const MatchData6Dec: MatchModel[] = [
+export const EuroleagueMatchData6Dec: MatchModel[] = [
   {
     date: '20:15',
     team1: 'LDLC ASVEL Villeurbanne',
@@ -28,7 +28,7 @@ export const MatchData6Dec: MatchModel[] = [
   {
     date: '20:30',
     team1: 'Baskonia Vitoria-Gasteiz',
-    logo1: 'assets/img/logos/euroleague/baskoniavitoriagasteiz.png',
+    logo1: 'assets/img/logos/euroleague/baskonia.png',
     team2: 'Fenerbahce Beko Istanbul',
     logo2: 'assets/img/logos/euroleague/fenerbahcebekoistanbul.png',
     stadium: 'Buesa Arena',

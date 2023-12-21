@@ -208,7 +208,7 @@ export const TwoPointers: StatsModel[] = [
     score: 25.6
   },
   {
-    position: 2,
+    position: 3,
     name: 'London Lions',
     score: 23.5
   },
