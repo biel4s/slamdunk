@@ -5,5 +5,5 @@ export interface PlayersModel {
   position: string;
   age: number;
   height: number;
-  nationality: string;
+  country: string;
 }

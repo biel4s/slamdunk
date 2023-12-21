@@ -18,10 +18,10 @@
     <div class="standings-tab">
       <app-standings-tab *ngIf="selectedLeague === 'euroleague'"
                          [standingsSource]="standingsEuroLeague"></app-standings-tab>
-      <app-standings-tab *ngIf="selectedLeague === 'acb'" [standingsSource]="standingsEuroLeague"></app-standings-tab>
-      <app-standings-tab *ngIf="selectedLeague === 'bsl'" [standingsSource]="standingsEuroLeague"></app-standings-tab>
+      <app-standings-tab *ngIf="selectedLeague === 'acb'" [standingsSource]="standingsACB"></app-standings-tab>
+      <app-standings-tab *ngIf="selectedLeague === 'bsl'" [standingsSource]="standingsBSL"></app-standings-tab>
       <app-standings-tab *ngIf="selectedLeague === 'lega basket a'"
-                         [standingsSource]="standingsEuroLeague.slice(0,10)"></app-standings-tab>
+                         [standingsSource]="standingsLegaBasketA"></app-standings-tab>
       <mat-tab-group animationDuration="500ms">
         <mat-tab *ngIf="selectedLeague === 'eurocup'" label="Group A">
           <app-standings-tab [standingsSource]="standingsEuroCupA"></app-standings-tab>

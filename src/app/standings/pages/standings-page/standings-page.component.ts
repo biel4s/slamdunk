@@ -19,6 +19,9 @@ import {StandingsBCLG} from "../../models/standings-bcl/standings-bclG";
 import {StandingsBCLF} from "../../models/standings-bcl/standings-bclF";
 import {StandingsBCLE} from "../../models/standings-bcl/standings-bclE";
 import {StandingsBCLD} from "../../models/standings-bcl/standings-bclD";
+import {StandingsLegaBasketA} from "../../models/standings-legabasketa";
+import {StandingsACB} from "../../models/standings-acb";
+import {StandingsBSL} from "../../models/standings-bsl";
 
 @Component({
   selector: 'app-standings-page',
@@ -28,7 +31,7 @@ import {StandingsBCLD} from "../../models/standings-bcl/standings-bclD";
   styleUrl: './standings-page.component.scss'
 })
 export class StandingsPageComponent {
-  selectedLeague: string = 'acb';
+  selectedLeague: string = 'euroleague';
   protected readonly standingsEuroLeague: StandingsModel[] = StandingsEuroLeague;
   protected readonly standingsEuroCupA: StandingsModel[] = StandingsEuroCupA;
   protected readonly standingsEuroCupB: StandingsModel[] = StandingsEuroCupB;
@@ -40,5 +43,8 @@ export class StandingsPageComponent {
   protected readonly standingsBCLF: StandingsModel[] = StandingsBCLF;
   protected readonly standingsBCLG: StandingsModel[] = StandingsBCLG;
   protected readonly standingsBCLH: StandingsModel[] = StandingsBCLH;
+  protected readonly standingsLegaBasketA: StandingsModel[] = StandingsLegaBasketA;
+  protected readonly standingsACB: StandingsModel[] = StandingsACB;
+  protected readonly standingsBSL: StandingsModel[] = StandingsBSL;
 
 }

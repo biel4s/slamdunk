@@ -5,6 +5,8 @@ import {MatTableModule} from '@angular/material/table';
 import {StandingsTabComponent} from "../../components/standings-tab/standings-tab.component";
 import {StandingsModel} from "../../models/standings.model";
 import {StandingsEuroLeague} from "../../models/standings-euroleague";
+import {StandingsEuroCupA} from "../../models/standings-eurocupA";
+import {StandingsEuroCupB} from "../../models/standings-eurocupB";
 
 
 @Component({
@@ -15,5 +17,7 @@ import {StandingsEuroLeague} from "../../models/standings-euroleague";
   styleUrl: './standings-main-page.component.scss'
 })
 export class StandingsMainPageComponent {
-  protected readonly standingsData: StandingsModel[] = StandingsEuroLeague;
+  protected readonly standingsEuroLeague: StandingsModel[] = StandingsEuroLeague;
+  protected readonly standingsEuroCupA: StandingsModel[] = StandingsEuroCupA;
+  protected readonly standingsEuroCupB: StandingsModel[] = StandingsEuroCupB;
 }

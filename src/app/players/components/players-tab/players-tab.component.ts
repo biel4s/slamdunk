@@ -14,5 +14,5 @@ import {PlayersModel} from "../../models/players.model";
 })
 export class PlayersTabComponent {
   @Input() playersSource!: MatTableDataSource<PlayersModel>;
-  displayedColumns: string[] = ['name', 'team', 'position', 'age', 'height', 'nationality'];
+  displayedColumns: string[] = ['name', 'team', 'position', 'age', 'height', 'country'];
 }

@@ -25,7 +25,8 @@
       </div>
     </div>
     <div class="players-tab">
-      <app-players-tab [playersSource]="playersData"></app-players-tab>
+      <app-players-tab *ngIf="getCurrentLeague(selectedLeague)"
+                       [playersSource]="getCurrentLeague(selectedLeague)"></app-players-tab>
       <mat-paginator
         [pageSize]="10"
         aria-label="Select page"
