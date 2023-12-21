@@ -9,10 +9,12 @@ import {StatsTabComponent} from "../components/stats-tab/stats-tab.component";
 import {StatsModel} from "../models/stats.model";
 import * as euroleagueAveragePlayers from "../models/players/euroleague/averageStatsPlayers";
 import * as euroleagueTotalPlayers from "../models/players/euroleague/totalStatsPlayers"
-import * as eurocupTotalPlayers from "../models/players/eurocup/totalStatsPlayers";
-import * as eurocupAveragePlayers from "../models/players/eurocup/averageStatsPlayers";
 import * as euroleagueTotalTeams from "../models/teams/euroleague/totalStatsTeams";
 import * as euroleagueAverageTeams from "../models/teams/euroleague/averageStatsTeams";
+import * as eurocupTotalPlayers from "../models/players/eurocup/totalStatsPlayers";
+import * as eurocupAveragePlayers from "../models/players/eurocup/averageStatsPlayers";
+import * as eurocupTotalTeams from "../models/teams/eurocup/totalStatsTeams";
+import * as eurocupAverageTeams from "../models/teams/eurocup/averageStatsTeams";
 
 @Component({
   selector: 'app-stats',
@@ -56,27 +58,27 @@ export class StatsPageComponent {
   ];
 
   totalTeamsStats: { heading: string; data: StatsModel[][] }[] = [
-    {heading: 'Points', data: [euroleagueTotalTeams.Points]},
-    {heading: 'Rebounds', data: [euroleagueTotalTeams.Rebounds]},
-    {heading: 'Assists', data: [euroleagueTotalTeams.Assists]},
-    {heading: 'Blocks', data: [euroleagueTotalTeams.Blocks]},
-    {heading: 'Steals', data: [euroleagueTotalTeams.Steals]},
-    {heading: 'Two-pointers Made', data: [euroleagueTotalTeams.TwoPointers]},
-    {heading: 'Three-pointers Made', data: [euroleagueTotalTeams.ThreePointers]},
-    {heading: 'Free Throws Made', data: [euroleagueTotalTeams.FreePointers]},
+    {heading: 'Points', data: [euroleagueTotalTeams.Points, eurocupTotalTeams.Points]},
+    {heading: 'Rebounds', data: [euroleagueTotalTeams.Rebounds, eurocupTotalTeams.Rebounds]},
+    {heading: 'Assists', data: [euroleagueTotalTeams.Assists, eurocupTotalTeams.Assists]},
+    {heading: 'Blocks', data: [euroleagueTotalTeams.Blocks, eurocupTotalTeams.Blocks]},
+    {heading: 'Steals', data: [euroleagueTotalTeams.Steals, eurocupTotalTeams.Steals]},
+    {heading: 'Two-pointers Made', data: [euroleagueTotalTeams.TwoPointers, eurocupTotalTeams.TwoPointers]},
+    {heading: 'Three-pointers Made', data: [euroleagueTotalTeams.ThreePointers, eurocupTotalTeams.ThreePointers]},
+    {heading: 'Free Throws Made', data: [euroleagueTotalTeams.FreePointers, eurocupTotalTeams.FreePointers]},
   ];
 
   averageTeamsStats: { heading: string; data: StatsModel[][] }[] = [
-    {heading: 'Points', data: [euroleagueAverageTeams.Points]},
-    {heading: 'Rebounds', data: [euroleagueAverageTeams.Rebounds]},
-    {heading: 'Assists', data: [euroleagueAverageTeams.Assists]},
-    {heading: 'Blocks', data: [euroleagueAverageTeams.Blocks]},
-    {heading: 'Steals', data: [euroleagueAverageTeams.Steals]},
-    {heading: 'Two-pointers Made', data: [euroleagueAverageTeams.TwoPointers]},
+    {heading: 'Points', data: [euroleagueAverageTeams.Points, eurocupAverageTeams.Points]},
+    {heading: 'Rebounds', data: [euroleagueAverageTeams.Rebounds, eurocupAverageTeams.Rebounds]},
+    {heading: 'Assists', data: [euroleagueAverageTeams.Assists, eurocupAverageTeams.Assists]},
+    {heading: 'Blocks', data: [euroleagueAverageTeams.Blocks, eurocupAverageTeams.Blocks]},
+    {heading: 'Steals', data: [euroleagueAverageTeams.Steals, eurocupAverageTeams.Steals]},
+    {heading: 'Two-pointers Made', data: [euroleagueAverageTeams.TwoPointers, eurocupAverageTeams.TwoPointers]},
     {
       heading: 'Three-pointers Made',
-      data: [euroleagueAverageTeams.ThreePointers]
+      data: [euroleagueAverageTeams.ThreePointers, eurocupAverageTeams.ThreePointers]
     },
-    {heading: 'Free Throws Made', data: [euroleagueAverageTeams.FreePointers]},
+    {heading: 'Free Throws Made', data: [euroleagueAverageTeams.FreePointers, eurocupAverageTeams.FreePointers]},
   ];
 }
