@@ -19,6 +19,15 @@ import {EuroCupMatchData12Dec} from "../models/eurocup/match-12dec";
 import {BCLMatchData5Dec} from "../models/bcl/match-5dec";
 import {BCLMatchData6Dec} from "../models/bcl/match-6dec";
 import {BCLMatchData12Dec} from "../models/bcl/match-12dec";
+import {LegaBasketAMatchData3Dec} from "../models/legabasketa/match-3dec";
+import {ACBMatchData3Dec} from "../models/acb/match-3dec";
+import {ACBMatchData10Dec} from "../models/acb/match-10dec";
+import {ACBMatchData9Dec} from "../models/acb/match-9dec";
+import {BSLMatchData3Dec} from "../models/bsl/match-3dec";
+import {BSLMatchData8Dec} from "../models/bsl/match-8dec";
+import {BSLMatchData9Dec} from "../models/bsl/match-9dec";
+import {LegaBasketAMatchData10Dec} from "../models/legabasketa/match-10dec";
+import {LegaBasketAMatchData17Dec} from "../models/legabasketa/match-17dec";
 
 @Component({
   selector: 'app-schedule',
@@ -42,6 +51,16 @@ export class SchedulePageComponent {
   protected readonly bclMatchData5Dec: MatchModel[] = BCLMatchData5Dec;
   protected readonly bclMatchData6Dec: MatchModel[] = BCLMatchData6Dec;
   protected readonly bclMatchData12Dec: MatchModel[] = BCLMatchData12Dec;
+  protected readonly acbMatchData3Dec: MatchModel[] = ACBMatchData3Dec;
+  protected readonly acbMatchData9Dec: MatchModel[] = ACBMatchData9Dec;
+  protected readonly acbMatchData10Dec: MatchModel[] = ACBMatchData10Dec;
+  protected readonly bslMatchData3Dec: MatchModel[] = BSLMatchData3Dec;
+  protected readonly bslMatchData8Dec: MatchModel[] = BSLMatchData8Dec;
+  protected readonly bslMatchData9Dec: MatchModel[] = BSLMatchData9Dec;
+  protected readonly legabasketaMatchData3Dec: MatchModel[] = LegaBasketAMatchData3Dec;
+  protected readonly legabasketaMatchData10Dec: MatchModel[] = LegaBasketAMatchData10Dec;
+  protected readonly legabasketaMatchData17Dec: MatchModel[] = LegaBasketAMatchData17Dec;
+
 
   protected readonly matchData: { [key: string]: { [date: string]: MatchModel[] } } = {
     'euroleague': {
@@ -58,7 +77,22 @@ export class SchedulePageComponent {
       '5 December 2023': this.bclMatchData5Dec,
       '6 December 2023': this.bclMatchData6Dec,
       '12 December 2023': this.bclMatchData12Dec
-    }
+    },
+    'acb': {
+      '3 December 2023': this.acbMatchData3Dec,
+      '9 December 2023': this.acbMatchData9Dec,
+      '10 December 2023': this.acbMatchData10Dec
+    },
+    'bsl': {
+      '3 December 2023': this.bslMatchData3Dec,
+      '8 December 2023': this.bslMatchData8Dec,
+      '9 December 2023': this.bslMatchData9Dec
+    },
+    'lega basket a': {
+      '3 December 2023': this.legabasketaMatchData3Dec,
+      '10 December 2023': this.legabasketaMatchData10Dec,
+      '17 December 2023': this.legabasketaMatchData17Dec
+    },
   }
   protected readonly Object: ObjectConstructor = Object;
 
