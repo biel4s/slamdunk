@@ -4,8 +4,11 @@ export interface NewsCardModel {
   league: string;
   img: string;
   img2?: string;
-  description: string;
-  detailedDescription?: string;
+  imgDescription?: string;
+  subtitle: string;
+  firstDescription: string;
+  secondDescription?: string;
+  thirdDescription?: string;
   type: string;
   url: string
 }

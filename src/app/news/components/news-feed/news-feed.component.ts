@@ -37,7 +37,7 @@ export class NewsFeedComponent {
 
   loadMore(): void {
     this.currentIndex += 3;
-    if (this.currentIndex > 12) {
+    if (this.currentIndex > this.cards.length) {
       this._snackBar.open("No more content available!", "OK", {duration: 5000});
       return;
     }

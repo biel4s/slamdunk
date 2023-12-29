@@ -6,18 +6,19 @@ import {EventsPageComponent} from "./events/pages/events-page/events-page.compon
 import {PlayersPageComponent} from "./players/players-page/players-page.component";
 import {TeamsPageComponent} from "./teams/teams-page/teams-page.component";
 import {StandingsPageComponent} from "./standings/pages/standings-page/standings-page.component";
-import {
-  FilipPetrusevReturnsToEuropePageComponent
-} from "./news/pages/news-urls/filip-petrusev-returns-to-europe-page/filip-petrusev-returns-to-europe-page.component";
 import {SchedulePageComponent} from "./schedule/schedule-page/schedule-page.component";
 import {StatsPageComponent} from "./stats/stats-page/stats-page.component";
+import {NewsUrlPageComponent} from "./news/pages/news-url-page/news-url-page.component";
 
 export const routes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'home', component: MainPageComponent},
   {path: 'news', component: NewsPageComponent},
-  {path: 'news/filip-petrusev-returns-to-europe', component: FilipPetrusevReturnsToEuropePageComponent},
+  {path: 'news/:url', component: NewsUrlPageComponent},
+  /*
+    {path: 'news/filip-petrusev-returns-to-europe', component: FilipPetrusevReturnsToEuropePageComponent},
+  */
   {path: 'schedule', component: SchedulePageComponent},
   {path: 'stats', component: StatsPageComponent},
   {path: 'standings', component: StandingsPageComponent},

@@ -20,14 +20,14 @@ export class NewsMainPageComponent {
   scrollToLeft(): void {
     const container = document.querySelector('.cards-content');
     if (container !== null) {
-      container.scrollBy({left: -410, behavior: 'smooth'}); // Scroll 200px to the left
+      container.scrollBy({left: -410, behavior: 'smooth'});
     }
   }
 
   scrollToRight(): void {
     const container = document.querySelector('.cards-content');
     if (container !== null) {
-      container.scrollBy({left: 410, behavior: 'smooth'}); // Scroll 200px to the right
+      container.scrollBy({left: 410, behavior: 'smooth'});
     }
   }
 }

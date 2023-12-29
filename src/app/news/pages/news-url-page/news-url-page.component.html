@@ -1,0 +1,34 @@
+<app-header/>
+<div class="news-url-container">
+  <div *ngIf="newsData">
+    <mat-card class="news-url-card">
+      <mat-card-header>
+        <mat-card-title class="news-url-title">{{newsData.title}}</mat-card-title>
+        <mat-card-subtitle class="news-url-date">{{newsData.date}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p class="latest-paragraph">
+          {{newsData.firstDescription}}
+        </p>
+        <div class="news-img">
+          <img alt="News Photo" class="news-img-url" mat-card-image src="{{newsData.img}}">
+        </div>
+        <h2>{{newsData.subtitle}}</h2>
+        <p class="latest-paragraph">{{newsData.secondDescription}}</p>
+        <div *ngIf="newsData.img2" class="news-img">
+          <img alt="News Photo 2" class="news-img-url" mat-card-image src="{{newsData.img2}}">
+          <p class="news-img-subtitle">{{newsData.imgDescription}}</p>
+        </div>
+        <p class="latest-paragraph">
+          {{newsData.thirdDescription}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <a class="news-link" href="/news">
+    <button class="read-more" color="primary" mat-raised-button>Back to news</button>
+  </a>
+</div>
+<app-footer/>
