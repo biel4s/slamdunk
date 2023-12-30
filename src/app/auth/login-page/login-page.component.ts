@@ -98,9 +98,6 @@ export class LoginPageComponent {
     this.loginPageStore.patchState({
       isLoading: true,
     })
-    const email: any = this.email;
-    const password: any = this.password;
-    const confirmPassword: any = this.confirmPassword
 
     const credentials: Credentials = this.authForm.getRawValue();
 
@@ -109,7 +106,7 @@ export class LoginPageComponent {
     }
 
     if (this.isRegister) {
-      if (this.authForm.invalid && password !== confirmPassword) {
+      if (this.authForm.invalid && credentials.password !== credentials.confirmPassword) {
         this.authService.serverMessage = "Passwords do not match!";
         return;
       }
@@ -117,13 +114,9 @@ export class LoginPageComponent {
     }
 
     if (this.isPasswordReset) {
-      try {
-        await this.authService.resetPassword(email);
-        this.authForm.reset();
-      } catch (error) {
-        this.authService.handleError(error);
-      }
+      this.loginPageStore.reset(credentials);
     }
+
     this.loginPageStore.patchState({
       isLoading: false,
     })

@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ComponentStore} from "@ngrx/component-store";
 import {AuthService} from "../services/auth.service";
-import {Router} from "@angular/router";
 import {exhaustMap, tap} from "rxjs";
 
 interface LoginPageState {
@@ -20,6 +19,7 @@ export interface Credentials {
 
 @Injectable()
 export class LoginPageStore extends ComponentStore<LoginPageState> {
+
 
   readonly login = this.effect<Credentials>(credentials$ => {
     return credentials$.pipe(
@@ -56,12 +56,10 @@ export class LoginPageStore extends ComponentStore<LoginPageState> {
           })
       ))
   })
-
+  readonly type$ = this.select(state => state.type);
   private readonly isLoading$ = this.select(state => state.isLoading);
-  private readonly type$ = this.select(state => state.type);
   private readonly serverMessage$ = this.select(state => state.serverMessage);
   private readonly isPasswordHidden$ = this.select(state => state.isPasswordHidden);
-
   readonly vm$ = this.select(
     {
       isLoading: this.isLoading$,
@@ -72,7 +70,7 @@ export class LoginPageStore extends ComponentStore<LoginPageState> {
     {debounce: true},
   )
 
-  constructor(private authService: AuthService, private readonly router: Router) {
+  constructor(private readonly authService: AuthService) {
     super({
       isLoading: false,
       type: 'login',

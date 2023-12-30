@@ -1,5 +1,4 @@
 mat-grid-tile {
-  cursor: pointer;
   border-radius: 5px;
   background-repeat: no-repeat;
   background-position: center;
@@ -9,7 +8,7 @@ mat-grid-tile {
 .tile-description {
   font-size: 1.3rem;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
   padding: 10px;

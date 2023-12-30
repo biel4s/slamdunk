@@ -25,13 +25,11 @@ export class AuthService {
   goToLoginPage(): void {
     this.setFormType('login');
     this.router.navigate(['/login']).then();
-    console.log(this.type);
   }
 
   goToRegisterPage(): void {
     this.setFormType('register');
     this.router.navigate(['/login']).then();
-    console.log(this.type);
   }
 
   goToResetPage(): void {
