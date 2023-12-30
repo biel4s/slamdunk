@@ -4,7 +4,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {AuthService} from "../../../auth/auth.service";
+import {AuthService} from "../../../auth/services/auth.service";
 import {Router, RouterLinkActive} from "@angular/router";
 
 @Component({
@@ -36,9 +36,7 @@ export class NavbarComponent {
     this.isScrolled = window.scrollY > 50;
   }
 
-  isHomeRouter(): void {
-    this.router.events.subscribe(event => {
-      this.isHomeRoute = this.router.url === '/home';
-    });
+  onLogout(): void {
+    this.authService.logout();
   }
 }
