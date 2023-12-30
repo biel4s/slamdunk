@@ -30,7 +30,7 @@
         <mat-label>Email</mat-label>
         <input [formControl]="authForm.controls.email" autocomplete="off" matInput/>
       </mat-form-field>
-      <mat-form-field *ngIf="!isPasswordReset" class="login-form-field">
+      <mat-form-field *ngIf="!isReset" class="login-form-field">
         <mat-label>Password</mat-label>
         <input
           [formControl]="authForm.controls.password"
@@ -47,7 +47,7 @@
           type="button">
           <mat-icon>{{vm.isPasswordHidden ? "visibility_off" : "visibility"}}</mat-icon>
         </button>
-        <mat-hint (click)="this.authService.setFormType('reset')" *ngIf="isLogin && !isPasswordReset" align="start">
+        <mat-hint (click)="this.authService.setFormType('reset')" *ngIf="isLogin && !isReset" align="start">
           Forgot
           password?
         </mat-hint>
@@ -68,13 +68,9 @@
           <mat-icon>{{vm.isPasswordHidden ? "visibility_off" : "visibility"}}</mat-icon>
         </button>
       </mat-form-field>
-      <!--  <mat-error *ngIf="authForm.errors?.['passwordMatchError'] && isLoading" class="errorMessage">
-          {{authService.serverMessage}}
-        </mat-error>-->
       <mat-error class="errorMessage">
-        {{authService.serverMessage}}
+        {{vm.serverMessage}}
       </mat-error>
-
       <div *ngIf="isLogin">
         <div class="login-buttons">
           <button class="btn-submit" color="primary" mat-raised-button type="submit">
@@ -112,7 +108,7 @@
           Login
         </button>
       </div>
-      <div *ngIf="isPasswordReset">
+      <div *ngIf="isReset">
         <button class="btn-submit" color="primary" mat-raised-button type="submit">
           Reset password
         </button>
