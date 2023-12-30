@@ -1,11 +1,4 @@
-import {
-  AbstractControl,
-  FormBuilder,
-  ReactiveFormsModule,
-  ValidationErrors,
-  ValidatorFn,
-  Validators
-} from '@angular/forms';
+import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
@@ -34,12 +27,17 @@ import {Credentials, LoginPageStore} from "./login-page.store";
 })
 export class LoginPageComponent {
   readonly vm$ = this.loginPageStore.vm$;
+  readonly authForm = this.fb.nonNullable.group({
+    email: ['', [Validators.email, Validators.required]],
+    password: ['', [Validators.minLength(6), Validators.required]],
+    confirmPassword: ['', [Validators.required]]
+  }/*, {validators: this.doesPasswordMatch}*/);
 
   constructor(private readonly fb: FormBuilder,
               private _snackBar: MatSnackBar,
               public authService: AuthService,
               private router: Router,
-              private readonly loginPageStore: LoginPageStore
+              public loginPageStore: LoginPageStore
   ) {
   }
 
@@ -51,7 +49,7 @@ export class LoginPageComponent {
     return this.authService.type === 'register';
   }
 
-  get isPasswordReset(): boolean {
+  get isReset(): boolean {
     return this.authService.type === 'reset';
   }
 
@@ -63,11 +61,7 @@ export class LoginPageComponent {
     return this.authForm.value.password;
   }
 
-  get confirmPassword() {
-    return this.authForm.value.confirmPassword;
-  }
-
-  doesPasswordMatch: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+  /*doesPasswordMatch: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
     let password = control.get('password');
     let confirmPassword = control.get('confirmPassword');
     if (password && confirmPassword && password?.value != confirmPassword?.value
@@ -77,13 +71,11 @@ export class LoginPageComponent {
       }
     }
     return null;
-  }
+  }*/
 
-  readonly authForm = this.fb.nonNullable.group({
-    email: ['', [Validators.email, Validators.required]],
-    password: ['', [Validators.minLength(6), Validators.required]],
-    confirmPassword: ['', [Validators.required]]
-  }, {validators: this.doesPasswordMatch});
+  get confirmPassword() {
+    return this.authForm.value.confirmPassword;
+  }
 
   onLogout(): void {
     this.authService.logout();
@@ -95,30 +87,16 @@ export class LoginPageComponent {
   }
 
   async onSubmit(): Promise<void> {
-    this.loginPageStore.patchState({
-      isLoading: true,
-    })
-
     const credentials: Credentials = this.authForm.getRawValue();
 
     if (this.isLogin) {
       this.loginPageStore.login(credentials);
     }
-
     if (this.isRegister) {
-      if (this.authForm.invalid && credentials.password !== credentials.confirmPassword) {
-        this.authService.serverMessage = "Passwords do not match!";
-        return;
-      }
       this.loginPageStore.register(credentials);
     }
-
-    if (this.isPasswordReset) {
+    if (this.isReset) {
       this.loginPageStore.reset(credentials);
     }
-
-    this.loginPageStore.patchState({
-      isLoading: false,
-    })
   }
 }
