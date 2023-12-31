@@ -12,7 +12,9 @@
 }
 
 .header {
+  position: relative;
   display: flex;
+  justify-content: space-between;
   width: 100%;
   color: white;
 }
@@ -20,7 +22,6 @@
 .header-brand {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
 }
 
 .header-logo {
@@ -45,14 +46,16 @@
   color: white;
 }
 
-
 .nav-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: flex;
   align-items: center;
-  flex-basis: 0;
-  flex-grow: 1;
+  margin: auto;
   padding: 0;
   list-style: none;
+  transform: translate(-50%, -50%);
 }
 
 .nav-item {
@@ -85,8 +88,6 @@
 .header-auth {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 100%;
 }
 
 .auth-button {
@@ -105,6 +106,7 @@
 .auth-email {
   cursor: pointer;
   transition: ease-in-out .1s;
+  text-align: center;
   color: white;
 
   &:hover {
@@ -176,4 +178,13 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+//Media Queries
+
+@media screen and (max-width: 1500px) {
+  .nav-menu {
+    position: static;
+    transform: none;
+  }
 }

@@ -23,6 +23,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .standings-content {
+    width: 100vw;
+  }
+
   .standings-header {
     flex-direction: column;
   }
