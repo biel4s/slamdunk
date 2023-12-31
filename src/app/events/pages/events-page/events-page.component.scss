@@ -24,3 +24,21 @@
   flex-direction: column;
   padding-top: 50px;
 }
+
+//Media Queries
+
+@media screen and (max-width: 900px) {
+  .primary-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .events-header {
+    flex-direction: column;
+  }
+
+  .primary-heading {
+    text-align: center;
+  }
+}
