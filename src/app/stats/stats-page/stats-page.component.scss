@@ -32,3 +32,35 @@
 .stats-teams {
   margin-top: 100px;
 }
+
+//Media Queries
+
+@media screen and (max-width: 900px) {
+  .primary-heading {
+    font-size: 2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .stats-filters {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stats-header {
+    flex-direction: column;
+  }
+
+  .primary-heading {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: repeat(1, 2fr);
+  }
+}

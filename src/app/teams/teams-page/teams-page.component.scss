@@ -18,6 +18,45 @@
 .teams-tab {
   display: grid;
   width: 80vw;
-  grid-template-columns: repeat(6, 2fr);
-  gap: 60px;
+  grid-template-columns: repeat(5, 2fr);
+  gap: 40px;
+}
+
+app-teams-card {
+  display: flex;
+  justify-content: center;
+}
+
+//Media Queries
+
+@media screen and (max-width: 1300px) {
+  .teams-tab {
+    grid-template-columns: repeat(4, 2fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .teams-tab {
+    grid-template-columns: repeat(3, 2fr);
+  }
+  
+  .primary-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .teams-header {
+    flex-direction: column;
+  }
+
+  .primary-heading {
+    text-align: center;
+  }
+
+  .teams-tab {
+    width: 100vw;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  }
 }

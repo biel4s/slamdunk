@@ -46,3 +46,21 @@
   align-items: center;
   margin: 0 15px;
 }
+
+//Media Queries
+
+@media screen and (max-width: 600px) {
+  .card-name {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-name {
+    font-size: 0.9rem;
+  }
+
+  .card-location, .card-date {
+    font-size: 0.8rem;
+  }
+}

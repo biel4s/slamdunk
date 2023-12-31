@@ -22,6 +22,7 @@
 
 .primary-heading {
   font-size: 2.5rem;
+
 }
 
 .players-filters {
@@ -36,4 +37,25 @@ mat-paginator {
   overflow: hidden !important;
   border-radius: 0 0 10px 10px;
   box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 10px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+//Media Queries
+
+@media screen and (max-width: 900px) {
+  .players-filters {
+    flex-direction: column;
+  }
+
+  .primary-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .players-header {
+    flex-direction: column;
+  }
+  .primary-heading {
+    text-align: center;
+  }
 }

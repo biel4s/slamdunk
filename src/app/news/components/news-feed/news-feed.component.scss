@@ -36,3 +36,40 @@ app-news-card {
 .load-more {
   @include more-button;
 }
+
+//Media Queries
+
+@media screen and (max-width: 1300px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  app-news-card {
+    transform: scale(0.9);
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+  .cards-row {
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  app-news-card {
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .cards-row {
+    align-items: center;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 20px;
+    justify-items: center;
+  }
+}

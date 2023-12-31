@@ -69,7 +69,7 @@
           Log in
         </button>
       </div>
-      <div *ngIf="authService.afAuth.authState | async as user" class="auth-logout">
+      <div *ngIf="authService.afAuth.authState | async as user" class="sidenav-auth-logout">
         <p (click)="goToLoginPage()" class="auth-email">{{ user.email }}</p>
         <button (click)="onLogout()" class="auth-button" color="primary" mat-raised-button>Logout
         </button>

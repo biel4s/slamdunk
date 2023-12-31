@@ -11,6 +11,7 @@
 
 .latest-img {
   width: 50vw;
+  height: 500px;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -47,4 +48,31 @@
   width: 150px;
   height: 40px;
   vertical-align: top;
+}
+
+//Media Queries
+
+@media screen and (min-width: 901px) {
+  .latest-paragraph {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .latest-paragraph {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+  }
+  .latest-header {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
 }

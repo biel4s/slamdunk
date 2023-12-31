@@ -134,7 +134,7 @@
 
 .mat-drawer {
   position: fixed;
-  width: 400px;
+  width: 300px;
   background-color: #303030;
 }
 
@@ -147,7 +147,7 @@
 }
 
 .header-menu.open {
-  transform: translateX(calc(-360px));
+  transform: translateX(calc(-260px));
 }
 
 .sidenav-header-auth {
@@ -171,10 +171,9 @@
   padding: 20px 0;
 }
 
-//Media Queries
-
-/*@media screen and (max-width: 1150px) {
-  .nav-menu, .header-auth {
-    display: none;
-  }
-}*/
+.sidenav-auth-logout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -11,7 +11,7 @@
 
 .news-url-card {
   font-size: 1.2rem;
-  max-width: 50vw;
+  width: 70vw;
   padding: 30px;
   color: black;
   border-radius: 10px;
@@ -42,12 +42,14 @@
 
 .news-img {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   border-radius: 5px;
+  object-fit: contain;
 
   &-url {
-    max-width: 45vw;
+    max-width: 100%
   }
 
   &-subtitle {
@@ -63,4 +65,28 @@
 .read-more {
   @include more-button;
   margin: 50px 0;
+}
+
+//Media Queries
+
+@media screen and (max-width: 900px) {
+  .news-url-card {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news-url-title, h2 {
+    font-size: 1.5rem;
+  }
+
+  :host ::ng-deep .mat-mdc-card-header-text {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .news-url-card {
+    width: 100vw;
+  }
 }

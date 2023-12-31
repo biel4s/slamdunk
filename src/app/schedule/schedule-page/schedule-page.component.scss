@@ -29,3 +29,21 @@
 .load-more {
   @include more-button;
 }
+
+//Media Queries
+
+@media screen and (max-width: 900px) {
+  .primary-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .schedule-header {
+    flex-direction: column;
+  }
+
+  .primary-heading {
+    text-align: center;
+  }
+}

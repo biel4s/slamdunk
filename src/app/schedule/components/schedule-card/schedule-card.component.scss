@@ -62,3 +62,23 @@
   text-align: end;
 }
 
+//Media Queries
+
+@media screen and (max-width: 600px) {
+  .team-name {
+    font-size: 0.9rem;
+  }
+
+  .card-date {
+    margin-left: 5px;
+  }
+
+  .card-img {
+    margin: 0 5px;
+  }
+
+  .card-stadium {
+    font-size: 0.8rem;
+    margin-right: 5px;
+  }
+}
