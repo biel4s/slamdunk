@@ -1,4 +1,3 @@
-<!--<mat-toolbar [ngClass]="{'active': isHomeRouter}">-->
 <mat-toolbar>
   <header class="header">
     <div class="header-brand">
@@ -7,15 +6,52 @@
         <div class="header-text">SlamDunk</div>
       </a>
     </div>
-    <ul class="nav-menu">
-      <li *ngFor="let link of navLinks; let i = index" class="nav-item">
-        <ng-container>
-          <a class="nav-item-link" href="{{ link | lowercase }}"><span>{{ link }}</span></a>
-        </ng-container>
-      </li>
-    </ul>
-    <div class="header-auth">
-      <div *ngIf="!(authService.afAuth.authState | async)">
+    <div *ngIf="!isScreenSmall" class="header-actions">
+      <ul class="nav-menu">
+        <li *ngFor="let link of navLinks; let i = index" class="nav-item">
+          <ng-container>
+            <a class="nav-item-link" href="{{ link | lowercase }}"><span>{{ link }}</span></a>
+          </ng-container>
+        </li>
+      </ul>
+      <div class="header-auth">
+        <div *ngIf="!(authService.afAuth.authState | async)">
+          <button
+            (click)="goToRegisterPage()"
+            class="auth-button"
+            color="primary"
+            mat-button
+          >
+            Sign up
+          </button>
+          <button
+            (click)="goToLoginPage()"
+            class="auth-button"
+            color="primary"
+            mat-raised-button
+          >
+            Log in
+          </button>
+        </div>
+        <div *ngIf="authService.afAuth.authState | async as user" class="auth-logout">
+          <p (click)="goToLoginPage()" class="auth-email">{{ user.email }}</p>
+          <button (click)="onLogout()" class="auth-button" color="primary" mat-raised-button>Logout
+          </button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isScreenSmall" class="header-menu">
+      <button (click)="toggleDrawer()" mat-button type="button">
+        <mat-icon class="side-icon">menu</mat-icon>
+      </button>
+    </div>
+  </header>
+</mat-toolbar>
+
+<mat-drawer-container autosize class="side-menu">
+  <mat-drawer #drawer class="side-sidenav" mode="side" position="end">
+    <div class="sidenav-header-auth">
+      <div *ngIf="!(authService.afAuth.authState | async)" class="sidenav-auth-buttons">
         <button
           (click)="goToRegisterPage()"
           class="auth-button"
@@ -39,5 +75,12 @@
         </button>
       </div>
     </div>
-  </header>
-</mat-toolbar>
+    <ul class="sidenav-nav-menu">
+      <li *ngFor="let link of navLinks; let i = index" class="sidenav-nav-item">
+        <ng-container>
+          <a class="nav-item-link" href="{{ link | lowercase }}"><span>{{ link }}</span></a>
+        </ng-container>
+      </li>
+    </ul>
+  </mat-drawer>
+</mat-drawer-container>

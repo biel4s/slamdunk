@@ -61,6 +61,7 @@
   &-link {
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: ease-in-out 0.2s;
     text-decoration: none;
@@ -104,6 +105,7 @@
 .auth-email {
   cursor: pointer;
   transition: ease-in-out .1s;
+  color: white;
 
   &:hover {
     transform: scale(1.05);
@@ -113,8 +115,66 @@
 .auth-logout {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   .auth-button {
     margin-left: 20px;
   }
 }
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.side-icon {
+  position: fixed;
+  transform: scale(2);
+}
+
+.mat-drawer {
+  position: fixed;
+  width: 400px;
+  background-color: #303030;
+}
+
+.mat-drawer-container {
+  z-index: 200;
+}
+
+.header-menu {
+  transition: transform 0.2s ease-in-out;
+}
+
+.header-menu.open {
+  transform: translateX(calc(-360px));
+}
+
+.sidenav-header-auth {
+  padding: 15px 20px 0;
+}
+
+.sidenav-auth-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.sidenav-nav-menu {
+  font-size: 1.5rem;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+}
+
+.sidenav-nav-item {
+  padding: 20px 0;
+}
+
+//Media Queries
+
+/*@media screen and (max-width: 1150px) {
+  .nav-menu, .header-auth {
+    display: none;
+  }
+}*/
