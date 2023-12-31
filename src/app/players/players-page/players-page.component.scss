@@ -5,14 +5,6 @@
   @include template-container;
 }
 
-.players-content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 80vw;
-}
-
 .players-header {
   display: flex;
   align-items: center;
@@ -22,7 +14,6 @@
 
 .primary-heading {
   font-size: 2.5rem;
-
 }
 
 .players-filters {
@@ -48,13 +39,19 @@ mat-paginator {
 
   .primary-heading {
     font-size: 2rem;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .players-content {
+    width: 100vw;
+  }
+
   .players-header {
     flex-direction: column;
   }
+
   .primary-heading {
     text-align: center;
   }

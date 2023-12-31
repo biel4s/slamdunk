@@ -25,8 +25,12 @@
       </div>
     </div>
     <div class="players-tab">
-      <app-players-tab [hidden]="!getCurrentLeague(selectedLeague)"
-                       [playersSource]="getCurrentLeague(selectedLeague)"></app-players-tab>
+      <mat-tab-group animationDuration="500ms">
+        <mat-tab *ngIf="selectedLeague" label="Players list">
+          <app-players-tab [hidden]="!getCurrentLeague(selectedLeague)"
+                           [playersSource]="getCurrentLeague(selectedLeague)"></app-players-tab>
+        </mat-tab>
+      </mat-tab-group>
       <mat-paginator
         [pageSize]="10"
         aria-label="Select page"

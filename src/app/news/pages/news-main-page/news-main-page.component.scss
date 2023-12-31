@@ -119,3 +119,11 @@ mat-icon {
 .custom-shape-divider-bottom-1701102997 .shape-fill {
   fill: #151515;
 }
+
+//Media Queries
+
+@media screen and (max-width: 480px) {
+  .cards-content {
+    min-width: 350px;
+  }
+}
