@@ -6,6 +6,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {Cards} from "../../models/news";
 import {NewsCardModel} from "../../models/news-card.model";
+import {NewsService} from "../../services/news.service";
 
 @Component({
   selector: 'app-news-page',
@@ -16,6 +17,9 @@ import {NewsCardModel} from "../../models/news-card.model";
 })
 export class NewsMainPageComponent {
   cards: NewsCardModel[] = Cards;
+
+  constructor(private newsService: NewsService) {
+  }
 
   scrollToLeft(): void {
     const container = document.querySelector('.cards-content');
@@ -29,5 +33,9 @@ export class NewsMainPageComponent {
     if (container !== null) {
       container.scrollBy({left: 410, behavior: 'smooth'});
     }
+  }
+
+  goToUrl(url: string): void {
+    this.newsService.goToNews(url);
   }
 }

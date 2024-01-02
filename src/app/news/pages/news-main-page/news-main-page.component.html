@@ -12,9 +12,9 @@
       <mat-icon (click)="scrollToLeft()" class="left-arrow">keyboard_arrow_left</mat-icon>
       <div class="cards-content">
         <ng-container *ngFor="let card of cards">
-          <a [routerLink]="'/news/' + card.url" class="news-card-link">
-            <app-news-card [cardSource]="card"/>
-          </a>
+          <div class="news-card-link">
+            <app-news-card (click)="goToUrl(card.url)" [cardSource]="card"/>
+          </div>
         </ng-container>
       </div>
       <mat-icon (click)="scrollToRight()" class="right-arrow">keyboard_arrow_right</mat-icon>
