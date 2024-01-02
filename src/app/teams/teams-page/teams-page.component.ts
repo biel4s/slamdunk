@@ -23,12 +23,30 @@ import {TeamsLegaBasketA} from "../models/lega-basket-a";
 })
 export class TeamsPageComponent {
   selectedLeague: string = 'euroleague';
-
   protected readonly teamsEuroleague: TeamModel[] = TeamsEuroLeague;
   protected readonly teamsEuroCup: TeamModel[] = TeamsEuroCup;
   protected readonly teamsBCL: TeamModel[] = TeamsBCL;
   protected readonly teamsACB: TeamModel[] = TeamsACB;
   protected readonly teamsBSL: TeamModel[] = TeamsBSL;
   protected readonly teamsLegaBasketA: TeamModel[] = TeamsLegaBasketA;
+
+  getTeamsArray(league: string): TeamModel[] {
+    switch (league) {
+      case 'euroleague':
+        return this.teamsEuroleague;
+      case 'eurocup':
+        return this.teamsEuroCup;
+      case 'bcl':
+        return this.teamsBCL;
+      case 'acb':
+        return this.teamsACB;
+      case 'bsl':
+        return this.teamsBSL;
+      case 'lega basket a':
+        return this.teamsLegaBasketA;
+      default:
+        return [];
+    }
+  }
 
 }

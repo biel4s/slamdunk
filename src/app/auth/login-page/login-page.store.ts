@@ -35,10 +35,10 @@ export class LoginPageStore extends ComponentStore<LoginPageState> {
               },
               error: (error: unknown) => this.handleError(error),
               finalize: (): void => this.patchState({isLoading: false})
-            })
-          )
-      ))
-  })
+            }),
+          ),
+      ));
+  });
 
   readonly register = this.effect<Credentials>(credentials$ => {
     return credentials$.pipe(
@@ -62,7 +62,7 @@ export class LoginPageStore extends ComponentStore<LoginPageState> {
       })
     )
   })
-  
+
   readonly reset = this.effect<Credentials>(credentials$ => {
     return credentials$.pipe(
       tap(() => this.patchState({isLoading: true, serverMessage: null})),

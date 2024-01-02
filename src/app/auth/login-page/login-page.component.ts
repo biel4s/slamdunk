@@ -86,7 +86,7 @@ export class LoginPageComponent {
     this.loginPageStore.togglePasswordVisibility();
   }
 
-  async onSubmit(): Promise<void> {
+  onSubmit(): void {
     const credentials: Credentials = this.authForm.getRawValue();
 
     if (this.isLogin) {
@@ -98,5 +98,5 @@ export class LoginPageComponent {
     if (this.isReset) {
       this.loginPageStore.reset(credentials);
     }
-  }
+  };
 }

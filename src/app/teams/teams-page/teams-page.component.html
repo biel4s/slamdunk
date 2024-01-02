@@ -16,23 +16,8 @@
       </mat-form-field>
     </div>
     <div class="teams-tab">
-      <ng-container *ngIf="selectedLeague === 'euroleague'">
-        <app-teams-card *ngFor="let team of teamsEuroleague" [teamsSource]="team"></app-teams-card>
-      </ng-container>
-      <ng-container *ngIf="selectedLeague === 'eurocup'">
-        <app-teams-card *ngFor="let team of teamsEuroCup" [teamsSource]="team"></app-teams-card>
-      </ng-container>
-      <ng-container *ngIf="selectedLeague === 'bcl'">
-        <app-teams-card *ngFor="let team of teamsBCL" [teamsSource]="team"></app-teams-card>
-      </ng-container>
-      <ng-container *ngIf="selectedLeague === 'acb'">
-        <app-teams-card *ngFor="let team of teamsACB" [teamsSource]="team"></app-teams-card>
-      </ng-container>
-      <ng-container *ngIf="selectedLeague === 'bsl'">
-        <app-teams-card *ngFor="let team of teamsBSL" [teamsSource]="team"></app-teams-card>
-      </ng-container>
-      <ng-container *ngIf="selectedLeague === 'lega basket a'">
-        <app-teams-card *ngFor="let team of teamsLegaBasketA" [teamsSource]="team"></app-teams-card>
+      <ng-container *ngIf="getTeamsArray(selectedLeague) as teamsArray">
+        <app-teams-card *ngFor="let team of teamsArray" [teamsSource]="team"/>
       </ng-container>
     </div>
   </div>
