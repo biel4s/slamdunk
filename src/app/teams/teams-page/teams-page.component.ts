@@ -23,6 +23,7 @@ import {TeamsLegaBasketA} from "../models/lega-basket-a";
 })
 export class TeamsPageComponent {
   selectedLeague: string = 'euroleague';
+
   protected readonly teamsEuroleague: TeamModel[] = TeamsEuroLeague;
   protected readonly teamsEuroCup: TeamModel[] = TeamsEuroCup;
   protected readonly teamsBCL: TeamModel[] = TeamsBCL;

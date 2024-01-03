@@ -43,3 +43,7 @@ body {
   text-decoration: none;
 }
 
+.mat-mdc-chip-set, .mdc-evolution-chip-set__chips {
+  display: flex;
+  justify-content: center;
+}

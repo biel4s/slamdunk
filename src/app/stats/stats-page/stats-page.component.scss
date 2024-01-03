@@ -39,7 +39,7 @@
   .primary-heading {
     font-size: 2rem;
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(2, 2fr);
   }
@@ -54,9 +54,11 @@
     flex-direction: column;
   }
 
-  .primary-heading {
+  .primary-heading, .secondary-heading {
     text-align: center;
   }
+
+
 }
 
 @media screen and (max-width: 480px) {

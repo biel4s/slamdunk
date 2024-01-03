@@ -26,7 +26,7 @@
     </div>
     <div class="stats-cards">
       <div class="stats-players">
-        <h1>{{'Players -' + selectedStatistics}}</h1>
+        <h1 class="secondary-heading">{{'Players -' + selectedStatistics}}</h1>
         <div *ngIf="selectedStatistics === 'Totals'" class="stats-grid">
           <app-stats-tab *ngFor="let stat of totalPlayersStats" [heading]="stat.heading"
                          [statsSource]="stat.data[leagueMapping[selectedLeague]]"></app-stats-tab>
