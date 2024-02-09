@@ -64,7 +64,14 @@ span::before {
 
 //Media Queries
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
+  .home-text {
+    position: static;
+    max-width: 325px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .home-text {
     position: static;
     max-width: 325px;

@@ -35,11 +35,12 @@ app-teams-card {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
   .teams-tab {
+    width: 100vw;
     grid-template-columns: repeat(3, 2fr);
   }
-  
+
   .primary-heading {
     font-size: 2rem;
   }
@@ -55,7 +56,6 @@ app-teams-card {
   }
 
   .teams-tab {
-    width: 100vw;
     grid-template-columns: repeat(2, 2fr);
     gap: 20px;
   }

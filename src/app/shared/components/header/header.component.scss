@@ -149,7 +149,12 @@
 }
 
 .header-menu.open {
-  transform: translateX(calc(-260px));
+  transform: translateX(calc(-270px));
+}
+
+.header-button {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sidenav-header-auth {
