@@ -10,7 +10,7 @@
   <ng-container matColumnDef="team">
     <th *matHeaderCellDef mat-header-cell>Team</th>
     <td *matCellDef="let element" class="team-cell" mat-cell>
-      <img alt="Team's logo" class="team-logo" src="{{element.logo}}">
+      <img alt="Team's logo" class="team-logo" height="35" ngSrc="{{element.logo}}" width="30">
       {{element.team}}
     </td>
   </ng-container>

@@ -4,7 +4,8 @@
   <ng-container matColumnDef="name">
     <th *matHeaderCellDef mat-header-cell>Name</th>
     <td *matCellDef="let element" mat-cell>
-      <img alt="Players's picture" class="players-img" src="{{element.picture}}">{{element.name}}
+      <img alt="Players picture" class="players-img" height="35" ngSrc="{{element.picture}}"
+           width="25">{{element.name}}
     </td>
   </ng-container>
 

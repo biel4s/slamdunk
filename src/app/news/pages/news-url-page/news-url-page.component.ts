@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {FooterComponent} from "../../../shared/components/footer/footer.component";
 import {MatButtonModule} from "@angular/material/button";
 import {NavbarComponent} from "../../../shared/components/header/header.component";
@@ -12,7 +12,7 @@ import {MatDividerModule} from "@angular/material/divider";
 @Component({
   selector: 'app-news-url-page',
   standalone: true,
-  imports: [CommonModule, FooterComponent, MatButtonModule, NavbarComponent, MatCardModule, MatDividerModule],
+  imports: [CommonModule, FooterComponent, MatButtonModule, NavbarComponent, MatCardModule, MatDividerModule, NgOptimizedImage],
   templateUrl: './news-url-page.component.html',
   styleUrl: './news-url-page.component.scss'
 })

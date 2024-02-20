@@ -10,9 +10,10 @@
 }
 
 .team-logo {
-  width: 30px;
+  justify-content: center;
   margin-right: 10px;
   vertical-align: middle;
+  object-fit: contain;
 }
 
 .team-cell {

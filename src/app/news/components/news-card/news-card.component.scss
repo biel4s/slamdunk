@@ -6,7 +6,12 @@
 }
 
 .news-header-image {
+
   background-size: cover;
+}
+
+.news-image {
+  width: 100%;
 }
 
 .news-description {
@@ -22,11 +27,6 @@
 
 .mat-icon {
   vertical-align: 0;
-}
-
-.news-image {
-  width: 350px;
-  height: 185px;
 }
 
 //Media Queries

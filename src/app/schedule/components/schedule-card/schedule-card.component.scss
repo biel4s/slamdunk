@@ -31,22 +31,20 @@
 }
 
 .card-team1 {
+  align-items: center;
   justify-content: end;
   text-align: end;
 }
 
 .card-team2 {
+  align-items: center;
   justify-content: start;
   text-align: start;
 }
 
 .card-img {
-  display: flex;
-  justify-content: center;
-  width: 10%;
   margin: 0 15px;
   cursor: pointer;
-  aspect-ratio: 3/2;
   object-fit: contain;
 }
 
@@ -63,6 +61,16 @@
 }
 
 //Media Queries
+
+@media screen and (max-width: 992px) {
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .card-stadium {
+    font-size: 0.9rem;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .team-name {
