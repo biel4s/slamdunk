@@ -1,17 +1,12 @@
 .news-card {
-  max-width: 350px;
+  width: 350px;
   cursor: pointer;
   color: black;
   border-radius: 10px;
 }
 
 .news-header-image {
-
   background-size: cover;
-}
-
-.news-image {
-  width: 100%;
 }
 
 .news-description {

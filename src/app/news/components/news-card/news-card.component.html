@@ -4,7 +4,8 @@
     <mat-card-title>{{cardSource.title}}</mat-card-title>
     <mat-card-subtitle>{{cardSource.date}}</mat-card-subtitle>
   </mat-card-header>
-  <img alt="News" class="news-image" mat-card-image ngSrc="{{cardSource.img}}" sizes="50vw">
+  <img alt="News" class="news-image" fetchpriority="low" height="185" mat-card-image ngSrc="{{cardSource.img}}"
+       priority="" width="350">
   <mat-card-content>
     <p class="news-description">
       {{cardSource.firstDescription}}

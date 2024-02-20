@@ -1,7 +1,8 @@
 <div class="latest-content">
-  <a (click)="goToLatest(latest.url)" class="latest-link"><img alt="Latest new" class="latest-img"
-                                                               height="500" ngSrc="{{latest.img}}" priority=""
-                                                               width="950"></a>
+  <a (click)="goToLatest(latest.url)" class="latest-link">
+    <img alt="Latest new" class="latest-img" height="500" ngSrc="{{latest.img}}" priority="" sizes="(max-width: 768px) 100vw, 50vw"
+         width="950"/>
+  </a>
   <div class="latest-description">
     <div class="latest-heading">
       <a (click)="goToLatest(latest.url)" class="latest-link"><h1 class="latest-header">{{latest.title}}</h1></a>

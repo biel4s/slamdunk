@@ -12,12 +12,14 @@
           {{newsData.firstDescription}}
         </p>
         <div class="news-img">
-          <img alt="News Photo" class="news-img-url" height="600" mat-card-image ngSrc="{{newsData.img}}" width="1000"/>
+          <img alt="News Photo" class="news-img-url" height="550" mat-card-image ngSrc="{{newsData.img}}"
+               sizes="(max-width: 992px) 100vw" width="1000"/>
         </div>
         <h2>{{newsData.subtitle}}</h2>
         <p class="latest-paragraph">{{newsData.secondDescription}}</p>
         <div *ngIf="newsData.img2" class="news-img">
-          <img alt="News Photo 2" class="news-img-url" mat-card-image src="{{newsData.img2}}"/>
+          <img alt="News Photo 2" class="news-img-url" height="550" mat-card-image ngSrc="{{newsData.img2}}"
+               sizes="(max-width: 992px) 100vw" width="1000"/>
           <p class="news-img-subtitle">{{newsData.imgDescription}}</p>
         </div>
         <p class="latest-paragraph">
