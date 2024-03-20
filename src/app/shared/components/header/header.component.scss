@@ -1,3 +1,17 @@
+.blur {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+
+}
+
 .mat-toolbar {
   position: fixed;
   z-index: 100;
@@ -40,6 +54,7 @@
     family: "Montserrat Subrayada", sans-serif;
     size: 1.3rem;
   }
+
   margin-left: 5px;
   color: white;
 }
@@ -129,30 +144,27 @@
 
 .side-icon {
   position: fixed;
+  margin-right: 0 !important;
   transform: scale(2);
 }
 
 .mat-drawer {
   position: fixed;
-  width: 300px;
+  width: min(70vw, 300px);
   background-color: #303030;
 }
 
 .mat-drawer-container {
-  z-index: 200;
+  z-index: 999;
 }
 
 .header-menu {
   transition: transform 0.2s ease-in-out;
 }
 
-.header-menu.open {
-  transform: translateX(calc(-270px));
-}
-
 .header-button {
+  z-index: 101;
   display: flex;
-  justify-content: flex-end;
 }
 
 .sidenav-header-auth {

@@ -34,25 +34,29 @@ export class NavbarComponent {
   isScreenSmall: boolean = false;
 
   constructor(public authService: AuthService) {
-    this.isScreenSmall = window.innerWidth <= 1300;
+    this.isScreenSmall = window.innerWidth <= 1100;
   }
 
   @HostListener('window:resize', [])
   onWindowResize() {
-    this.isScreenSmall = window.innerWidth <= 1300;
+    this.isScreenSmall = window.innerWidth <= 1100;
     if (!this.isScreenSmall && this.drawer.opened) {
       this.drawer.close().then();
     }
   }
 
-  toggleDrawer() {
-    const drawerWidth = this.drawer._getWidth();
+  toggleDrawer(): void {
     this.drawer.toggle().then();
     if (this.drawer.opened) {
-      document.querySelector('.header-menu')!.classList.add('open');
+      document.querySelector('.header-overlay')!.classList.add('blur');
     } else {
-      document.querySelector('.header-menu')!.classList.remove('open');
+      document.querySelector('.header-overlay')!.classList.remove('blur');
     }
+  }
+
+  closeDrawer(): void {
+    this.drawer.close().then();
+    document.querySelector('.header-overlay')!.classList.remove('blur');
   }
 
   onLogout(): void {
