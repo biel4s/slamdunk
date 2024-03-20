@@ -1,5 +1,4 @@
 # Slamdunk
-My engineering thesis project 
 
 ![Slamdunk](https://i.imgur.com/SrprcBU.jpeg)
 
