@@ -15,6 +15,7 @@ import {NewsService} from "../../services/news.service";
   templateUrl: './news-main-page.component.html',
   styleUrl: './news-main-page.component.scss'
 })
+
 export class NewsMainPageComponent {
   cards: NewsCardModel[] = Cards;
 
@@ -22,14 +23,14 @@ export class NewsMainPageComponent {
   }
 
   scrollToLeft(): void {
-    const container = document.querySelector('.cards-content');
+    const container: Element | null = document.querySelector('.cards-content');
     if (container !== null) {
       container.scrollBy({left: -410, behavior: 'smooth'});
     }
   }
 
   scrollToRight(): void {
-    const container = document.querySelector('.cards-content');
+    const container: Element | null = document.querySelector('.cards-content');
     if (container !== null) {
       container.scrollBy({left: 410, behavior: 'smooth'});
     }

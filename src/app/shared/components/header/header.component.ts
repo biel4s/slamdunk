@@ -34,14 +34,15 @@ export class NavbarComponent {
   isScreenSmall: boolean = false;
 
   constructor(public authService: AuthService) {
-    this.isScreenSmall = window.innerWidth <= 1100;
+    this.isScreenSmall = window.innerWidth <= 1300;
   }
 
   @HostListener('window:resize', [])
   onWindowResize() {
-    this.isScreenSmall = window.innerWidth <= 1100;
+    this.isScreenSmall = window.innerWidth <= 1300;
     if (!this.isScreenSmall && this.drawer.opened) {
       this.drawer.close().then();
+      document.querySelector('.header-overlay')!.classList.remove('blur');
     }
   }
 
