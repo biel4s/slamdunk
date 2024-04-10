@@ -4,16 +4,16 @@ Slamdunk is a solution for fans of this discipline who want to have the most imp
 
 ![Slamdunk](https://i.imgur.com/SrprcBU.jpeg)
 
-## Table of Contents
+# Table of Contents
 
 - [Versions](#versions)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
 
-# Versions
+## Versions
 
-###                                                                   
+###                                                                     
 
 - Node.js: ```18.17.1```
 - Npm: ```10.2.0```
