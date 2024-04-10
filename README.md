@@ -1,14 +1,10 @@
 # Slamdunk
 
----
-
 Slamdunk is a solution for fans of this discipline who want to have the most important content located on one page. Displaying and filtering information for the basketball league chosen by the user. Key data and facts about the most popular European tournaments.
 
 ![Slamdunk](https://i.imgur.com/SrprcBU.jpeg)
 
 ## Table of Contents
-
----
 
 - [Versions](#versions)
 - [Installation](#installation)
@@ -17,8 +13,6 @@ Slamdunk is a solution for fans of this discipline who want to have the most imp
 
 # Versions
 
----
-
 ###                                                                   
 
 - Node.js: ```18.17.1```
@@ -26,8 +20,6 @@ Slamdunk is a solution for fans of this discipline who want to have the most imp
 - Angular: ```17.2.1```
 
 ## Installation
-
----
 
 1. Clone the repository:
 
@@ -60,8 +52,6 @@ npm start
 Open [http://localhost:3000](http://localhost:3000) to view the project in your browser.
 
 ## Technologies
-
----
 
 The application is based on various technologies necessary for proper operation. App uses framework Angular, which allows for the efficient creation of interactive and reusable components. TypeScript language provides static typing. The Angular Material UI component library provides ready-made components. A collection of NgRx libraries, and the RxJS library allows for reactive programming. The application's infrastructure uses a cloud serverless solution, Firebase. All backend functions and services are provided by the supplier. The server-side is entirely managed by the platform.
 
