@@ -10,10 +10,11 @@ Slamdunk is a solution for fans of this discipline who want to have the most imp
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
+- [To Do List](#todolist)
 
 ## Versions
 
-###                                                                     
+###                                                                         
 
 - Node.js: ```18.17.1```
 - Npm: ```10.2.0```
@@ -55,7 +56,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the project in your 
 
 The application is based on various technologies necessary for proper operation. App uses framework Angular, which allows for the efficient creation of interactive and reusable components. TypeScript language provides static typing. The Angular Material UI component library provides ready-made components. A collection of NgRx libraries, and the RxJS library allows for reactive programming. The application's infrastructure uses a cloud serverless solution, Firebase. All backend functions and services are provided by the supplier. The server-side is entirely managed by the platform.
 
-## TODO LIST:
+## To Do List
 
 - Schedule add working properly load more button
 - Add sort function to players page
