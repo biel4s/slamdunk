@@ -10,11 +10,11 @@ Slamdunk is a solution for fans of this discipline who want to have the most imp
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
-- [To Do List](#todolist)
+- [To Do List](#to-do-list)
 
 ## Versions
 
-###                                                                         
+###                                                                             
 
 - Node.js: ```18.17.1```
 - Npm: ```10.2.0```
