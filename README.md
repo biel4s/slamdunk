@@ -14,8 +14,6 @@ Slamdunk is a solution for fans of this discipline who want to have the most imp
 
 ## Versions
 
-###                                                                             
-
 - Node.js: ```18.17.1```
 - Npm: ```10.2.0```
 - Angular: ```17.2.1```
@@ -41,8 +39,6 @@ npm install
 ```
 
 ## Usage
-
----
 
 To run the project, use the following command:
 
