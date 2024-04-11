@@ -49,7 +49,7 @@ npm install
 To run the project, use the following command:
 
 ```bash
-npm start
+ng serve
 ```
 
 Open [http://localhost:4200](http://localhost:4200) to view the project in your browser.
