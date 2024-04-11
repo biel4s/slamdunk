@@ -52,7 +52,7 @@ To run the project, use the following command:
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the project in your browser.
+Open [http://localhost:4200](http://localhost:4200) to view the project in your browser.
 
 &nbsp;
 
