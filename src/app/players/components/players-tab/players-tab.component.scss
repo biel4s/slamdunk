@@ -22,9 +22,12 @@
   font-weight: 500;
 }
 
-.mat-column-team, .mat-column-position, .mat-column-age, .mat-column-height, .mat-column-country {
-  width: 13%;
-  text-align: center;
+.mat-column-team, .mat-column-position {
+  width: 15%;
+}
+
+.mat-column-age, .mat-column-height, .mat-column-country {
+  width: 10%;
 }
 
 tr:hover {

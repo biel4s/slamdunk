@@ -1,8 +1,9 @@
-<table [dataSource]="playersSource" class="mat-elevation-z8" mat-table matSort>
+<table (matSortChange)="announceSortChange($event)" [dataSource]="playersSource" class="mat-elevation-z8" mat-table
+       matSort>
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
-    <th *matHeaderCellDef mat-header-cell>Name</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by name">Name</th>
     <td *matCellDef="let element" mat-cell>
       <img alt="Players picture" class="players-img" height="35" ngSrc="{{element.picture}}"
            width="25">{{element.name}}
@@ -11,7 +12,7 @@
 
   <!-- Team Column -->
   <ng-container matColumnDef="team">
-    <th *matHeaderCellDef mat-header-cell>Team</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by team">Team</th>
     <td *matCellDef="let element" class="team-cell" mat-cell>
       <a class="team-name" href="/teams/{{element.team}}" target="_blank">
         {{element.team}}</a>
@@ -20,13 +21,13 @@
 
   <!-- Position Column -->
   <ng-container matColumnDef="position">
-    <th *matHeaderCellDef mat-header-cell>Position</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by position">Position</th>
     <td *matCellDef="let element" mat-cell>{{element.position}}</td>
   </ng-container>
 
   <!-- Age Column -->
   <ng-container matColumnDef="age">
-    <th *matHeaderCellDef mat-header-cell>Age</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by age">Age</th>
     <td *matCellDef="let element" mat-cell>
       {{element.age}}
     </td>
@@ -34,13 +35,13 @@
 
   <!-- Height Column -->
   <ng-container matColumnDef="height">
-    <th *matHeaderCellDef mat-header-cell>Height</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by height">Height</th>
     <td *matCellDef="let element" mat-cell>{{element.height}}cm</td>
   </ng-container>
 
   <!-- Nationality Column -->
   <ng-container matColumnDef="country">
-    <th *matHeaderCellDef mat-header-cell>Country</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by country">Country</th>
     <td *matCellDef="let element" mat-cell>{{element.country}}</td>
   </ng-container>
 
