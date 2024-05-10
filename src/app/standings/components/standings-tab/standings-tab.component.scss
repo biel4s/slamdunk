@@ -6,7 +6,6 @@
 
 .mat-column-position {
   width: 5%;
-  text-align: center;
 }
 
 .mat-column-team {
@@ -25,8 +24,12 @@
   letter-spacing: 0.03rem;
 }
 
-.mat-column-wins, .mat-column-loses, .mat-column-winratio, .mat-column-home, .mat-column-away, .mat-column-last10 {
+.mat-column-home, .mat-column-away, .mat-column-last10 {
   text-align: center;
+}
+
+.mat-column-wins, .mat-column-loses, .mat-column-winratio, .mat-column-home, .mat-column-away, .mat-column-last10 {
+  width: 8%;
 }
 
 tr:hover {

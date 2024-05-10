@@ -6,7 +6,6 @@
 
 .mat-column-position {
   width: 5%;
-  text-align: center;
 }
 
 .team-logo {
@@ -21,9 +20,14 @@
   letter-spacing: 0.03rem;
 }
 
-.mat-column-wins, .mat-column-loses, .mat-column-winratio, .mat-column-last5, .mat-column-points {
+.mat-column-last5, .mat-column-points {
   text-align: center;
 }
+
+.mat-column-wins, .mat-column-loses, .mat-column-winratio, .mat-column-last5, .mat-column-points {
+  width: 8%;
+}
+
 
 .mat-column-points {
   font-weight: bolder;

@@ -1,14 +1,15 @@
-<table [dataSource]="standingsSource" class="mat-elevation-z8" mat-table>
+<table (matSortChange)="announceSortChange($event)" [dataSource]="standingsSource" class="mat-elevation-z8" mat-table
+       matSort>
 
   <!-- Position Column -->
   <ng-container matColumnDef="position">
-    <th *matHeaderCellDef mat-header-cell>Position</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by position">Position</th>
     <td *matCellDef="let element" mat-cell> {{element.position}} </td>
   </ng-container>
 
   <!-- Team Column -->
   <ng-container matColumnDef="team">
-    <th *matHeaderCellDef mat-header-cell>Team</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by team">Team</th>
     <td *matCellDef="let element" class="team-cell" mat-cell>
       <img alt="Team's logo" class="team-logo" height="35" ngSrc="{{element.logo}}" width="30">
       {{element.team}}
@@ -17,19 +18,19 @@
 
   <!-- Wins Column -->
   <ng-container matColumnDef="wins">
-    <th *matHeaderCellDef mat-header-cell>W</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by win">W</th>
     <td *matCellDef="let element" mat-cell>{{element.wins}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="loses">
-    <th *matHeaderCellDef mat-header-cell>L</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by lose">L</th>
     <td *matCellDef="let element" mat-cell>{{element.loses}} </td>
   </ng-container>
 
   <!-- Win ratio Column -->
   <ng-container matColumnDef="winratio">
-    <th *matHeaderCellDef mat-header-cell>WIN%</th>
+    <th *matHeaderCellDef mat-header-cell mat-sort-header sortActionDescription="Sort by win%">WIN%</th>
     <td *matCellDef="let element" mat-cell>{{element.winratio}}%</td>
   </ng-container>
 
