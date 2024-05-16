@@ -31,7 +31,7 @@ export class LoginPageComponent {
     email: ['', [Validators.email, Validators.required]],
     password: ['', [Validators.minLength(6), Validators.required]],
     confirmPassword: ['', [Validators.required]]
-  }/*, {validators: this.doesPasswordMatch}*/);
+  });
 
   constructor(private readonly fb: FormBuilder,
               private _snackBar: MatSnackBar,
@@ -60,18 +60,6 @@ export class LoginPageComponent {
   get password() {
     return this.authForm.value.password;
   }
-
-  /*doesPasswordMatch: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
-    let password = control.get('password');
-    let confirmPassword = control.get('confirmPassword');
-    if (password && confirmPassword && password?.value != confirmPassword?.value
-    ) {
-      return {
-        passwordMatchError: true,
-      }
-    }
-    return null;
-  }*/
 
   get confirmPassword() {
     return this.authForm.value.confirmPassword;
