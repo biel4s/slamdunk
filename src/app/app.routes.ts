@@ -16,9 +16,6 @@ export const routes: Routes = [
   {path: 'home', component: MainPageComponent},
   {path: 'news', component: NewsPageComponent},
   {path: 'news/:url', component: NewsUrlPageComponent},
-  /*
-    {path: 'news/filip-petrusev-returns-to-europe', component: FilipPetrusevReturnsToEuropePageComponent},
-  */
   {path: 'schedule', component: SchedulePageComponent},
   {path: 'stats', component: StatsPageComponent},
   {path: 'standings', component: StandingsPageComponent},
