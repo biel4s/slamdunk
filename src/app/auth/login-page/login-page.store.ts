@@ -6,7 +6,6 @@ import {Router} from "@angular/router";
 import firebase from "firebase/compat";
 import FirebaseError = firebase.FirebaseError;
 
-
 interface LoginPageState {
   isLoading: boolean;
   serverMessage: string | null;
@@ -18,7 +17,6 @@ export interface Credentials {
   password: string;
   confirmPassword: string;
 }
-
 
 @Injectable()
 export class LoginPageStore extends ComponentStore<LoginPageState> {
@@ -108,7 +106,7 @@ export class LoginPageStore extends ComponentStore<LoginPageState> {
     this.patchState(state => ({isPasswordHidden: !state.isPasswordHidden}));
   }
 
-  isFirebaseError(error: unknown): error    is    FirebaseError {
+  isFirebaseError(error: unknown): error is FirebaseError {
     return (error as FirebaseError).code !== undefined;
   }
 

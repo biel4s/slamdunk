@@ -22,7 +22,6 @@ import {AuthService} from "../../../auth/services/auth.service";
     MatIconModule,
     NgOptimizedImage,
     RouterLinkActive,
-
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
