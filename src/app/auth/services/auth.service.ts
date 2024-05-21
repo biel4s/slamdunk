@@ -37,7 +37,7 @@ export class AuthService {
     this.router.navigate(['/login']).then();
   }
 
-  async GoogleAuth(): Promise<void> {
+  async googleAuth(): Promise<void> {
     await this.afAuth.signInWithPopup(new GoogleAuthProvider())
     await this.router.navigate(['/']);
   }
