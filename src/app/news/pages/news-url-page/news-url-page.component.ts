@@ -8,11 +8,12 @@ import {NewsCardModel} from "../../models/news-card.model";
 import {ActivatedRoute} from "@angular/router";
 import {Cards} from "../../models/news";
 import {MatDividerModule} from "@angular/material/divider";
+import {ShapeDividerComponent} from "../../../shared/components/shape-divider/shape-divider.component";
 
 @Component({
   selector: 'app-news-url-page',
   standalone: true,
-  imports: [CommonModule, FooterComponent, MatButtonModule, NavbarComponent, MatCardModule, MatDividerModule, NgOptimizedImage],
+  imports: [CommonModule, FooterComponent, MatButtonModule, NavbarComponent, MatCardModule, MatDividerModule, NgOptimizedImage, ShapeDividerComponent],
   templateUrl: './news-url-page.component.html',
   styleUrl: './news-url-page.component.scss'
 })

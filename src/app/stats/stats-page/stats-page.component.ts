@@ -31,11 +31,12 @@ import * as legabasketaTotalPlayers from "../models/players/legabasketa/totalSta
 import * as legabasketaAveragePlayers from "../models/players/legabasketa/averageStatsPlayers";
 import * as legabasketaTotalTeams from "../models/teams/legabasketa/totalStatsTeams";
 import * as legabasketaAverageTeams from "../models/teams/legabasketa/averageStatsTeams";
+import {ShapeDividerComponent} from "../../shared/components/shape-divider/shape-divider.component";
 
 @Component({
   selector: 'app-stats',
   standalone: true,
-  imports: [CommonModule, FooterComponent, NavbarComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, StatsTabComponent],
+  imports: [CommonModule, FooterComponent, NavbarComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, StatsTabComponent, ShapeDividerComponent],
   templateUrl: './stats-page.component.html',
   styleUrl: './stats-page.component.scss'
 })

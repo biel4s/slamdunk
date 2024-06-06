@@ -13,11 +13,12 @@ import {EventsData2024} from '../../models/events-2024'
 import {EventsData2025} from '../../models/events-2025'
 import {EventsData2026} from '../../models/events-2026'
 import {EventsData2027} from '../../models/events-2027'
+import {ShapeDividerComponent} from "../../../shared/components/shape-divider/shape-divider.component";
 
 @Component({
   selector: 'app-events-page',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, MatButtonModule, ScheduleCardComponent, EventsCardComponent],
+  imports: [CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, MatButtonModule, ScheduleCardComponent, EventsCardComponent, ShapeDividerComponent],
   templateUrl: './events-page.component.html',
   styleUrl: './events-page.component.scss'
 })

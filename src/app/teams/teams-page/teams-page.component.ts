@@ -13,11 +13,12 @@ import {TeamsBCL} from "../models/bcl";
 import {TeamsBSL} from "../models/bsl";
 import {TeamsACB} from "../models/acb";
 import {TeamsLegaBasketA} from "../models/lega-basket-a";
+import {ShapeDividerComponent} from "../../shared/components/shape-divider/shape-divider.component";
 
 @Component({
   selector: 'app-teams-page',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, TeamsCardComponent],
+  imports: [CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, TeamsCardComponent, ShapeDividerComponent],
   templateUrl: './teams-page.component.html',
   styleUrl: './teams-page.component.scss'
 })

@@ -28,11 +28,12 @@ import {BSLMatchData8Dec} from "../models/bsl/match-8dec";
 import {BSLMatchData9Dec} from "../models/bsl/match-9dec";
 import {LegaBasketAMatchData10Dec} from "../models/legabasketa/match-10dec";
 import {LegaBasketAMatchData17Dec} from "../models/legabasketa/match-17dec";
+import {ShapeDividerComponent} from "../../shared/components/shape-divider/shape-divider.component";
 
 @Component({
   selector: 'app-schedule',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, ScheduleCardComponent, MatButtonModule, TeamsCardComponent],
+  imports: [CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, ScheduleCardComponent, MatButtonModule, TeamsCardComponent, ShapeDividerComponent],
   templateUrl: './schedule-page.component.html',
   styleUrl: './schedule-page.component.scss'
 })

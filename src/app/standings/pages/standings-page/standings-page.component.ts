@@ -22,11 +22,12 @@ import {StandingsBCLD} from "../../models/standings-bcl/standings-bclD";
 import {StandingsLegaBasketA} from "../../models/standings-legabasketa";
 import {StandingsACB} from "../../models/standings-acb";
 import {StandingsBSL} from "../../models/standings-bsl";
+import {ShapeDividerComponent} from "../../../shared/components/shape-divider/shape-divider.component";
 
 @Component({
   selector: 'app-standings-page',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, MatTabsModule, StandingsTabComponent, FooterComponent, MatSelectModule, MatFormFieldModule, StandingsTabBCLComponent],
+  imports: [CommonModule, NavbarComponent, MatTabsModule, StandingsTabComponent, FooterComponent, MatSelectModule, MatFormFieldModule, StandingsTabBCLComponent, ShapeDividerComponent],
   templateUrl: './standings-page.component.html',
   styleUrl: './standings-page.component.scss'
 })

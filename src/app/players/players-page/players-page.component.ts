@@ -20,12 +20,13 @@ import {PlayersACB} from "../models/players-acb";
 import {PlayersBSL} from "../models/players-bsl";
 import {PlayersLegaBasketA} from "../models/players-legabasketa";
 import {MatTabsModule} from "@angular/material/tabs";
+import {ShapeDividerComponent} from "../../shared/components/shape-divider/shape-divider.component";
 
 
 @Component({
   selector: 'app-players-page',
   standalone: true,
-  imports: [MatIconModule, MatInputModule, FormsModule, CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, MatPaginatorModule, PlayersTabComponent, EventsCardComponent, MatTabsModule],
+  imports: [MatIconModule, MatInputModule, FormsModule, CommonModule, NavbarComponent, FooterComponent, MatFormFieldModule, MatOptionModule, MatSelectModule, MatPaginatorModule, PlayersTabComponent, EventsCardComponent, MatTabsModule, ShapeDividerComponent],
   templateUrl: './players-page.component.html',
   styleUrl: './players-page.component.scss'
 })
