@@ -1,19 +1,19 @@
-import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NavbarComponent} from "../../../shared/components/header/header.component";
-import {FooterComponent} from "../../../shared/components/footer/footer.component";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatOptionModule} from "@angular/material/core";
-import {MatSelectModule} from "@angular/material/select";
+import {Component} from '@angular/core';
 import {MatButtonModule} from "@angular/material/button";
+import {MatOptionModule} from "@angular/material/core";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
 import {ScheduleCardComponent} from "../../../schedule/components/schedule-card/schedule-card.component";
+import {FooterComponent} from "../../../shared/components/footer/footer.component";
+import {NavbarComponent} from "../../../shared/components/header/header.component";
+import {ShapeDividerComponent} from "../../../shared/components/shape-divider/shape-divider.component";
 import {EventsCardComponent} from "../../components/events-card/events-card.component";
-import {EventsModel} from "../../models/events.model";
 import {EventsData2024} from '../../models/events-2024'
 import {EventsData2025} from '../../models/events-2025'
 import {EventsData2026} from '../../models/events-2026'
 import {EventsData2027} from '../../models/events-2027'
-import {ShapeDividerComponent} from "../../../shared/components/shape-divider/shape-divider.component";
+import {EventsModel} from "../../models/events.model";
 
 @Component({
   selector: 'app-events-page',

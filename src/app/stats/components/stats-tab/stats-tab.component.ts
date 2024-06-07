@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {Component, Input} from '@angular/core';
 import {MatTableModule} from "@angular/material/table";
 import {StatsModel} from "../../models/stats.model";
 

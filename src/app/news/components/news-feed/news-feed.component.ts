@@ -1,14 +1,14 @@
-import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NewsCardComponent} from "../news-card/news-card.component";
-import {MatChipsModule} from '@angular/material/chips';
-import {MatButtonModule} from "@angular/material/button";
-import {RouterLink} from "@angular/router";
+import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
+import {MatButtonModule} from "@angular/material/button";
+import {MatChipsModule} from '@angular/material/chips';
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {RouterLink} from "@angular/router";
 import {Cards} from "../../models/news";
 import {NewsCardModel} from "../../models/news-card.model";
-import {MatSnackBar} from "@angular/material/snack-bar";
 import {NewsService} from "../../services/news.service";
+import {NewsCardComponent} from "../news-card/news-card.component";
 
 @Component({
   selector: 'app-news-feed',

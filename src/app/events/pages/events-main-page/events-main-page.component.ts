@@ -1,9 +1,9 @@
-import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import {EventsGridComponent} from "../../components/events-grid/events-grid.component";
 import {RouterLink} from "@angular/router";
+import {EventsGridComponent} from "../../components/events-grid/events-grid.component";
 
 @Component({
   selector: 'app-events',

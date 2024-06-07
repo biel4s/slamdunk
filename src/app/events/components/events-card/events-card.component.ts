@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {Component, Input} from '@angular/core';
 import {MatCardModule} from "@angular/material/card";
 import {EventsModel} from "../../models/events.model";
 

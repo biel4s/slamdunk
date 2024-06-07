@@ -1,26 +1,26 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NavbarComponent} from "../../shared/components/header/header.component";
-import {FooterComponent} from "../../shared/components/footer/footer.component";
-import {MatFormFieldModule} from "@angular/material/form-field";
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import {MatOptionModule} from "@angular/material/core";
-import {MatSelectModule} from "@angular/material/select";
-import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
+import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
-import {FormsModule} from '@angular/forms';
-import {PlayersTabComponent} from "../components/players-tab/players-tab.component";
-import {PlayersEuroLeague} from "../models/players-euroleague";
+import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
+import {MatSelectModule} from "@angular/material/select";
 import {MatTableDataSource} from "@angular/material/table";
-import {PlayersModel} from "../models/players.model";
-import {PlayersEuroCup} from "../models/players-eurocup";
-import {EventsCardComponent} from "../../events/components/events-card/events-card.component";
-import {PlayersBCL} from "../models/players-bcl";
-import {PlayersACB} from "../models/players-acb";
-import {PlayersBSL} from "../models/players-bsl";
-import {PlayersLegaBasketA} from "../models/players-legabasketa";
 import {MatTabsModule} from "@angular/material/tabs";
+import {EventsCardComponent} from "../../events/components/events-card/events-card.component";
+import {FooterComponent} from "../../shared/components/footer/footer.component";
+import {NavbarComponent} from "../../shared/components/header/header.component";
 import {ShapeDividerComponent} from "../../shared/components/shape-divider/shape-divider.component";
+import {PlayersTabComponent} from "../components/players-tab/players-tab.component";
+import {PlayersACB} from "../models/players-acb";
+import {PlayersBCL} from "../models/players-bcl";
+import {PlayersBSL} from "../models/players-bsl";
+import {PlayersEuroCup} from "../models/players-eurocup";
+import {PlayersEuroLeague} from "../models/players-euroleague";
+import {PlayersLegaBasketA} from "../models/players-legabasketa";
+import {PlayersModel} from "../models/players.model";
 
 
 @Component({

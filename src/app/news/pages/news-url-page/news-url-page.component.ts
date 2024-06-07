@@ -1,14 +1,14 @@
-import {Component, OnInit} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {FooterComponent} from "../../../shared/components/footer/footer.component";
+import {Component, OnInit} from '@angular/core';
 import {MatButtonModule} from "@angular/material/button";
-import {NavbarComponent} from "../../../shared/components/header/header.component";
 import {MatCardModule} from "@angular/material/card";
-import {NewsCardModel} from "../../models/news-card.model";
-import {ActivatedRoute} from "@angular/router";
-import {Cards} from "../../models/news";
 import {MatDividerModule} from "@angular/material/divider";
+import {ActivatedRoute} from "@angular/router";
+import {FooterComponent} from "../../../shared/components/footer/footer.component";
+import {NavbarComponent} from "../../../shared/components/header/header.component";
 import {ShapeDividerComponent} from "../../../shared/components/shape-divider/shape-divider.component";
+import {Cards} from "../../models/news";
+import {NewsCardModel} from "../../models/news-card.model";
 
 @Component({
   selector: 'app-news-url-page',

@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {Component} from '@angular/core';
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
-import {NewsService} from "../../services/news.service";
-import {NewsCardModel} from "../../models/news-card.model";
 import {Cards} from "../../models/news";
+import {NewsCardModel} from "../../models/news-card.model";
+import {NewsService} from "../../services/news.service";
 
 
 @Component({

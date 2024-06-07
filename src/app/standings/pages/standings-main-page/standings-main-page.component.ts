@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MatTabsModule} from '@angular/material/tabs';
+import {Component} from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import {MatTabsModule} from '@angular/material/tabs';
 import {StandingsTabComponent} from "../../components/standings-tab/standings-tab.component";
-import {StandingsModel} from "../../models/standings.model";
-import {StandingsEuroLeague} from "../../models/standings-euroleague";
 import {StandingsEuroCupA} from "../../models/standings-eurocupA";
 import {StandingsEuroCupB} from "../../models/standings-eurocupB";
+import {StandingsEuroLeague} from "../../models/standings-euroleague";
+import {StandingsModel} from "../../models/standings.model";
 
 
 @Component({

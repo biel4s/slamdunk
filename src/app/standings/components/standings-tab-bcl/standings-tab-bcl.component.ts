@@ -1,10 +1,10 @@
-import {Component, Input, ViewChild} from '@angular/core';
+import {LiveAnnouncer} from "@angular/cdk/a11y";
 import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {Component, Input, ViewChild} from '@angular/core';
+import {MatSort, MatSortModule, Sort} from "@angular/material/sort";
 import {MatTableDataSource, MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
 import {StandingsModel} from "../../models/standings.model";
-import {MatSort, MatSortModule, Sort} from "@angular/material/sort";
-import {LiveAnnouncer} from "@angular/cdk/a11y";
 
 @Component({
   selector: 'app-standings-tab-bcl',

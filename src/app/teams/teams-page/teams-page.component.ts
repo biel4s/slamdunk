@@ -1,19 +1,19 @@
-import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NavbarComponent} from "../../shared/components/header/header.component";
-import {FooterComponent} from "../../shared/components/footer/footer.component";
-import {MatFormFieldModule} from "@angular/material/form-field";
+import {Component} from '@angular/core';
 import {MatOptionModule} from "@angular/material/core";
+import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
+import {FooterComponent} from "../../shared/components/footer/footer.component";
+import {NavbarComponent} from "../../shared/components/header/header.component";
+import {ShapeDividerComponent} from "../../shared/components/shape-divider/shape-divider.component";
 import {TeamsCardComponent} from "../components/teams-card/teams-card.component";
-import {TeamModel} from "../models/team.model";
-import {TeamsEuroLeague} from "../models/euroleague";
-import {TeamsEuroCup} from "../models/eurocup";
+import {TeamsACB} from "../models/acb";
 import {TeamsBCL} from "../models/bcl";
 import {TeamsBSL} from "../models/bsl";
-import {TeamsACB} from "../models/acb";
+import {TeamsEuroCup} from "../models/eurocup";
+import {TeamsEuroLeague} from "../models/euroleague";
 import {TeamsLegaBasketA} from "../models/lega-basket-a";
-import {ShapeDividerComponent} from "../../shared/components/shape-divider/shape-divider.component";
+import {TeamModel} from "../models/team.model";
 
 @Component({
   selector: 'app-teams-page',

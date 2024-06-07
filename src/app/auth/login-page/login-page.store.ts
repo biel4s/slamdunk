@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {ComponentStore, tapResponse} from "@ngrx/component-store";
-import {AuthService} from "../services/auth.service";
-import {EMPTY, exhaustMap, from, tap} from "rxjs";
 import {Router} from "@angular/router";
+import {ComponentStore, tapResponse} from "@ngrx/component-store";
 import firebase from "firebase/compat";
+import {EMPTY, exhaustMap, from, tap} from "rxjs";
+import {AuthService} from "../services/auth.service";
 import FirebaseError = firebase.FirebaseError;
 
 interface LoginPageState {
