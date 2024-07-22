@@ -11,6 +11,11 @@
   align-items: center;
   justify-content: space-evenly;
   height: 75px;
+  transition: ease-in-out .2s;
+
+  &:hover {
+    background-color: #ECECEC;
+  }
 }
 
 .card-date {
