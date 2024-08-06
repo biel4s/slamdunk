@@ -67,3 +67,4 @@ The application is based on various technologies necessary for proper operation.
 - Schedule add working properly load more button
 - Add past games to schedule page
 - Add filtring news per league
+- Fix mat table width
