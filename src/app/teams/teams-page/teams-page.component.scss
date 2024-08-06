@@ -37,22 +37,19 @@ app-teams-card {
 
 @media screen and (max-width: 992px) {
   .teams-tab {
-    width: 100vw;
+    width: 90vw;
     grid-template-columns: repeat(3, 2fr);
   }
 
   .primary-heading {
     font-size: 2rem;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 600px) {
   .teams-header {
     flex-direction: column;
-  }
-
-  .primary-heading {
-    text-align: center;
   }
 
   .teams-tab {
