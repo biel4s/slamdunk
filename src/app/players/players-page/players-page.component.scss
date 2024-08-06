@@ -27,7 +27,7 @@ mat-icon {
 mat-paginator {
   overflow: hidden !important;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 10px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 10px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 //Media Queries
@@ -50,9 +50,5 @@ mat-paginator {
 
   .players-header {
     flex-direction: column;
-  }
-
-  .primary-heading {
-    text-align: center;
   }
 }
